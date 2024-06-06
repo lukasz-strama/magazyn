@@ -30,3 +30,31 @@
 *.exe
 *.out
 *.app
+
+# IDE and build files
+.vscode/
+.idea/
+.project
+.classpath
+.settings/
+*.iml
+build/
+CMakeFiles/
+CMakeCache.txt
+Makefile
+CMakeLists.txt.user
+
+# Documentation files
+*.log
+*.txt
+*.md
+/docs/
+/documentation/
+/doc/
+
+# Temporary files
+*~
+*.swp
+*.swo
+.DS_Store
+Thumbs.db
