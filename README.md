@@ -19,16 +19,16 @@ To build and run this project, you will need:
    git clone https://github.com/lukasz-strama/magazyn.git
    cd magazyn
    ```
-   
+
 ## 📚 Documentation
 
 (...)
 
 ## ✨ Authors
 
-- Daniel Śledź
-- Wiktoria Pyka
-- Michał Kucharski
-- Łukasz Strama
-- Antoni Białecki
-- Antoni Grycmann
+- Michał Kucharski (project management)
+- Daniel Śledź (programming)
+- Łukasz Strama (programming)
+- Wiktoria Pyka (documentation)
+- Antoni Białecki (documentation)
+- Antoni Grycmann (documentation)
