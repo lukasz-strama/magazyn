@@ -43,6 +43,29 @@ Aby zbudować i uruchomić ten projekt, będziesz potrzebować:
    make clean
    ```
 
+5. **Dla użytkowników VS Code:**
+
+   Umożliwienie kompilacji poprzez skrót klawiszowy **Ctrl+Shift+B**
+   
+   .vscode/tasks.json
+   ```json
+   {
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Make",
+            "type": "shell",
+            "command": "make",
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "problemMatcher": []
+        }
+    ]
+   }
+   ```
+
 ## ✨ Autorzy
 
 | Zarządzanie i prezentacja 👨🏻‍🏫 | Programowanie 🧑🏻‍💻 | Dokumentacja 📄 |
