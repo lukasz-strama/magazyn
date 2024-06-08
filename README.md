@@ -1,7 +1,5 @@
 # 📦 PBL MAGAZYN
 
-Welcome to **PBL MAGAZYN**, a C++ project designed for managing warehouse inventory. This project is currently in its initial stages.
-
 ## 🚀 Getting Started
 
 ### Prerequisites
@@ -20,15 +18,10 @@ To build and run this project, you will need:
    cd magazyn
    ```
 
-## 📚 Documentation
-
-(...)
-
 ## ✨ Authors
 
-- Michał Kucharski (project management)
-- Daniel Śledź (programming)
-- Łukasz Strama (programming)
-- Wiktoria Pyka (documentation)
-- Antoni Białecki (documentation)
-- Antoni Grycmann (documentation)
+| Project management 👨🏻‍🏫 | Programming 🧑🏻‍💻 | Documentation 📄 |
+| --------------------- | -------------- | ---------------- |
+| Michał Kucharski      | Daniel Śledź   | Wiktoria Pyka    |
+|                       | Łukasz Strama  | Antoni Białecki  |
+|                       |                | Antoni Grycmann  |
