@@ -1,27 +1,27 @@
 # 📦 PBL MAGAZYN
 
-## 🚀 Getting Started
+## 🚀 Rozpoczęcie
 
-### Prerequisites
+### Wymagania
 
-To build and run this project, you will need:
+Aby zbudować i uruchomić ten projekt, będziesz potrzebować:
 
-- A C++ compiler (GCC, Clang, MSVC, etc.)
+- Kompilator C++ (GCC, Clang, MSVC itp.)
 - Git
 
-### Installation
+### Instalacja
 
-1. **Clone the repository:**
+1. **Sklonuj repozytorium:**
 
    ```sh
    git clone https://github.com/lukasz-strama/magazyn.git
    cd magazyn
    ```
 
-## ✨ Authors
+## ✨ Autorzy
 
-| Project management 👨🏻‍🏫 | Programming 🧑🏻‍💻 | Documentation 📄 |
-| --------------------- | -------------- | ---------------- |
-| Michał Kucharski      | Daniel Śledź   | Wiktoria Pyka    |
-|                       | Łukasz Strama  | Antoni Białecki  |
-|                       |                | Antoni Grycmann  |
+| Zarządzanie i prezentacja 👨🏻‍🏫 | Programowanie 🧑🏻‍💻 | Dokumentacja 📄 |
+| ---------------------------- | ---------------- | --------------- |
+| Michał Kucharski             | Daniel Śledź     | Wiktoria Pyka   |
+|                              | Łukasz Strama    | Antoni Białecki |
+|                              |                  | Antoni Grycmann |
