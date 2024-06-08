@@ -1,5 +1,5 @@
 #include <iostream>
-#include "Magazyn.cpp"
+#include "Magazyn.h"
 
 int main()
 {

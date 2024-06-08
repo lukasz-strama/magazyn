@@ -1,25 +1,21 @@
+#include "Magazyn.h"
 #include <iostream>
 
-class Magazyn
+Magazyn::Magazyn(int pojemnosc, int ilosc) : _pojemnosc(pojemnosc), _ilosc(ilosc) {}
+Magazyn::Magazyn() : _pojemnosc(0), _ilosc(0) {}
+
+Magazyn::~Magazyn() {}
+
+int Magazyn::getPojemnosc() const { return _pojemnosc; }
+
+int Magazyn::getIlosc() const { return _ilosc; }
+
+void Magazyn::setPojemnosc(int pojemnosc) { _pojemnosc = pojemnosc; }
+
+void Magazyn::setIlosc(int ilosc) { _ilosc = ilosc; }
+
+void Magazyn::pokazStan() const
 {
-private:
-    int _pojemnosc;
-    int _ilosc;
-
-public:
-    int getPojemnosc() const { return _pojemnosc; }
-    int getIlosc() const { return _ilosc; }
-
-    void setPojemnosc(int pojemnosc) { _pojemnosc = pojemnosc; }
-    void setIlosc(int ilosc) { _ilosc = ilosc; }
-
-    Magazyn(int pojemnosc, int ilosc) : _pojemnosc(pojemnosc), _ilosc(ilosc) {}
-    Magazyn() : _pojemnosc(0), _ilosc(0) {}
-    ~Magazyn() {}
-
-    void pokazStan() const
-    {
-        std::cout << "Pojemnosc: " << _pojemnosc << std::endl;
-        std::cout << "Ilosc: " << _ilosc << std::endl;
-    }
-};
+    std::cout << "Pojemnosc: " << _pojemnosc << std::endl;
+    std::cout << "Ilosc: " << _ilosc << std::endl;
+}

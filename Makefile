@@ -2,6 +2,7 @@ TARGET = Magazyn
 
 SRC_DIR = src
 BUILD_DIR = build
+INCLUDE_DIR = include
 
 SRCS = $(wildcard $(SRC_DIR)/*.cpp)
 OBJS = $(SRCS:$(SRC_DIR)/%.cpp=$(BUILD_DIR)/%.o)
@@ -23,7 +24,7 @@ else
 	RMDIR := rm -rf
 endif
 
-CFLAGS = -g -Wall
+CFLAGS = -g -Wall -I$(INCLUDE_DIR)
 
 all: $(BUILD_DIR) $(TARGET)
 	@$(info Compilation successful)
@@ -42,9 +43,9 @@ $(BUILD_DIR)/%.o: $(SRC_DIR)/%.cpp
 
 clean:
 	@$(info Cleaning...)
-	@$(info Deleting object files...)
+	@$(info Deleting object files)
 	@FOR %%f IN ($(BUILD_DIR)\*.o) DO @IF EXIST %%f DEL /Q %%f
-	@$(info Deleting executable...)
+	@$(info Deleting executable)
 	@IF EXIST $(TARGET).exe DEL /Q $(TARGET).exe
-	@$(info Removing directory...)
+	@$(info Removing directory)
 	@RMDIR $(BUILD_DIR) 2>nul || echo No build directory found.
