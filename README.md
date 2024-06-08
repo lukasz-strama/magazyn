@@ -25,7 +25,7 @@ Aby zbudować i uruchomić ten projekt, będziesz potrzebować:
    make
    ```
 
-   - Jeśli nie masz zainstalowanego Make, możesz zainstalować go za pomocą Homebrew (dla systemów UNIX)
+   Jeśli nie masz zainstalowanego Make, możesz zainstalować go za pomocą Homebrew (dla systemów UNIX)
 
    ```sh
    brew install make
