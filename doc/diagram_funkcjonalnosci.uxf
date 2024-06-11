@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<diagram program="umlet" version="15.1">
+  <zoom_level>19</zoom_level>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>931</x>
+      <y>627</y>
+      <w>228</w>
+      <h>209</h>
+    </coordinates>
+    <panel_attributes>Czytnik kodów</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLGeneric</id>
+    <coordinates>
+      <x>589</x>
+      <y>114</y>
+      <w>304</w>
+      <h>684</h>
+    </coordinates>
+    <panel_attributes>Zarządzanie magazynem
+halign=center
+fontsize=13</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>646</x>
+      <y>171</y>
+      <w>190</w>
+      <h>95</h>
+    </coordinates>
+    <panel_attributes>Dodaj towar 
+na półkę
+fontsize=12
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>646</x>
+      <y>399</y>
+      <w>190</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>Nadaj towar
+fontsize=12
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>646</x>
+      <y>285</y>
+      <w>190</w>
+      <h>95</h>
+    </coordinates>
+    <panel_attributes>Przenieś towar 
+z półki na półkę
+fontsize=11
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>646</x>
+      <y>494</y>
+      <w>190</w>
+      <h>95</h>
+    </coordinates>
+    <panel_attributes>Sprawdź historię 
+zamówień
+fontsize=11
+bg=yellow</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>646</x>
+      <y>703</y>
+      <w>190</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>Wygeneruj kod
+fontsize=11
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>UMLUseCase</id>
+    <coordinates>
+      <x>646</x>
+      <y>608</y>
+      <w>190</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes>Odczytaj kod
+fontsize=11
+bg=pink</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>532</x>
+      <y>209</y>
+      <w>57</w>
+      <h>380</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;180.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>380</x>
+      <y>380</y>
+      <w>209</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;90.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>532</x>
+      <y>190</y>
+      <w>152</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;60.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>532</x>
+      <y>285</y>
+      <w>152</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;60.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>532</x>
+      <y>399</y>
+      <w>152</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;60.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>532</x>
+      <y>513</y>
+      <w>152</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;60.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>817</x>
+      <y>608</y>
+      <w>152</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;60.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>817</x>
+      <y>703</y>
+      <w>152</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;60.0;20.0</additional_attributes>
+  </element>
+  <element>
+    <id>UMLActor</id>
+    <coordinates>
+      <x>304</x>
+      <y>361</y>
+      <w>190</w>
+      <h>209</h>
+    </coordinates>
+    <panel_attributes>Magazynier</panel_attributes>
+    <additional_attributes/>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>912</x>
+      <y>627</y>
+      <w>57</w>
+      <h>152</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;10.0;10.0;60.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>912</x>
+      <y>646</y>
+      <w>171</w>
+      <h>76</h>
+    </coordinates>
+    <panel_attributes/>
+    <additional_attributes>10.0;20.0;70.0;20.0</additional_attributes>
+  </element>
+</diagram>
