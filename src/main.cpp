@@ -1,9 +1,7 @@
-#include <iostream>
-#include "Magazyn.h"
+#include "../test/SecurityTests.cpp"
 
 int main()
 {
-    Magazyn magazyn(100, 50);
-    magazyn.pokazStan();
+    runSecurityTests();
     return 0;
 }
