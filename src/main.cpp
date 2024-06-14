@@ -2,6 +2,6 @@
 
 int main()
 {
-    runSecurityTests();
+    runLoginTests();
     return 0;
 }

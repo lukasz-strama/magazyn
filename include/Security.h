@@ -5,7 +5,10 @@
 #include <unordered_map>
 
 /**
- * @brief Klasa Security odpowiedzialna za zarządzanie bezpieczeństwem użytkowników.
+ * @brief Klasa Security odpowiedzialna jest za zarządzanie systemem logowania.
+ * Umożliwia logowanie, rejestracje oraz zmiana hasła użytkownika.
+ * Dozwolone jest jedynie jednokierunkowe szyfrowanie hasła (zapisywane są w formacie JSON).
+ * Dla czytelności dozwolone jest używanie aliasu User zamiast Security.
  */
 class Security
 {
@@ -71,5 +74,7 @@ public:
      */
     static bool loadPasswordFromFile(const Security &sec, std::string &password);
 };
+
+using User = Security;
 
 #endif // SECURITY_H
