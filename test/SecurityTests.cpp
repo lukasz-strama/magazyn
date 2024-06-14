@@ -5,6 +5,7 @@ void runLoginTests()
 {
     User user1(1, "initialPassword1");
     User user2(2, "initialPassword2");
+    User user3(3, "initialPassword3");
 
     if (user1.loginValidation("initialPassword1"))
     {
