@@ -5,7 +5,14 @@
 
 using json = nlohmann::json;
 
-Security::Security(int id, const std::string &pass) : userID(id), password(pass) {}
+Security::Security(int id, const std::string &pass) : userID(id)
+{
+    if (!pass.empty())
+    {
+        password = encryptPassword(pass);
+        savePasswordToFile(userID, password);
+    }
+}
 
 std::string Security::encryptPassword(const std::string &password) const
 {
@@ -18,7 +25,7 @@ std::string Security::encryptPassword(const std::string &password) const
 bool Security::loginValidation(const std::string &inputPassword) const
 {
     std::string storedPassword;
-    if (loadPasswordFromFile(*this, storedPassword))
+    if (loadPasswordFromFile(userID, storedPassword))
     {
         std::string encryptedInputPassword = encryptPassword(inputPassword);
         return storedPassword == encryptedInputPassword;
@@ -28,12 +35,13 @@ bool Security::loginValidation(const std::string &inputPassword) const
 
 bool Security::changePassword(const std::string &newPassword)
 {
-    return savePasswordToFile(*this, newPassword);
+    password = encryptPassword(newPassword);
+    return savePasswordToFile(userID, password);
 }
 
 int Security::getUserID() const { return userID; }
 
-bool Security::savePasswordToFile(const Security &sec, const std::string &password)
+bool Security::savePasswordToFile(int userID, const std::string &encryptedPassword)
 {
     std::ifstream inFile("passwords.json");
     json data;
@@ -43,9 +51,7 @@ bool Security::savePasswordToFile(const Security &sec, const std::string &passwo
         inFile.close();
     }
 
-    std::string encryptedPassword = sec.encryptPassword(password);
-
-    data[std::to_string(sec.getUserID())] = encryptedPassword;
+    data[std::to_string(userID)] = encryptedPassword;
 
     std::ofstream outFile("passwords.json");
     if (outFile.is_open())
@@ -57,7 +63,7 @@ bool Security::savePasswordToFile(const Security &sec, const std::string &passwo
     return false;
 }
 
-bool Security::loadPasswordFromFile(const Security &sec, std::string &password)
+bool Security::loadPasswordFromFile(int userID, std::string &encryptedPassword)
 {
     std::ifstream inFile("passwords.json");
     if (inFile.is_open())
@@ -66,10 +72,10 @@ bool Security::loadPasswordFromFile(const Security &sec, std::string &password)
         inFile >> data;
         inFile.close();
 
-        std::string key = std::to_string(sec.getUserID());
+        std::string key = std::to_string(userID);
         if (data.contains(key))
         {
-            password = data[key];
+            encryptedPassword = data[key];
             return true;
         }
     }

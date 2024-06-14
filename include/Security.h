@@ -24,6 +24,24 @@ private:
      */
     std::string encryptPassword(const std::string &password) const;
 
+    /**
+     * @brief Metoda statyczna do zapisu hasła użytkownika do pliku.
+     *
+     * @param userID ID użytkownika
+     * @param encryptedPassword Zaszyfrowane hasło do zapisania
+     * @return true jeśli zapis się powiódł, false w przeciwnym razie
+     */
+    static bool savePasswordToFile(int userID, const std::string &encryptedPassword);
+
+    /**
+     * @brief Metoda statyczna do wczytania hasła użytkownika z pliku.
+     *
+     * @param userID ID użytkownika
+     * @param encryptedPassword Zmienna referencyjna, do której zostanie wczytane hasło
+     * @return true jeśli wczytanie się powiodło, false w przeciwnym razie
+     */
+    static bool loadPasswordFromFile(int userID, std::string &encryptedPassword);
+
 public:
     /**
      * @brief Konstruktor inicjalizujący obiekt Security.
@@ -55,24 +73,6 @@ public:
      * @return ID użytkownika
      */
     int getUserID() const;
-
-    /**
-     * @brief Metoda statyczna do zapisu hasła użytkownika do pliku.
-     *
-     * @param sec Obiekt Security do którego należy zapis hasła
-     * @param password Hasło do zapisania
-     * @return true jeśli zapis się powiódł, false w przeciwnym razie
-     */
-    static bool savePasswordToFile(const Security &sec, const std::string &password);
-
-    /**
-     * @brief Metoda statyczna do wczytania hasła użytkownika z pliku.
-     *
-     * @param sec Obiekt Security do którego należy wczytać hasło
-     * @param password Zmienna referencyjna, do której zostanie wczytane hasło
-     * @return true jeśli wczytanie się powiodło, false w przeciwnym razie
-     */
-    static bool loadPasswordFromFile(const Security &sec, std::string &password);
 };
 
 using User = Security;
