@@ -65,6 +65,11 @@ Aby zbudować i uruchomić ten projekt, będziesz potrzebować:
     ]
    }
    ```
+   
+## 📃 Dokumentacja
+
+### Diagram UML klas:
+![Diagram](https://github.com/lukasz-strama/pbl-magazyn/assets/146090599/33088fd4-785b-4fe8-b181-274b1a5f4308)
 
 ## ✨ Autorzy
 
