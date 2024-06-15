@@ -43,7 +43,7 @@ void runLoginTests()
         std::cout << "Login for user 2 (wrong password) failed." << std::endl;
     }
 
-    if (user1.changePassword("newPassword1"))
+    if (user1.changePassword("newPassword50"))
     {
         std::cout << "Password for user 1 changed successfully." << std::endl;
     }
@@ -52,7 +52,7 @@ void runLoginTests()
         std::cout << "Failed to change password for user 1." << std::endl;
     }
 
-    if (user2.changePassword("newPassword2"))
+    if (user2.changePassword("newPassword60"))
     {
         std::cout << "Password for user 2 changed successfully." << std::endl;
     }
@@ -61,7 +61,7 @@ void runLoginTests()
         std::cout << "Failed to change password for user 2." << std::endl;
     }
 
-    if (user1.loginValidation("newPassword1"))
+    if (user1.loginValidation("newPassword50"))
     {
         std::cout << "Login for user 1 with new password successful." << std::endl;
     }
@@ -70,7 +70,7 @@ void runLoginTests()
         std::cout << "Login for user 1 with new password failed." << std::endl;
     }
 
-    if (user2.loginValidation("newPassword2"))
+    if (user2.loginValidation("newPassword60"))
     {
         std::cout << "Login for user 2 with new password successful." << std::endl;
     }

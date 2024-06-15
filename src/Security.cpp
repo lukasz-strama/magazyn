@@ -17,8 +17,19 @@ Security::Security(int id, const std::string &pass) : userID(id)
 std::string Security::encryptPassword(const std::string &password) const
 {
     std::string encrypted = password;
-    std::transform(encrypted.begin(), encrypted.end(), encrypted.begin(), [](char c)
-                   { return c + 1; });
+
+    for (char &c : encrypted)
+    {
+        if (std::isalpha(c))
+        {
+            c = std::isupper(c) ? ((c - 'A' + 10) % 26) + 'A' : ((c - 'a' + 10) % 26) + 'a';
+        }
+        else if (std::isdigit(c))
+        {
+            c = ((c - '0' + 5) % 10) + '0';
+        }
+    }
+
     return encrypted;
 }
 
