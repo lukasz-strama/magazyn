@@ -1,4 +1,4 @@
-#include "../test/SecurityTests.cpp"
+#include "../test/SecurityTest.cpp"
 
 int main()
 {

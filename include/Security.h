@@ -2,7 +2,6 @@
 #define SECURITY_H
 
 #include <string>
-#include <unordered_map>
 
 /**
  * @brief Klasa Security odpowiedzialna jest za zarządzanie systemem logowania.
@@ -75,6 +74,9 @@ public:
     int getUserID() const;
 };
 
+/**
+ * @brief Alias dla klasy Security. Umożliwia używanie User zamiast Security.
+ */
 using User = Security;
 
 #endif // SECURITY_H
