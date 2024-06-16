@@ -3,8 +3,9 @@
 
 #include <string>
 
+/** @file */
+
 /**
- * @file
  * @brief Klasa Security odpowiedzialna jest za zarządzanie systemem logowania.
  * - Umożliwia logowanie, rejestracje oraz zmiana hasła użytkownika.
  * - Szyfruje hasła jednokierunkowo i zapisuej je w formacie JSON do pliku.
