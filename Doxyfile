@@ -1,10 +1,8 @@
-# Doxyfile configuration file for Doxygen 1.8.21
-
 DOXYFILE_ENCODING      = UTF-8
 PROJECT_NAME           = "PBL Magazyn"
-PROJECT_NUMBER         = w produkcji
-PROJECT_BRIEF          = 
-PROJECT_LOGO           = 
+PROJECT_NUMBER         = v0.0.1
+PROJECT_BRIEF          = PBL MAGAZYN to projekt w języku C++.
+PROJECT_LOGO           = doc/html/package.png
 OUTPUT_DIRECTORY       = doc
 CREATE_SUBDIRS         = YES
 ALLOW_UNICODE_NAMES    = NO
@@ -59,9 +57,7 @@ TYPEDEF_HIDES_STRUCT   = NO
 LOOKUP_CACHE_SIZE      = 0
 NUM_PROC_THREADS       = 1
 
-# Example configuration options
 INPUT                  = src include
-EXTRACT_PRIVATE        = YES
 FILE_PATTERNS          = *.cpp *.h 
 RECURSIVE              = NO
 EXCLUDE                = test
@@ -83,11 +79,11 @@ HTML_FILE_EXTENSION    = .html
 HTML_HEADER            = 
 HTML_FOOTER            = 
 HTML_STYLESHEET        = 
-HTML_EXTRA_STYLESHEET  = 
+HTML_EXTRA_STYLESHEET  = doc/html/doxygen-awesome.css \
+                         doc/html/doxygen-awesome-sidebar-only.css
 HTML_EXTRA_FILES       = 
-HTML_COLORSTYLE_HUE    = 220
-HTML_COLORSTYLE_SAT    = 100
-HTML_COLORSTYLE_GAMMA  = 80
+HTML_COLORSTYLE        = LIGHT 
+FULL_SIDEBAR           = NO
 HTML_TIMESTAMP         = NO
 HTML_DYNAMIC_MENUS     = YES
 HTML_DYNAMIC_SECTIONS  = YES
@@ -115,7 +111,7 @@ QHG_LOCATION           =
 GENERATE_ECLIPSEHELP   = NO
 ECLIPSE_DOC_ID         = 
 DISABLE_INDEX          = NO
-GENERATE_TREEVIEW      = NO
+GENERATE_TREEVIEW      = YES
 ENUM_VALUES_PER_LINE   = 4
 TREEVIEW_WIDTH         = 250
 EXT_LINKS_IN_WINDOW    = NO
