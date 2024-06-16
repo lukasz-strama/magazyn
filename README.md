@@ -1,5 +1,11 @@
 # 📦 PBL MAGAZYN
 
+1. [Rozpoczęcie](#-rozpoczęcie)
+   - [Wymagania](#wymagania)
+   - [Kompilacja](#kompilacja)
+2. [Dokumentacja](#-dokumentacja)
+3. [Autorzy](#-autorzy)
+
 ## 🚀 Rozpoczęcie
 
 ### Wymagania
