@@ -28,13 +28,12 @@
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>486</x>
-      <y>333</y>
+      <x>963</x>
+      <y>423</y>
       <w>360</w>
       <h>135</h>
     </coordinates>
     <panel_attributes>Warehouse
-bg=yellow
 --
 - storageUnits: vector&lt;StoraSgeUnit&gt; 
 - history : vector&lt;Order&gt;
@@ -49,8 +48,8 @@ bg=yellow
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>558</x>
-      <y>99</y>
+      <x>1035</x>
+      <y>189</y>
       <w>306</w>
       <h>108</h>
     </coordinates>
@@ -68,8 +67,8 @@ bg=green
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>702</x>
-      <y>234</y>
+      <x>1179</x>
+      <y>324</y>
       <w>36</w>
       <h>99</h>
     </coordinates>
@@ -80,26 +79,28 @@ m2=1</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>99</x>
-      <y>360</y>
-      <w>225</w>
-      <h>90</h>
+      <x>495</x>
+      <y>450</y>
+      <w>306</w>
+      <h>126</h>
     </coordinates>
     <panel_attributes>BarcodeReader
 bg=yellow
 --
-- barcode : int
+- barcode : string
 --
-+ getBarcode() const : int
-+ generateCode() const : int
-+ validateBarcode(barcode : int) : bool</panel_attributes>
++ getBarcode() const : string
++ generateCode(countryCode : char, 
+                           &amp;manufacturerCode : string, 
+                           &amp;productCode : string) const : bool
++ validateBarcode(&amp;barcode : string) : bool</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>315</x>
-      <y>378</y>
+      <x>792</x>
+      <y>468</y>
       <w>171</w>
       <h>45</h>
     </coordinates>
@@ -112,8 +113,8 @@ m2=1..n
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>432</x>
-      <y>549</y>
+      <x>909</x>
+      <y>639</y>
       <w>243</w>
       <h>162</h>
     </coordinates>
@@ -133,8 +134,8 @@ m2=1..n
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>792</x>
-      <y>567</y>
+      <x>1269</x>
+      <y>657</y>
       <w>324</w>
       <h>108</h>
     </coordinates>
@@ -151,8 +152,8 @@ m2=1..n
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1296</x>
-      <y>369</y>
+      <x>1773</x>
+      <y>459</y>
       <w>243</w>
       <h>144</h>
     </coordinates>
@@ -171,8 +172,8 @@ updateQuantity(newQuantity : int) : void</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>936</x>
-      <y>369</y>
+      <x>1413</x>
+      <y>459</y>
       <w>216</w>
       <h>135</h>
     </coordinates>
@@ -191,8 +192,8 @@ Slot
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>837</x>
-      <y>414</y>
+      <x>1314</x>
+      <y>504</y>
       <w>117</w>
       <h>27</h>
     </coordinates>
@@ -202,8 +203,8 @@ Slot
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>837</x>
-      <y>405</y>
+      <x>1314</x>
+      <y>495</y>
       <w>117</w>
       <h>45</h>
     </coordinates>
@@ -217,8 +218,8 @@ m2=1
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>441</x>
-      <y>846</y>
+      <x>918</x>
+      <y>936</y>
       <w>261</w>
       <h>108</h>
     </coordinates>
@@ -233,8 +234,8 @@ m2=1
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>612</x>
-      <y>477</y>
+      <x>1089</x>
+      <y>567</y>
       <w>45</w>
       <h>90</h>
     </coordinates>
@@ -248,8 +249,8 @@ m2=1
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>558</x>
-      <y>720</y>
+      <x>1035</x>
+      <y>810</y>
       <w>45</w>
       <h>144</h>
     </coordinates>
@@ -263,8 +264,8 @@ m2=1..n
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>684</x>
-      <y>585</y>
+      <x>1161</x>
+      <y>675</y>
       <w>117</w>
       <h>45</h>
     </coordinates>
@@ -278,8 +279,8 @@ m2=1
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>702</x>
-      <y>198</y>
+      <x>1179</x>
+      <y>288</y>
       <w>27</w>
       <h>153</h>
     </coordinates>
@@ -289,8 +290,8 @@ m2=1
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1143</x>
-      <y>423</y>
+      <x>1620</x>
+      <y>513</y>
       <w>171</w>
       <h>27</h>
     </coordinates>
@@ -300,8 +301,8 @@ m2=1
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>315</x>
-      <y>387</y>
+      <x>792</x>
+      <y>477</y>
       <w>189</w>
       <h>27</h>
     </coordinates>
@@ -311,8 +312,8 @@ m2=1
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>558</x>
-      <y>702</y>
+      <x>1035</x>
+      <y>792</y>
       <w>27</w>
       <h>153</h>
     </coordinates>
@@ -322,8 +323,8 @@ m2=1
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>612</x>
-      <y>459</y>
+      <x>1089</x>
+      <y>549</y>
       <w>27</w>
       <h>108</h>
     </coordinates>
@@ -333,8 +334,8 @@ m2=1
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>666</x>
-      <y>594</y>
+      <x>1143</x>
+      <y>684</y>
       <w>144</w>
       <h>27</h>
     </coordinates>
@@ -344,8 +345,8 @@ m2=1
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1161</x>
-      <y>414</y>
+      <x>1638</x>
+      <y>504</y>
       <w>153</w>
       <h>45</h>
     </coordinates>
@@ -359,8 +360,8 @@ m2=1
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1152</x>
-      <y>549</y>
+      <x>1629</x>
+      <y>639</y>
       <w>171</w>
       <h>81</h>
     </coordinates>
@@ -375,8 +376,8 @@ m2=1
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1143</x>
-      <y>495</y>
+      <x>1620</x>
+      <y>585</y>
       <w>108</w>
       <h>72</h>
     </coordinates>
@@ -386,8 +387,8 @@ m2=1
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>936</x>
-      <y>216</y>
+      <x>1413</x>
+      <y>306</y>
       <w>216</w>
       <h>90</h>
     </coordinates>
@@ -403,8 +404,8 @@ m2=1
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1035</x>
-      <y>297</y>
+      <x>1512</x>
+      <y>387</y>
       <w>27</w>
       <h>90</h>
     </coordinates>
