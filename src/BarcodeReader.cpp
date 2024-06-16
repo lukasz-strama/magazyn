@@ -3,6 +3,8 @@
 #include <cctype>
 #include <algorithm>
 
+/** @file */
+
 int BarcodeReader::calculateChecksum(const std::string &barcode) const
 {
     int sumOdd = 0;

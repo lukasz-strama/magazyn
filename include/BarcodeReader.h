@@ -3,6 +3,8 @@
 
 #include <string>
 
+/** @file */
+
 class BarcodeReader
 {
 private:
@@ -17,6 +19,5 @@ public:
     bool validateBarcode(const std::string &barcode) const;
     std::string getBarcode() const;
 };
-;
 
 #endif // BARCODEREADER_H

@@ -7,7 +7,7 @@ void runLoginTests()
     {
         User user1(1, "initialPassword1");
         User user2(2, "initialPassword2");
-        User user3(3, "initialPassword3");
+        User user3(3);
 
         if (user1.loginValidation("initialPassword1"))
         {
@@ -25,6 +25,14 @@ void runLoginTests()
         else
         {
             std::cout << "Login for user 2 failed." << std::endl;
+        }
+        if (user3.loginValidation("initialPassword3"))
+        {
+            std::cout << "Login for user 3 successful." << std::endl;
+        }
+        else
+        {
+            std::cout << "Login for user 3 failed." << std::endl;
         }
 
         if (user1.loginValidation("wrongPassword"))

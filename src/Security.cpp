@@ -3,9 +3,11 @@
 #include <algorithm>
 #include "../lib/json.hpp"
 
+/** @file */
+
 using json = nlohmann::json;
 
-Security::Security(int id, const std::string &pass) : userID(id)
+Security::Security(int id, const std::string &pass = "") : userID(id)
 {
     if (!pass.empty())
     {
@@ -14,6 +16,14 @@ Security::Security(int id, const std::string &pass) : userID(id)
     }
 }
 
+Security::Security(int id) : userID(id)
+{
+    std::string storedPassword;
+    if (loadPasswordFromFile(userID, storedPassword))
+    {
+        password = storedPassword;
+    }
+}
 std::string Security::encryptPassword(const std::string &password) const
 {
     std::string encrypted = password;

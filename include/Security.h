@@ -4,10 +4,18 @@
 #include <string>
 
 /**
+ * @file
  * @brief Klasa Security odpowiedzialna jest za zarządzanie systemem logowania.
- * Umożliwia logowanie, rejestracje oraz zmiana hasła użytkownika.
- * Dozwolone jest jedynie jednokierunkowe szyfrowanie hasła (zapisywane są w formacie JSON).
- * Dla czytelności dozwolone jest używanie aliasu User zamiast Security.
+ * - Umożliwia logowanie, rejestracje oraz zmiana hasła użytkownika.
+ * - Szyfruje hasła jednokierunkowo i zapisuej je w formacie JSON do pliku.
+ * - Dla czytelności dozwolone jest używanie aliasu User zamiast Security.
+ *
+ * Przykład użycia:
+ * @code
+ *  User user(userID, initialPassword); // dla nowego użytkownika
+ *  User user(userID); // dla istniejacego użytkownika
+ *  user.validateLogin(providedPassword);
+ * @endcode
  */
 class Security
 {
@@ -28,7 +36,7 @@ private:
      *
      * @param userID ID użytkownika
      * @param encryptedPassword Zaszyfrowane hasło do zapisania
-     * @return true jeśli zapis się powiódł, false w przeciwnym razie
+     * @return Zwraca true jeśli zapis się powiódł, false w przeciwnym razie
      */
     static bool savePasswordToFile(int userID, const std::string &encryptedPassword);
 
@@ -37,24 +45,31 @@ private:
      *
      * @param userID ID użytkownika
      * @param encryptedPassword Zmienna referencyjna, do której zostanie wczytane hasło
-     * @return true jeśli wczytanie się powiodło, false w przeciwnym razie
+     * @return Zwraca true jeśli wczytanie się powiodło, false w przeciwnym razie
      */
     static bool loadPasswordFromFile(int userID, std::string &encryptedPassword);
 
 public:
     /**
-     * @brief Konstruktor inicjalizujący obiekt Security.
+     * @brief Konstruktor inicjalizujący obiekt Security, służy do rejestracji nowego użytkownika.
      *
      * @param id ID użytkownika
-     * @param pass Opcjonalne: hasło użytkownika (domyślnie puste)
+     * @param pass hasło użytkownika
      */
-    Security(int id, const std::string &pass = "");
+    Security(int id, const std::string &pass);
+
+    /**
+     * @brief Konstruktor inicjalizujący obiekt Security, służy do logowania istniejącego użytkownika.
+     *
+     * @param id ID użytkownika
+     */
+    Security(int id);
 
     /**
      * @brief Funkcja do walidacji logowania.
      *
      * @param inputPassword Hasło podane przez użytkownika
-     * @return true jeśli hasło jest poprawne, false w przeciwnym razie
+     * @return Zwraca true jeśli hasło jest poprawne, false w przeciwnym razie
      */
     bool loginValidation(const std::string &inputPassword) const;
 
@@ -62,7 +77,7 @@ public:
      * @brief Funkcja do zmiany hasła użytkownika.
      *
      * @param newPassword Nowe hasło do ustawienia
-     * @return true jeśli zmiana hasła powiodła się, false w przeciwnym razie
+     * @return Zwraca true jeśli zmiana hasła powiodła się, false w przeciwnym razie
      */
     bool changePassword(const std::string &newPassword);
 
