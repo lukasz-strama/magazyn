@@ -1,0 +1,70 @@
+name: Deploy Doxygen Documentation with GitHub Pages
+
+on:
+  # Runs on pushes targeting the main branch
+  push:
+    branches: ["main"]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Sets permissions of the GITHUB_TOKEN to allow deployment to GitHub Pages
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# Allow only one concurrent deployment, skipping runs queued between the run in-progress and latest queued.
+# However, do NOT cancel in-progress runs as we want to allow these production deployments to complete.
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  # Build job
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      # Install Doxygen (assuming it's available in the default repositories)
+      - name: Install Doxygen
+        run: sudo apt-get update && sudo apt-get install -y doxygen
+      
+      # Generate Doxygen documentation
+      - name: Generate Doxygen Documentation
+        run: Doxyfile
+
+      # (Optional) You may need additional steps here depending on your project setup
+      # For example, if your Doxygen output is in a specific directory, you may need to copy it to a deployable directory.
+
+      # Upload Doxygen artifact (if needed)
+      - name: Upload Doxygen Artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: doxygen-html
+          path: doc/html
+
+  # Deployment job
+  deploy:
+    environment:
+      name: github-pages
+      # Adjust the URL based on where your documentation is hosted
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      
+      # (Optional) Download Doxygen artifact if uploaded
+      - name: Download Doxygen Artifact
+        uses: actions/download-artifact@v2
+        with:
+          name: doxygen-html
+          path: doc/html
+
+      # Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages
+        uses: actions/deploy-pages@v4
