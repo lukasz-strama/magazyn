@@ -132,13 +132,6 @@ public:
      * @return Zwraca true, jeśli użytkownik jest zalogowany, false w przeciwnym razie
      */
     bool isLoggedIn() const;
-
-    /**
-     * @brief Zwraca ID użytkownika.
-     *
-     * @return ID użytkownika
-     */
-    int getUserID() const;
 };
 
 /**
