@@ -4,7 +4,9 @@
    - [Wymagania](#wymagania)
    - [Kompilacja](#kompilacja)
 2. [Dokumentacja](#-dokumentacja)
-3. [Autorzy](#-autorzy)
+   - [Diagram UML](#diagram-uml-klas)
+   - [Dokumentacja HTML w doxygen](#generowanie-dokumentacji-html-w-doxygen)
+4. [Autorzy](#-autorzy)
 
 ## 🚀 Rozpoczęcie
 
@@ -77,6 +79,31 @@ Aby zbudować i uruchomić ten projekt, będziesz potrzebować:
 ### Diagram UML klas:
 ![Diagram](doc/diagram_klas.png)
 
+### Generowanie dokumentacji HTML w doxygen:
+
+1. Wymagana wersja >= 1.9.5
+
+2. Przejdz do głównego katalogu projektu:
+   
+   ```sh
+   cd magazyn
+   ```
+
+3. Wygeneruj dokumentacje na podstawie pliku Doxyfile:
+   
+   ```sh
+   doxygen Doxyfile
+   ```
+
+4. Lokalizacja index.html:
+
+   ```sh
+   doc/html/index.html
+   ```
+
+Wygenerowana dokumentacja korzysta z dodatkowego arkusza stylów, arkusz powinenn już znajdować się w folderze z dokumentacją:
+[Doxygen Awesome](https://jothepro.github.io/doxygen-awesome-css)
+   
 ## ✨ Autorzy
 
 | Zarządzanie i prezentacja 👨🏻‍🏫 | Programowanie 🧑🏻‍💻 | Dokumentacja 📄 |
