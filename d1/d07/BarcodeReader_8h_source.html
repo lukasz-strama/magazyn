@@ -107,25 +107,26 @@ $(function(){initNavTree('d1/d07/BarcodeReader_8h_source.html','../../'); initRe
 <div class="line"><a id="l00003" name="l00003"></a><span class="lineno">    3</span> </div>
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span> </div>
-<div class="foldopen" id="foldopen00008" data-start="{" data-end="};">
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno"><a class="line" href="../../d0/d96/classBarcodeReader.html">    8</a></span><span class="keyword">class </span><a class="code hl_class" href="../../d0/d96/classBarcodeReader.html">BarcodeReader</a></div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span>{</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    std::string barcode;</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span> </div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>    <span class="keywordtype">int</span> calculateChecksum(<span class="keyword">const</span> std::string &amp;barcode) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span> </div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <a class="code hl_class" href="../../d0/d96/classBarcodeReader.html">BarcodeReader</a>();</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">bool</span> generateBarcode(<span class="keywordtype">char</span> countryCode, <span class="keyword">const</span> std::string &amp;manufacturerCode, <span class="keyword">const</span> std::string &amp;productCode);</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    <span class="keywordtype">bool</span> validateBarcode(<span class="keyword">const</span> std::string &amp;barcode) <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    std::string getBarcode() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>};</div>
+<div class="foldopen" id="foldopen00025" data-start="{" data-end="};">
+<div class="line"><a id="l00025" name="l00025"></a><span class="lineno"><a class="line" href="../../d0/d96/classBarcodeReader.html">   25</a></span><span class="keyword">class </span><a class="code hl_class" href="../../d0/d96/classBarcodeReader.html">BarcodeReader</a></div>
+<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>{</div>
+<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span>    std::string barcode; </div>
+<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">int</span> calculateChecksum(<span class="keyword">const</span> std::string &amp;barcode) <span class="keyword">const</span>; </div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>    <a class="code hl_function" href="../../d0/d96/classBarcodeReader_acbcba5853906809c4d11b464a2383a1f.html#acbcba5853906809c4d11b464a2383a1f">BarcodeReader</a>(); </div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d0/d96/classBarcodeReader.html#a39e108582119800446bf97b3579fe3fe">generateBarcode</a>(<span class="keywordtype">char</span> countryCode, <span class="keyword">const</span> std::string &amp;manufacturerCode, <span class="keyword">const</span> std::string &amp;productCode);</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="../../d0/d96/classBarcodeReader_a64c9bb4778bc4a692e68afa10421d5eb.html#a64c9bb4778bc4a692e68afa10421d5eb">validateBarcode</a>(<span class="keyword">const</span> std::string &amp;barcode) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    std::string <a class="code hl_function" href="../../d0/d96/classBarcodeReader_adc836fd7c60564fc0406d13e3c553bf6.html#adc836fd7c60564fc0406d13e3c553bf6">getBarcode</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00086" name="l00086"></a><span class="lineno">   86</span>};</div>
 </div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span><span class="preprocessor">#endif </span><span class="comment">// BARCODEREADER_H</span></div>
-<div class="ttc" id="aclassBarcodeReader_html"><div class="ttname"><a href="../../d0/d96/classBarcodeReader.html">BarcodeReader</a></div><div class="ttdef"><b>Definition</b> BarcodeReader.h:9</div></div>
+<div class="line"><a id="l00087" name="l00087"></a><span class="lineno">   87</span> </div>
+<div class="line"><a id="l00088" name="l00088"></a><span class="lineno">   88</span><span class="preprocessor">#endif </span><span class="comment">// BARCODEREADER_H</span></div>
+<div class="ttc" id="aclassBarcodeReader_a64c9bb4778bc4a692e68afa10421d5eb_html_a64c9bb4778bc4a692e68afa10421d5eb"><div class="ttname"><a href="../../d0/d96/classBarcodeReader_a64c9bb4778bc4a692e68afa10421d5eb.html#a64c9bb4778bc4a692e68afa10421d5eb">BarcodeReader::validateBarcode</a></div><div class="ttdeci">bool validateBarcode(const std::string &amp;barcode) const</div><div class="ttdoc">Publiczna metoda pozwalająca na tworzenie kodu towaru, zwracająca false, jeżeli podany warunek nie zo...</div><div class="ttdef"><b>Definition</b> BarcodeReader.cpp:47</div></div>
+<div class="ttc" id="aclassBarcodeReader_acbcba5853906809c4d11b464a2383a1f_html_acbcba5853906809c4d11b464a2383a1f"><div class="ttname"><a href="../../d0/d96/classBarcodeReader_acbcba5853906809c4d11b464a2383a1f.html#acbcba5853906809c4d11b464a2383a1f">BarcodeReader::BarcodeReader</a></div><div class="ttdeci">BarcodeReader()</div><div class="ttdoc">Suma kontrolna zliczana jest w następujący sposób:</div><div class="ttdef"><b>Definition</b> BarcodeReader.cpp:29</div></div>
+<div class="ttc" id="aclassBarcodeReader_adc836fd7c60564fc0406d13e3c553bf6_html_adc836fd7c60564fc0406d13e3c553bf6"><div class="ttname"><a href="../../d0/d96/classBarcodeReader_adc836fd7c60564fc0406d13e3c553bf6.html#adc836fd7c60564fc0406d13e3c553bf6">BarcodeReader::getBarcode</a></div><div class="ttdeci">std::string getBarcode() const</div><div class="ttdoc">Publiczna metoda sprawdzająca poprawność utworzonego kodu, zwracająca false, jeżeli podany warunek ni...</div><div class="ttdef"><b>Definition</b> BarcodeReader.cpp:65</div></div>
+<div class="ttc" id="aclassBarcodeReader_html"><div class="ttname"><a href="../../d0/d96/classBarcodeReader.html">BarcodeReader</a></div><div class="ttdoc">Służy do generowania kodu towaru, sprawdzania jego poprawności.</div><div class="ttdef"><b>Definition</b> BarcodeReader.h:26</div></div>
+<div class="ttc" id="aclassBarcodeReader_html_a39e108582119800446bf97b3579fe3fe"><div class="ttname"><a href="../../d0/d96/classBarcodeReader.html#a39e108582119800446bf97b3579fe3fe">BarcodeReader::generateBarcode</a></div><div class="ttdeci">bool generateBarcode(char countryCode, const std::string &amp;manufacturerCode, const std::string &amp;productCode)</div><div class="ttdoc">Konstruktor ustawiający wartość początkową kodu towaru.</div><div class="ttdef"><b>Definition</b> BarcodeReader.cpp:31</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

@@ -99,20 +99,39 @@ $(function(){initNavTree('d0/d96/classBarcodeReader.html','../../'); initResizab
   <div class="headertitle"><div class="title">Dokumentacja klasy BarcodeReader</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Służy do generowania kodu towaru, sprawdzania jego poprawności.  
+ <a href="#details">Więcej...</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d1/d07/BarcodeReader_8h_source.html">BarcodeReader.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Metody publiczne</h2></td></tr>
+<tr class="memitem:acbcba5853906809c4d11b464a2383a1f" id="r_acbcba5853906809c4d11b464a2383a1f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d96/classBarcodeReader_acbcba5853906809c4d11b464a2383a1f.html#acbcba5853906809c4d11b464a2383a1f">BarcodeReader</a> ()</td></tr>
+<tr class="memdesc:acbcba5853906809c4d11b464a2383a1f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Suma kontrolna zliczana jest w następujący sposób:  <br /></td></tr>
+<tr class="separator:acbcba5853906809c4d11b464a2383a1f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a39e108582119800446bf97b3579fe3fe" id="r_a39e108582119800446bf97b3579fe3fe"><td class="memItemLeft" align="right" valign="top"><a id="a39e108582119800446bf97b3579fe3fe" name="a39e108582119800446bf97b3579fe3fe"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><b>generateBarcode</b> (char countryCode, const std::string &amp;manufacturerCode, const std::string &amp;productCode)</td></tr>
+<tr class="memdesc:a39e108582119800446bf97b3579fe3fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor ustawiający wartość początkową kodu towaru. <br /></td></tr>
 <tr class="separator:a39e108582119800446bf97b3579fe3fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a64c9bb4778bc4a692e68afa10421d5eb" id="r_a64c9bb4778bc4a692e68afa10421d5eb"><td class="memItemLeft" align="right" valign="top"><a id="a64c9bb4778bc4a692e68afa10421d5eb" name="a64c9bb4778bc4a692e68afa10421d5eb"></a>
-bool&#160;</td><td class="memItemRight" valign="bottom"><b>validateBarcode</b> (const std::string &amp;barcode) const</td></tr>
+<tr class="memitem:a64c9bb4778bc4a692e68afa10421d5eb" id="r_a64c9bb4778bc4a692e68afa10421d5eb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d96/classBarcodeReader_a64c9bb4778bc4a692e68afa10421d5eb.html#a64c9bb4778bc4a692e68afa10421d5eb">validateBarcode</a> (const std::string &amp;barcode) const</td></tr>
+<tr class="memdesc:a64c9bb4778bc4a692e68afa10421d5eb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Publiczna metoda pozwalająca na tworzenie kodu towaru, zwracająca false, jeżeli podany warunek nie zostanie spełniony, true w przeciwnym wypadku.  <br /></td></tr>
 <tr class="separator:a64c9bb4778bc4a692e68afa10421d5eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc836fd7c60564fc0406d13e3c553bf6" id="r_adc836fd7c60564fc0406d13e3c553bf6"><td class="memItemLeft" align="right" valign="top"><a id="adc836fd7c60564fc0406d13e3c553bf6" name="adc836fd7c60564fc0406d13e3c553bf6"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getBarcode</b> () const</td></tr>
+<tr class="memitem:adc836fd7c60564fc0406d13e3c553bf6" id="r_adc836fd7c60564fc0406d13e3c553bf6"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d0/d96/classBarcodeReader_adc836fd7c60564fc0406d13e3c553bf6.html#adc836fd7c60564fc0406d13e3c553bf6">getBarcode</a> () const</td></tr>
+<tr class="memdesc:adc836fd7c60564fc0406d13e3c553bf6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Publiczna metoda sprawdzająca poprawność utworzonego kodu, zwracająca false, jeżeli podany warunek nie zostanie spełniony, true w przeciwnym wypadku.  <br /></td></tr>
 <tr class="separator:adc836fd7c60564fc0406d13e3c553bf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>Służy do generowania kodu towaru, sprawdzania jego poprawności. </p>
+<p>Klasa <a class="el" href="../../d0/d96/classBarcodeReader.html" title="Służy do generowania kodu towaru, sprawdzania jego poprawności.">BarcodeReader</a> pozwala na utworzenie kodu towaru, w celu ułatwienia zarządzania towarami na magazynie. Kod towaru składa się z ciągu 12 znaków i jest tworzony na podstawie schematu, wykorzystującego m.in. sumę kontrolną.</p>
+<p>Klasa obsługuje:</p><ul>
+<li>zliczanie sumy kontrolnej, umożliwiającej stworzenie kodu</li>
+<li>generowanie kodu towaru</li>
+<li>sprawdzanie poprawności wytworzonego kodu</li>
+</ul>
+<p>Przykład użycia:</p>
+<p>TO DO </p>
+</div><hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
 <li>include/<a class="el" href="../../d1/d07/BarcodeReader_8h_source.html">BarcodeReader.h</a></li>
 <li>src/<a class="el" href="../../da/dd1/BarcodeReader_8cpp.html">BarcodeReader.cpp</a></li>
 </ul>

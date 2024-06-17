@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['🚀_20rozpoczęcie_0',['🚀 Rozpoczęcie',['../index.html#autotoc_md1',1,'']]]
+  ['📦_20pbl_20magazyn_0',['📦 PBL MAGAZYN',['../index.html',1,'']]]
 ];
