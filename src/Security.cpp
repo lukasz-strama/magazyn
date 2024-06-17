@@ -1,15 +1,15 @@
 #include "Security.h"
 #include <fstream>
 #include <algorithm>
+#include <stdexcept>
 #include "../lib/json.hpp"
 
 /** @file */
 
-// Definicja aliasu dla nlohmann::json
 using json = nlohmann::json;
 
 // Konstruktor dla nowego użytkownika
-Security::Security(int id, const std::string &pass = "") : userID(id)
+Security::Security(int id, const std::string &pass) : userID(id), loggedIn(false)
 {
     if (!pass.empty())
     {
@@ -22,7 +22,7 @@ Security::Security(int id, const std::string &pass = "") : userID(id)
 }
 
 // Konstruktor dla istniejącego użytkownika
-Security::Security(int id) : userID(id)
+Security::Security(int id) : userID(id), loggedIn(false)
 {
     std::string storedPassword;
     if (!loadPasswordFromFile(userID, storedPassword))
@@ -41,12 +41,10 @@ std::string Security::encryptPassword(const std::string &password) const
     {
         if (std::isalpha(c))
         {
-            // Szyfrowanie liter: przesunięcie o 10 pozycji w alfabecie
             c = std::isupper(c) ? ((c - 'A' + 10) % 26) + 'A' : ((c - 'a' + 10) % 26) + 'a';
         }
         else if (std::isdigit(c))
         {
-            // Szyfrowanie cyfr: przesunięcie o 5 pozycji
             c = ((c - '0' + 5) % 10) + '0';
         }
     }
@@ -55,48 +53,73 @@ std::string Security::encryptPassword(const std::string &password) const
 }
 
 // Walidacja logowania
-bool Security::loginValidation(const std::string &inputPassword) const
+bool Security::loginValidation(const std::string &inputPassword)
 {
     std::string storedPassword;
     if (loadPasswordFromFile(userID, storedPassword))
     {
-        // Szyfruj wprowadzone hasło i porównaj z zapisanym
         std::string encryptedInputPassword = encryptPassword(inputPassword);
-        return storedPassword == encryptedInputPassword;
+        if (storedPassword == encryptedInputPassword)
+        {
+            loggedIn = true;
+            return true;
+        }
     }
     return false;
 }
 
-// Zmiana hasła użytkownika
+// Zmiana hasła
 bool Security::changePassword(const std::string &newPassword)
 {
-    // Szyfruj nowe hasło i zapisz do pliku
+    if (!loggedIn)
+    {
+        throw std::runtime_error("User is not logged in.");
+    }
+
     password = encryptPassword(newPassword);
-    return savePasswordToFile(userID, password);
+    if (!savePasswordToFile(userID, password))
+    {
+        throw std::runtime_error("Failed to save password to file.");
+    }
+    return true;
 }
 
-// Zwracanie ID użytkownika
-int Security::getUserID() const { return userID; }
+// Wylogowanie użytkownika
+void Security::logout()
+{
+    loggedIn = false;
+}
 
-// Zapis zaszyfrowanego hasła do pliku JSON
+// Sprawdzenie, czy użytkownik jest zalogowany
+bool Security::isLoggedIn() const
+{
+    return loggedIn;
+}
+
+// Zapis hasła do pliku
 bool Security::savePasswordToFile(int userID, const std::string &encryptedPassword)
 {
     std::ifstream inFile("passwords.json");
     json data;
     if (inFile.is_open())
     {
-        // Wczytaj istniejące dane z pliku
-        inFile >> data;
+        try
+        {
+            inFile >> data;
+        }
+        catch (const json::parse_error &e)
+        {
+            inFile.close();
+            throw std::runtime_error("JSON parse error: " + std::string(e.what()));
+        }
         inFile.close();
     }
 
-    // Zaktualizuj dane dla danego użytkownika
     data[std::to_string(userID)] = encryptedPassword;
 
     std::ofstream outFile("passwords.json");
     if (outFile.is_open())
     {
-        // Zapisz zaktualizowane dane do pliku
         outFile << data.dump(4);
         outFile.close();
         return true;
@@ -104,18 +127,24 @@ bool Security::savePasswordToFile(int userID, const std::string &encryptedPasswo
     return false;
 }
 
-// Wczytanie zaszyfrowanego hasła z pliku JSON
+// Wczytanie hasła z pliku
 bool Security::loadPasswordFromFile(int userID, std::string &encryptedPassword)
 {
     std::ifstream inFile("passwords.json");
     if (inFile.is_open())
     {
-        // Wczytaj dane z pliku
         json data;
-        inFile >> data;
+        try
+        {
+            inFile >> data;
+        }
+        catch (const json::parse_error &e)
+        {
+            inFile.close();
+            throw std::runtime_error("JSON parse error: " + std::string(e.what()));
+        }
         inFile.close();
 
-        // Sprawdź, czy dane dla danego użytkownika istnieją
         std::string key = std::to_string(userID);
         if (data.contains(key))
         {

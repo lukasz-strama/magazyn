@@ -7,7 +7,7 @@
 
 /**
  * @class Security
- * @brief Zarządza systemem logowania, umożliwiając rejestrację, logowanie oraz zmianę hasła użytkownika.
+ * @brief Zarządza systemem logowania, umożliwiając rejestrację, logowanie, zmianę hasła użytkownika oraz wylogowanie.
  *
  * Klasa Security zapewnia mechanizmy uwierzytelniania użytkowników oraz zarządzania hasłami.
  * Hasła są szyfrowane za pomocą algorytmu jednokierunkowego i przechowywane w formacie JSON.
@@ -17,15 +17,17 @@
  * - Rejestrację nowych użytkowników (szyfrowanie i zapis hasła)
  * - Logowanie istniejących użytkowników (walidacja hasła)
  * - Zmianę hasła (aktualizacja zaszyfrowanego hasła w pliku)
+ * - Wylogowanie użytkownika
  *
  * Przykład użycia:
  * @code
  *  try {
  *      User newUser(userID, initialPassword); // rejestracja nowego użytkownika
  *      User existingUser(userID); // logowanie istniejącego użytkownika
- *      bool isLoggedIn = existingUser.validateLogin(providedPassword);
+ *      bool isLoggedIn = existingUser.loginValidation(providedPassword);
  *      if (isLoggedIn) {
  *          existingUser.changePassword(newPassword); // zmiana hasła
+ *          existingUser.logout(); // wylogowanie użytkownika
  *      }
  *  } catch (const std::exception &e) {
  *      std::cerr << "Error: " << e.what() << std::endl;
@@ -37,6 +39,7 @@ class Security
 private:
     int userID;           /**< ID użytkownika */
     std::string password; /**< Hasło użytkownika */
+    bool loggedIn;        /**< Status zalogowania użytkownika */
 
     /**
      * @brief Szyfruje hasło za pomocą algorytmu jednokierunkowego.
@@ -58,6 +61,7 @@ private:
      * @param userID ID użytkownika
      * @param encryptedPassword Zaszyfrowane hasło do zapisania
      * @return Zwraca true, jeśli zapis się powiódł, false w przeciwnym razie
+     * @throw std::runtime_error w przypadku błędu zapisu do pliku
      */
     static bool savePasswordToFile(int userID, const std::string &encryptedPassword);
 
@@ -69,6 +73,7 @@ private:
      * @param userID ID użytkownika
      * @param encryptedPassword Zmienna referencyjna, do której zostanie wczytane zaszyfrowane hasło
      * @return Zwraca true, jeśli wczytanie się powiodło, false w przeciwnym razie
+     * @throw std::runtime_error w przypadku błędu odczytu z pliku
      */
     static bool loadPasswordFromFile(int userID, std::string &encryptedPassword);
 
@@ -103,7 +108,7 @@ public:
      * @param inputPassword Hasło podane przez użytkownika
      * @return Zwraca true, jeśli hasło jest poprawne, false w przeciwnym razie
      */
-    bool loginValidation(const std::string &inputPassword) const;
+    bool loginValidation(const std::string &inputPassword);
 
     /**
      * @brief Zmienia hasło użytkownika na nowe.
@@ -112,8 +117,21 @@ public:
      *
      * @param newPassword Nowe hasło do ustawienia
      * @return Zwraca true, jeśli zmiana hasła się powiodła, false w przeciwnym razie
+     * @throw std::runtime_error jeśli zapis hasła do pliku się nie powiedzie
      */
     bool changePassword(const std::string &newPassword);
+
+    /**
+     * @brief Wylogowuje użytkownika.
+     */
+    void logout();
+
+    /**
+     * @brief Sprawdza, czy użytkownik jest zalogowany.
+     *
+     * @return Zwraca true, jeśli użytkownik jest zalogowany, false w przeciwnym razie
+     */
+    bool isLoggedIn() const;
 
     /**
      * @brief Zwraca ID użytkownika.
