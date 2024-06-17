@@ -19,6 +19,7 @@
  * - Zmianę hasła (aktualizacja zaszyfrowanego hasła w pliku)
  * - Wylogowanie użytkownika
  *  test
+ * test 2
  *
  * Przykład użycia:
  * @code
