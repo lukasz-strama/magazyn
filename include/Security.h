@@ -87,7 +87,7 @@ public:
      *
      * @param id ID użytkownika
      * @param pass Hasło użytkownika
-     * @throw std::runtime_error jeśli zapis hasła do pliku się nie powiedzie
+     * @throw std::runtime_error, jeśli zapis hasła do pliku się nie powiedzie
      */
     Security(int id, const std::string &pass);
 
@@ -97,7 +97,7 @@ public:
      * Inicjalizuje obiekt Security dla istniejącego użytkownika, wczytuje zaszyfrowane hasło z pliku.
      *
      * @param id ID użytkownika
-     * @throw std::runtime_error jeśli wczytanie hasła z pliku się nie powiedzie
+     * @throw std::runtime_error, jeśli wczytanie hasła z pliku się nie powiedzie
      */
     Security(int id);
 
@@ -119,7 +119,7 @@ public:
      *
      * @param newPassword Nowe hasło do ustawienia
      * @return Zwraca true, jeśli zmiana hasła się powiodła, false w przeciwnym razie
-     * @throw std::runtime_error jeśli zapis hasła do pliku się nie powiedzie
+     * @throw std::runtime_error, jeśli zapis hasła do pliku się nie powiedzie
      */
     bool changePassword(const std::string &newPassword);
 
