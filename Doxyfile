@@ -59,7 +59,7 @@ NUM_PROC_THREADS       = 1
 
 INPUT                  = src include
 FILE_PATTERNS          = *.cpp *.h 
-RECURSIVE              = NO
+RECURSIVE              = YES
 EXCLUDE                = test
 EXCLUDE_PATTERNS       = 
 EXCLUDE_SYMBOLS        = 
