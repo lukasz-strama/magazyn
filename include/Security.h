@@ -18,6 +18,7 @@
  * - Logowanie istniejących użytkowników (walidacja hasła)
  * - Zmianę hasła (aktualizacja zaszyfrowanego hasła w pliku)
  * - Wylogowanie użytkownika
+ *  test
  *
  * Przykład użycia:
  * @code
