@@ -48,7 +48,7 @@ jobs:
     environment:
       name: github-pages
       # Adjust the URL based on where your documentation is hosted
-      url: ${{ steps.deployment.outputs.page_url }}
+      url: ${{ steps.deploy.outputs.url }}
     runs-on: ubuntu-latest
     needs: build
     steps:
@@ -64,7 +64,7 @@ jobs:
 
       # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          token: ${{ secrets.GITHUB_TOKEN }}
-          artifact-dir: ./doc/html  # Adjust this path if necessary
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./doc/html  # Adjust this path if necessary
