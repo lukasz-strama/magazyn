@@ -81,6 +81,8 @@ Aby zbudować i uruchomić ten projekt, będziesz potrzebować:
 
 ### Generowanie dokumentacji HTML w doxygen:
 
+Automatycznie wygenerowana dokumentacja na podstawie gałęzi ```main``` znajduje się [tutaj](https://lukasz-strama.github.io/pbl-magazyn/d1/d13/classSecurity.html). Aktualizowana jest z każdym ```push```. 
+
 1. Wymagana wersja >= 1.9.5
 
 2. Przejdz do głównego katalogu projektu:
