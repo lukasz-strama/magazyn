@@ -1,4 +1,5 @@
 DOXYFILE_ENCODING      = UTF-8
+USE_MDFILE_AS_MAINPAGE = README.md
 PROJECT_NAME           = "PBL Magazyn"
 PROJECT_NUMBER         = v0.0.1
 PROJECT_BRIEF          = PBL MAGAZYN to projekt w języku C++.
@@ -57,7 +58,7 @@ TYPEDEF_HIDES_STRUCT   = NO
 LOOKUP_CACHE_SIZE      = 0
 NUM_PROC_THREADS       = 1
 
-INPUT                  = src include
+INPUT                  = src include README.md
 FILE_PATTERNS          = *.cpp *.h 
 RECURSIVE              = YES
 EXCLUDE                = test
@@ -66,7 +67,7 @@ EXCLUDE_SYMBOLS        =
 EXAMPLE_PATH           = 
 EXAMPLE_PATTERNS       = *
 EXAMPLE_RECURSIVE      = NO
-IMAGE_PATH             = 
+IMAGE_PATH             = doc/diagram_klas.png
 INPUT_FILTER           = 
 FILTER_PATTERNS        = 
 FILTER_SOURCE_FILES    = NO
