@@ -6,7 +6,7 @@
 2. [Dokumentacja](#-dokumentacja)
    - [Diagram UML](#diagram-uml-klas)
    - [Dokumentacja HTML w doxygen](#generowanie-dokumentacji-html-w-doxygen)
-4. [Autorzy](#-autorzy)
+3. [Autorzy](#-autorzy)
 
 ## 🚀 Rozpoczęcie
 
@@ -54,45 +54,47 @@ Aby zbudować i uruchomić ten projekt, będziesz potrzebować:
 5. **Dla użytkowników VS Code:**
 
    Umożliwienie kompilacji poprzez skrót klawiszowy **Ctrl+Shift+B**
-   
+
    .vscode/tasks.json
+
    ```json
    {
-    "version": "2.0.0",
-    "tasks": [
-        {
-            "label": "Make",
-            "type": "shell",
-            "command": "make",
-            "group": {
-                "kind": "build",
-                "isDefault": true
-            },
-            "problemMatcher": []
-        }
-    ]
+     "version": "2.0.0",
+     "tasks": [
+       {
+         "label": "Make",
+         "type": "shell",
+         "command": "make",
+         "group": {
+           "kind": "build",
+           "isDefault": true
+         },
+         "problemMatcher": []
+       }
+     ]
    }
    ```
-   
+
 ## 📃 Dokumentacja
 
 ### Diagram UML klas:
+
 ![Diagram](doc/diagram_klas.png)
 
 ### Generowanie dokumentacji HTML w doxygen:
 
-Automatycznie wygenerowana dokumentacja na podstawie gałęzi ```main``` znajduje się [tutaj](https://lukasz-strama.github.io/pbl-magazyn/index.html). Aktualizowana jest z każdym ```push```. 
+Automatycznie wygenerowana dokumentacja na podstawie gałęzi `main` znajduje się [tutaj](https://lukasz-strama.github.io/pbl-magazyn/index.html). Aktualizowana jest z każdym `push`.
 
 1. Wymagana wersja >= 1.9.5
 
 2. Przejdz do głównego katalogu projektu:
-   
+
    ```sh
    cd magazyn
    ```
 
 3. Wygeneruj dokumentacje na podstawie pliku Doxyfile:
-   
+
    ```sh
    doxygen Doxyfile
    ```
@@ -103,9 +105,9 @@ Automatycznie wygenerowana dokumentacja na podstawie gałęzi ```main``` znajduj
    doc/html/index.html
    ```
 
-Wygenerowana dokumentacja korzysta z dodatkowego arkusza stylów, arkusz powinenn już znajdować się w folderze z dokumentacją:
+Wygenerowana dokumentacja korzysta z dodatkowego arkusza stylów, arkusz powinen już znajdować się w folderze z dokumentacją:
 [Doxygen Awesome](https://jothepro.github.io/doxygen-awesome-css)
-   
+
 ## ✨ Autorzy
 
 | Zarządzanie i prezentacja 👨🏻‍🏫 | Programowanie 🧑🏻‍💻 | Dokumentacja 📄 |
