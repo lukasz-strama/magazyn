@@ -36,15 +36,12 @@ jobs:
       - name: Generate Doxygen Documentation
         run: doxygen ./Doxyfile
 
-      # (Optional) You may need additional steps here depending on your project setup
-      # For example, if your Doxygen output is in a specific directory, you may need to copy it to a deployable directory.
-
-      # Upload Doxygen artifact (if needed)
+      # Upload Doxygen artifact
       - name: Upload Doxygen Artifact
         uses: actions/upload-artifact@v2
         with:
-          name: doxygen-html
-          path: doc/html
+          name: doxygen-docs
+          path: ./doc/html  # Adjust this path if your Doxygen generates output to a different directory
 
   # Deployment job
   deploy:
@@ -57,14 +54,17 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-      
-      # (Optional) Download Doxygen artifact if uploaded
+
+      # Download Doxygen artifact
       - name: Download Doxygen Artifact
         uses: actions/download-artifact@v2
         with:
-          name: doxygen-html
-          path: doc/html
+          name: doxygen-docs
+          path: ./doc/html  # Adjust this path if your Doxygen generates output to a different directory
 
       # Deploy to GitHub Pages
       - name: Deploy to GitHub Pages
         uses: actions/deploy-pages@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          artifact-dir: ./doc/html  # Adjust this path if necessary
