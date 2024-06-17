@@ -13,9 +13,11 @@ Security::Security(int id, const std::string &pass = "") : userID(id)
 {
     if (!pass.empty())
     {
-        // Jeśli podano hasło, zaszyfruj je i zapisz do pliku
         password = encryptPassword(pass);
-        savePasswordToFile(userID, password);
+        if (!savePasswordToFile(userID, password))
+        {
+            throw std::runtime_error("Failed to save password to file.");
+        }
     }
 }
 
@@ -23,11 +25,11 @@ Security::Security(int id, const std::string &pass = "") : userID(id)
 Security::Security(int id) : userID(id)
 {
     std::string storedPassword;
-    if (loadPasswordFromFile(userID, storedPassword))
+    if (!loadPasswordFromFile(userID, storedPassword))
     {
-        // Jeśli uda się wczytać hasło z pliku, przypisz je do zmiennej password
-        password = storedPassword;
+        throw std::runtime_error("Failed to load password from file.");
     }
+    password = storedPassword;
 }
 
 // Szyfrowanie hasła za pomocą prostego algorytmu
