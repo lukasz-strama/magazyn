@@ -109,18 +109,8 @@ $(function(){initNavTree('d0/d96/classBarcodeReader_adc836fd7c60564fc0406d13e3c5
       </table>
 </div><div class="memdoc">
 
-<p>Publiczna metoda sprawdzająca poprawność utworzonego kodu, zwracająca false, jeżeli podany warunek nie zostanie spełniony, true w przeciwnym wypadku. </p>
-<p>Warunek składa się z: </p><dl class="params"><dt>Parametry</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">barcode</td><td>ciąg znaków tworzący kod towaru.</td></tr>
-  </table>
-  </dd>
-</dl>
-<p>Warunek sprawdza, czy:</p><ul>
-<li>ciąg składa się z 12 znaków,</li>
-<li>czy znaki tworzące kod są cyframi.</li>
-</ul>
-<p>Jeżeli została zwróona wartość true, sprawdzana jest poprawność ostatniej cyfry, reprezentującej checkSum. Jeżeli obliczona checkSum z 11 pierwszych cyfr kodu pokrywa się z checkSum, zwrócony zostaje poprawny kod towaru. </p>
+<p>Metoda zwracająca aktualną wartość kodu towaru. </p>
+<p>Jeśli wartość nie została ustawiona zostanie zwrócony pusty ciąg znaków. </p>
 
 </div>
 </div>

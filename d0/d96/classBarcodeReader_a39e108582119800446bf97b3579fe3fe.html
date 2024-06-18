@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PBL Magazyn: BarcodeReader::validateBarcode</title>
+<title>PBL Magazyn: BarcodeReader::generateBarcode</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -68,7 +68,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('d0/d96/classBarcodeReader_a64c9bb4778bc4a692e68afa10421d5eb.html','../../'); initResizable(); });
+$(function(){initNavTree('d0/d96/classBarcodeReader_a39e108582119800446bf97b3579fe3fe.html','../../'); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -94,33 +94,47 @@ $(function(){initNavTree('d0/d96/classBarcodeReader_a64c9bb4778bc4a692e68afa1042
 </div>
 
 <div class="contents">
-<a id="a64c9bb4778bc4a692e68afa10421d5eb" name="a64c9bb4778bc4a692e68afa10421d5eb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a64c9bb4778bc4a692e68afa10421d5eb">&#9670;&#160;</a></span>validateBarcode()</h2>
+<a id="a39e108582119800446bf97b3579fe3fe" name="a39e108582119800446bf97b3579fe3fe"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39e108582119800446bf97b3579fe3fe">&#9670;&#160;</a></span>generateBarcode()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">bool BarcodeReader::validateBarcode </td>
+          <td class="memname">bool BarcodeReader::generateBarcode </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>barcode</em></span></td><td>)</td>
-          <td> const</td>
+          <td class="paramtype">char</td>          <td class="paramname"><span class="paramname"><em>countryCode</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>manufacturerCode</em>, </span></td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;</td>          <td class="paramname"><span class="paramname"><em>productCode</em></span>&#160;)</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Publiczna metoda sprawdzająca poprawność utworzonego kodu, zwracająca false, jeżeli podany warunek nie zostanie spełniony, true w przeciwnym wypadku. </p>
+<p>Publiczna metoda pozwalająca na tworzenie kodu towaru, zwracająca false, jeżeli podany warunek nie zostanie spełniony, true w przeciwnym wypadku. </p>
 <p>Warunek składa się z: </p><dl class="params"><dt>Parametry</dt><dd>
   <table class="params">
-    <tr><td class="paramname">barcode</td><td>ciąg znaków tworzący kod towaru.</td></tr>
+    <tr><td class="paramname">countryCode</td><td>znak reprezentujący kod kraju, </td></tr>
+    <tr><td class="paramname">manufacturerCode</td><td>pięciocyfrowy kod producenta, </td></tr>
+    <tr><td class="paramname">productCode</td><td>pięciocyfrowy kod produktu.</td></tr>
   </table>
   </dd>
 </dl>
 <p>Warunek sprawdza, czy:</p><ul>
-<li>ciąg składa się z 12 znaków,</li>
-<li>czy znaki tworzące kod są cyframi.</li>
+<li>countryCode jest cyfrą,</li>
+<li>manufacturerCode oraz productCode są ciągami 5 cyfr.</li>
 </ul>
-<p>Jeżeli została zwróona wartość true, sprawdzana jest poprawność ostatniej cyfry, reprezentującej checkSum. Jeżeli obliczona checkSum z 11 pierwszych cyfr kodu pokrywa się z checkSum, zwrócony zostaje poprawny kod towaru. </p>
+<p>W sytuacji zwrócenia true, generowany jest kod, następujący sposób:</p><ul>
+<li>tworzy ciąg cyfr łącząc countryCode, manufacturerCode, productCode,</li>
+<li>po obliczeniu checkSum dodaje ją na koniec ciągu cyfr, tworząc kod towaru. </li>
+</ul>
 
 </div>
 </div>
