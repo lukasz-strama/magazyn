@@ -19,9 +19,22 @@
  * 
  * Przykład użycia: 
  * 
- * TO DO
+ * @code 
  * 
+ * try {
+ *  BarcodeReader newBarcode; // stworzenie nowego objektu
+ *  int checksum = newBarcode.calculateChecksum(barcode); // zliczanie sumy kontrolnej
+ *  bool isValidBarcode = newBarcode.generateBarcode(countryCode, manufacturerCode, productCode); // generowanie nowego kodu towaru
+ *  if (isValidBarcode) {
+        std::string completeBarcode = newBarcode.getBarcode(); // poprawny kod towaru
+            } else { // niepoprawny kod towaru
+            }
+} catch (const std::exception &e) {
+    std::cerr << "Error: " << e.what() << std::endl;
+}
+ *  @endcode
  */
+
 class BarcodeReader
 {
 private:
@@ -39,10 +52,10 @@ private:
      */
 
 public:
-    BarcodeReader(); /**Konstruktor ustawiający wartość początkową kodu towaru */
+/**Konstruktor ustawiający wartość początkową kodu towaru */
+    BarcodeReader(); 
 
-    bool generateBarcode(char countryCode, const std::string &manufacturerCode, const std::string &productCode);
-    /** @brief 
+ /** @brief 
      * Publiczna metoda pozwalająca na tworzenie kodu towaru, 
      * zwracająca false, jeżeli podany warunek nie zostanie spełniony, true w przeciwnym wypadku.
      * 
@@ -59,9 +72,9 @@ public:
      * - tworzy ciąg cyfr łącząc countryCode, manufacturerCode, productCode,
      * - po obliczeniu checkSum dodaje ją na koniec ciągu cyfr, tworząc kod towaru.
      */
-
-    bool validateBarcode(const std::string &barcode) const;
-    /** @brief
+    bool generateBarcode(char countryCode, const std::string &manufacturerCode, const std::string &productCode);
+   
+/** @brief
      * Publiczna metoda sprawdzająca poprawność utworzonego kodu,
      * zwracająca false, jeżeli podany warunek nie zostanie spełniony, true w przeciwnym wypadku.
      * 
@@ -77,12 +90,14 @@ public:
      * Jeżeli obliczona checkSum z 11 pierwszych cyfr kodu pokrywa się z checkSum, 
      * zwrócony zostaje poprawny kod towaru.
      */
-
-    std::string getBarcode() const;
-    /** @brief 
+    bool validateBarcode(const std::string &barcode) const;
+    
+/** @brief 
      * Metoda zwracająca aktualną wartość kodu towaru. 
      * Jeśli wartość nie została ustawiona zostanie zwrócony pusty ciąg znaków.
      */
+    std::string getBarcode() const;
+    
 };
 
 #endif // BARCODEREADER_H
