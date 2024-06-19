@@ -52,7 +52,7 @@ private:
      */
 
 public:
-/**Konstruktor ustawiający wartość początkową kodu towaru */
+/** @brief Konstruktor ustawiający wartość początkową kodu towaru */
     BarcodeReader(); 
 
  /** @brief 
