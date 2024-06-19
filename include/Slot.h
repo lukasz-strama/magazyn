@@ -8,11 +8,12 @@
 /**
  * @brief Abstrakcyjna klasa reprezentująca towar.
  */
-class Slot {
+class Slot
+{
 protected:
     std::vector<Item> items; ///< Wektor towarów w slocie
-    std::string location;      ///< Lokalizacja slotu
-    bool isFull;               ///< Czy slot jest pełny
+    std::string location;    ///< Lokalizacja slotu
+    bool isFull;             ///< Czy slot jest pełny
 
 public:
     /**
@@ -20,7 +21,7 @@ public:
      * @param towar Towar do dodania.
      * @return true jeśli towar został dodany, false w przeciwnym razie.
      */
-    virtual bool addPackage(const Item& item) = 0;
+    virtual bool addPackage(const Item &item) = 0;
 
     /**
      * @brief Sprawdza czy slot jest pełny.
@@ -37,8 +38,7 @@ public:
     /**
      * @brief Ustawia lokalizację slotu.
      */
-    void setLocation(const std::string& _location);
-
+    void setLocation(const std::string &_location);
 
     virtual ~Slot() = default;
 };

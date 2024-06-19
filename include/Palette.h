@@ -7,7 +7,8 @@
 /**
  * @brief Zarzadzanie paletą.
  */
-class Palette : public Slot{
+class Palette : public Slot
+{
 private:
     std::string type; ///< Typ palety
 
@@ -22,14 +23,14 @@ public:
      * @brief Ustawia typ palety.
      * @param type Typ palety.
      */
-    void setType(const std::string& type);
+    void setType(const std::string &type);
 
     /**
      * @brief Dodaje towar do palety.
      * @param towar Towar do dodania.
      * @return true jeśli towar został dodany, false w przeciwnym razie.
      */
-    bool addPackage(const Item& item) override;
+    bool addPackage(const Item &item) override;
 };
 
 #endif // Palette_H
