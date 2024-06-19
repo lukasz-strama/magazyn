@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['barcodereader_0',['BarcodeReader',['../d0/d96/classBarcodeReader.html#acbcba5853906809c4d11b464a2383a1f',1,'BarcodeReader']]]
+  ['addpackage_0',['addPackage',['../de/dad/classPalette_af8e60fdaed0f34d93422a44b6c724efc.html#af8e60fdaed0f34d93422a44b6c724efc',1,'Palette::addPackage()'],['../de/d6d/classShelf_a55b827ff3c9dfef409a2064b3db0bdad.html#a55b827ff3c9dfef409a2064b3db0bdad',1,'Shelf::addPackage()'],['../df/d6d/classSlot_ac24d05b7843520b521843bafdcd7a874.html#ac24d05b7843520b521843bafdcd7a874',1,'Slot::addPackage()']]]
 ];

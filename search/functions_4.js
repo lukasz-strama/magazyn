@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['loginvalidation_0',['loginValidation',['../d1/d13/classSecurity_a3af1c000dc3123eafad332de0223f328.html#a3af1c000dc3123eafad332de0223f328',1,'Security']]],
-  ['logout_1',['logout',['../d1/d13/classSecurity.html#a92fb6d9e769d5ba4547c4cdc8588343b',1,'Security']]]
+  ['isloggedin_0',['isLoggedIn',['../d1/d13/classSecurity_acceb12d52dfb0975c97f90dc0a8f3452.html#acceb12d52dfb0975c97f90dc0a8f3452',1,'Security']]],
+  ['isslotfull_1',['isSlotFull',['../df/d6d/classSlot_a1695b6f420ffa4eadfdfdae53fd2470c.html#a1695b6f420ffa4eadfdfdae53fd2470c',1,'Slot']]],
+  ['item_2',['Item',['../d0/dae/classItem_a88ba8ae5ac79b47fd21b1c7b773dd33e.html#a88ba8ae5ac79b47fd21b1c7b773dd33e',1,'Item']]]
 ];

@@ -29,9 +29,11 @@ var NAVTREE =
     [ "Struktury Danych", "annotated.html", [
       [ "Struktury danych", "annotated.html", "annotated_dup" ],
       [ "Indeks struktur danych", "classes.html", null ],
+      [ "Hierarchia klas", "hierarchy.html", "hierarchy" ],
       [ "Pola danych", "functions.html", [
         [ "Wszystko", "functions.html", null ],
-        [ "Funkcje", "functions_func.html", null ]
+        [ "Funkcje", "functions_func.html", null ],
+        [ "Zmienne", "functions_vars.html", null ]
       ] ]
     ] ],
     [ "Pliki", "files.html", [

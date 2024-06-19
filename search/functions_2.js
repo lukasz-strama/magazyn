@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['generatebarcode_0',['generateBarcode',['../d0/d96/classBarcodeReader_a39e108582119800446bf97b3579fe3fe.html#a39e108582119800446bf97b3579fe3fe',1,'BarcodeReader']]],
-  ['getbarcode_1',['getBarcode',['../d0/d96/classBarcodeReader_adc836fd7c60564fc0406d13e3c553bf6.html#adc836fd7c60564fc0406d13e3c553bf6',1,'BarcodeReader']]]
+  ['changepassword_0',['changePassword',['../d1/d13/classSecurity_a0230e728505f52afea904b2d59bb267a.html#a0230e728505f52afea904b2d59bb267a',1,'Security']]]
 ];

@@ -1,11 +1,12 @@
 var indexSectionsWithContent =
 {
   0: "abcdghiklmprsuvw✨📃📦🚀",
-  1: "bs",
-  2: "bs",
-  3: "bcgilsv",
-  4: "u",
-  5: "mp📦"
+  1: "bips",
+  2: "bis",
+  3: "abcgilsuv",
+  4: "il",
+  5: "u",
+  6: "mp📦"
 };
 
 var indexSectionNames =
@@ -14,8 +15,9 @@ var indexSectionNames =
   1: "classes",
   2: "files",
   3: "functions",
-  4: "typedefs",
-  5: "pages"
+  4: "variables",
+  5: "typedefs",
+  6: "pages"
 };
 
 var indexSectionLabels =
@@ -24,7 +26,8 @@ var indexSectionLabels =
   1: "Struktury Danych",
   2: "Pliki",
   3: "Funkcje",
-  4: "Definicje typów",
-  5: "Strony"
+  4: "Zmienne",
+  5: "Definicje typów",
+  6: "Strony"
 };
 

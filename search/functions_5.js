@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['security_0',['Security',['../d1/d13/classSecurity_a66d14b940550f7fb94d3b7a32dadc846.html#a66d14b940550f7fb94d3b7a32dadc846',1,'Security::Security(int id, const std::string &amp;pass)'],['../d1/d13/classSecurity_a0ce49938d9b1504b75c36d65e7fb1ddd.html#a0ce49938d9b1504b75c36d65e7fb1ddd',1,'Security::Security(int id)']]]
+  ['loginvalidation_0',['loginValidation',['../d1/d13/classSecurity_a3af1c000dc3123eafad332de0223f328.html#a3af1c000dc3123eafad332de0223f328',1,'Security']]],
+  ['logout_1',['logout',['../d1/d13/classSecurity.html#a92fb6d9e769d5ba4547c4cdc8588343b',1,'Security']]]
 ];
