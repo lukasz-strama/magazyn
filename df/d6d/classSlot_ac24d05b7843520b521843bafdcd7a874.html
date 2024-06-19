@@ -117,14 +117,19 @@ $(function(){initNavTree('df/d6d/classSlot_ac24d05b7843520b521843bafdcd7a874.htm
 </table>
 </div><div class="memdoc">
 
-<p>Dodaje towar do slotu. </p>
+<p>Publiczna metoda, dodająca towar do slotu. </p>
+<p>Zwrca true, jeśli dodanie towaru jest możliwe, false w przeciwnym wypadku.</p>
 <dl class="params"><dt>Parametry</dt><dd>
   <table class="params">
-    <tr><td class="paramname">towar</td><td>Towar do dodania. </td></tr>
+    <tr><td class="paramname">towar</td><td>Towar do dodania.</td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Zwraca</dt><dd>true jeśli towar został dodany, false w przeciwnym razie. </dd></dl>
+<p>Warunek sprawdza, czy:</p><ul>
+<li>na wybrany slot możliwe jest dodoanie towaru.</li>
+</ul>
+<p>W sytuacji zwrócenia true, towar dodawany jest na slot, W przeciwnej sytuacji (slot jest pełny), zwraca false.</p>
+<dl class="section return"><dt>Zwraca</dt><dd>zwraca true, jeśli towar został dodany, false kiedy dodanei towaru nie jest możliwe. </dd></dl>
 
 <p>Implementowany w <a class="el" href="../../de/dad/classPalette_af8e60fdaed0f34d93422a44b6c724efc.html#af8e60fdaed0f34d93422a44b6c724efc">Palette</a> i <a class="el" href="../../de/d6d/classShelf_a55b827ff3c9dfef409a2064b3db0bdad.html#a55b827ff3c9dfef409a2064b3db0bdad">Shelf</a>.</p>
 

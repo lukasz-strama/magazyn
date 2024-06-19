@@ -117,13 +117,17 @@ $(function(){initNavTree('de/dad/classPalette_af8e60fdaed0f34d93422a44b6c724efc.
 </table>
 </div><div class="memdoc">
 
-<p>Dodaje towar do palety. </p>
+<p>Metoda publiczna, która umożliwia dodanie towaru do palety. </p>
 <dl class="params"><dt>Parametry</dt><dd>
   <table class="params">
-    <tr><td class="paramname">towar</td><td>Towar do dodania. </td></tr>
+    <tr><td class="paramname">towar</td><td>Towar do dodania.</td></tr>
   </table>
   </dd>
 </dl>
+<p>Warunek sprawdza, czy:</p><ul>
+<li>wybrana paleta jest pełna.</li>
+</ul>
+<p>W sytuacji zwrócenia true, towar dodawany jest na paletę, W przeciwnej sytuacji (paleta jest pełna), zwraca false.</p>
 <dl class="section return"><dt>Zwraca</dt><dd>true jeśli towar został dodany, false w przeciwnym razie. </dd></dl>
 
 <p>Implementuje <a class="el" href="../../df/d6d/classSlot_ac24d05b7843520b521843bafdcd7a874.html#ac24d05b7843520b521843bafdcd7a874">Slot</a>.</p>

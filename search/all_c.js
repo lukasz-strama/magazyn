@@ -6,5 +6,6 @@ var searchData=
   ['setlocation_3',['setLocation',['../df/d6d/classSlot.html#a1c8d563f03bb06abea8ef033cab79d4e',1,'Slot']]],
   ['settype_4',['setType',['../de/dad/classPalette_acac80bded7161269b0a1238149d9c780.html#acac80bded7161269b0a1238149d9c780',1,'Palette']]],
   ['shelf_5',['Shelf',['../de/d6d/classShelf.html',1,'Shelf'],['../de/d6d/classShelf_a54bb6ba4b63f7473afbd1fb7d17f9c42.html#a54bb6ba4b63f7473afbd1fb7d17f9c42',1,'Shelf::Shelf()']]],
-  ['slot_6',['Slot',['../df/d6d/classSlot.html',1,'']]]
+  ['shelf_2eh_6',['Shelf.h',['../d3/d68/Shelf_8h.html',1,'']]],
+  ['slot_7',['Slot',['../df/d6d/classSlot.html',1,'']]]
 ];

@@ -117,13 +117,17 @@ $(function(){initNavTree('de/d6d/classShelf_a55b827ff3c9dfef409a2064b3db0bdad.ht
 </table>
 </div><div class="memdoc">
 
-<p>Dodaje towar do półki. </p>
+<p>Publiczna metoda, umożliwiająca dodanie towaru do półki. </p>
 <dl class="params"><dt>Parametry</dt><dd>
   <table class="params">
-    <tr><td class="paramname">towar</td><td>Towar do dodania. </td></tr>
+    <tr><td class="paramname">towar</td><td>Towar do dodania.</td></tr>
   </table>
   </dd>
 </dl>
+<p>Metoda sprawdza, czy:</p><ul>
+<li>wybrana półka jest pełna.</li>
+</ul>
+<p>W sytuacji, w której półka jest pusta, zwraca true, W przeciwnej sytuacji zwraca false (półka jest zajęta).</p>
 <dl class="section return"><dt>Zwraca</dt><dd>true jeśli towar został dodany, false w przeciwnym razie. </dd></dl>
 
 <p>Implementuje <a class="el" href="../../df/d6d/classSlot_ac24d05b7843520b521843bafdcd7a874.html#ac24d05b7843520b521843bafdcd7a874">Slot</a>.</p>
