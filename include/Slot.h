@@ -5,49 +5,14 @@
 #include <string>
 #include "Item.h"
 
-/** @file */
-
-
 /**
- * @class Slot
- * @brief Zarządzanie slotem, umożliwiając dodanie towaru, określenie lokalizacji slotu oraz ustawienie lokalizacji slotu.
- * 
- * Klasa abstrakcyjna, umożliwiająca dodanie towaru, w sytuacji, kiedy miejsce jest puste, w przeciwnym wypadku zwraca false,
- * Pozwala na określenie lokalziacji oraz dodanie lokalizacji slotu.
- * 
- * Klasa ta obsługuje:
- * - dodanie towaru na slot,
- * - ustawienie lokalizacji,
- * - określenie lokalizacji.
- * 
- * 
- * Przykład użycia:
- * @code
- * try{
- * Slot slot; // tworzenie obiektu klasy Slot
- * bool isAdded= slot.addPackage(item); // dodanie towaru
- * if(!isSlotFull){
- * items.push_back(item);
- * return true; // slot jest pusty, dodano towar
- * }
- * else {
- * return false; // slot jest pełny, nie można dodać towaru
- * }
- * }catch (const std::exception &e) {
-    std::cerr << "Error: " << e.what() << std::endl;
- * }
-  slot.setLocation(location); // ustawienie lokalizacji slotu
-  slot.getLocation(); // zwrócenie lokalizacji slotu
- * }
- * @endcode
+ * @brief Abstrakcyjna klasa reprezentująca towar.
  */
-
-
 class Slot {
 protected:
     std::vector<Item> items; ///< Wektor towarów w slocie
-    std::string location;      ///< Lokalizacja slotu
-    bool isFull;               ///< Czy slot jest pełny
+    std::string location;    ///< Lokalizacja slotu
+    bool isFull;             ///< Czy slot jest pełny
 
 public:
     /**
@@ -64,7 +29,7 @@ public:
      * 
      * @return zwraca true, jeśli towar został dodany, false kiedy dodanei towaru nie jest możliwe.
      */
-    virtual bool addPackage(const Item& item) = 0;
+    virtual bool addPackage(const Item &item) = 0;
 
     /**
      * @brief Publiczna metoda, sprawdzająca, czy slot jest pełny.
@@ -89,8 +54,7 @@ public:
     /**
      * @brief Ustawia lokalizację slotu.
      */
-    void setLocation(const std::string& _location);
-
+    void setLocation(const std::string &_location);
 
     virtual ~Slot() = default;
 };

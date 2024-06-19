@@ -4,39 +4,9 @@
 #include <string>
 #include "Slot.h"
 
-/** @file */
-
 /**
- * @class Palette 
- * @brief Zarzadzanie paletą, umożliwiając dodawanie na slot.
- * 
- * Klasa Palette pozwala na zarządzanie paletą, określenie jej typu.
- * Pozwala również na dodawanie na slot w razie, gdy jest on pusty. 
- * 
- * Klasa ta obsługuje:
- * - określanie typu palety,
- * - ustawienie palety na slocie. 
- *  
- * 
- * 
- * Przykład użycia:
- * @code
- * try{
- * Palette newPalette(type); // stworzenie objektu klasy Palette
- * bool isAdded = newPalette.addPackage(item); // dodanie towaru na paletę
- * if(!isSlotFull){
- * items.push_back(item);
- * return true; // paleta jest pusta, dodano towar
- * }
- * else 
- * return false; // paleta jest pełna, nie można dodać towaru
- * }
- * catch (const std::exception &e) {
-    std::cerr << "Error: " << e.what() << std::endl;
-}
- * @endcode
+ * @brief Zarzadzanie paletą.
  */
-
 class Palette : public Slot{
 private:
     std::string type; ///< Typ palety
@@ -55,7 +25,7 @@ public:
      * 
      * @param type Typ palety.
      */
-    void setType(const std::string& type);
+    void setType(const std::string &type);
 
     /**
      * @brief Metoda publiczna, która umożliwia dodanie towaru do palety.
@@ -69,7 +39,7 @@ public:
      * 
      * @return true jeśli towar został dodany, false w przeciwnym razie.
      */
-    bool addPackage(const Item& item) override;
+    bool addPackage(const Item &item) override;
 };
 
 #endif // Palette_H

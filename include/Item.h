@@ -28,12 +28,13 @@
  * }
  * @endcode
  */
-class Item {
+class Item
+{
 private:
-    int id;             ///< Identyfikator towaru
-    int quantity;       ///< Ilość towaru
-    int barcode;        ///< Kod kreskowy towaru
-    std::string owner;  ///< Właściciel towaru
+    int id;               ///< Identyfikator towaru
+    int quantity;         ///< Ilość towaru
+    int barcode;          ///< Kod kreskowy towaru
+    std::string owner;    ///< Właściciel towaru
     std::string itemType; ///< Typ towaru
 
 public:
@@ -48,7 +49,7 @@ public:
      * @param owner Właściciel towaru.
      * @param itemType Typ towaru.
      */
-    Item(int id, int quantity, int barcode, const std::string& owner, const std::string& itemType) ;
+    Item(int id, int quantity, int barcode, const std::string &owner, const std::string &itemType);
 
     /**
      * @brief Publiczna metoda, zwracająca dane towaru.
@@ -56,14 +57,14 @@ public:
      * 
      * @return zwraca szczegóły towaru w formacie string.
      */
-    std::string getItemDetails() const ;
+    std::string getItemDetails() const;
 
     /**
      * @brief Publiczna metoda, umożliwiająca zaktualizowanie ilości towaru.
      * 
      * @param newQuantity zwraca nową ilość towaru.
      */
-    void updateQuantity(int newQuantity) ;
+    void updateQuantity(int newQuantity);
 };
 
 #endif // ITEM_H

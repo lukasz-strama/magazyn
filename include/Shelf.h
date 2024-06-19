@@ -33,10 +33,11 @@
  * }
  * @endcode
  */
-class Shelf : public Slot {
+class Shelf : public Slot
+{
 private:
     std::tuple<int, int, int> dimensions; ///< Wymiary półki
-    int floor; ///< Piętro, na którym znajduje się półka
+    int floor;                            ///< Piętro, na którym znajduje się półka
 
 public:
     /**
@@ -47,7 +48,7 @@ public:
      * @param dimensions Wymiary półki.
      * @param floor Piętro, na którym znajduje się półka.
      */
-    Shelf(const std::tuple<int, int, int>& dimensions, int floor);
+    Shelf(const std::tuple<int, int, int> &dimensions, int floor);
 
     /**
      * @brief Publiczna metoda, zwracająca wymiary półki.
@@ -73,7 +74,7 @@ public:
      * 
      * @return true jeśli towar został dodany, false w przeciwnym razie.
      */
-    bool addPackage(const Item& towar) override;
+    bool addPackage(const Item &towar) override;
 };
 
 #endif // SHELF_H
