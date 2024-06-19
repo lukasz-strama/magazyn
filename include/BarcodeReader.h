@@ -23,7 +23,6 @@
  * 
  * try {
  *  BarcodeReader newBarcode; // stworzenie nowego objektu
- *  int checksum = newBarcode.calculateChecksum(barcode); // zliczanie sumy kontrolnej
  *  bool isValidBarcode = newBarcode.generateBarcode(countryCode, manufacturerCode, productCode); // generowanie nowego kodu towaru
  *  if (isValidBarcode) {
         std::string completeBarcode = newBarcode.getBarcode(); // poprawny kod towaru
@@ -43,7 +42,8 @@ private:
     int calculateChecksum(const std::string &barcode) const; /**<zliczanie sumy kontrolnej */
 
     /**
-     * @brief Suma kontrolna zliczana jest w następujący sposób:
+     * @brief Metoda prywatna zliczająca sumę kontrolną,
+     * W następujący sposób:
      * @param sumEven liczona jest suma cyfr na parzystych pozycjach,
      * @param sumOdd liczona jest suma cyfr na nieparzystych pozycjach,
      * @param total obliczana jest wartość sumy liczb: sumEven oraz potrojonej sumOdd,
@@ -57,7 +57,8 @@ public:
 
  /** @brief 
      * Publiczna metoda pozwalająca na tworzenie kodu towaru, 
-     * zwracająca false, jeżeli podany warunek nie zostanie spełniony, true w przeciwnym wypadku.
+     * 
+     * @return zwracająca false, jeżeli podany warunek nie zostanie spełniony, true w przeciwnym wypadku.
      * 
      * Warunek składa się z:
      * @param countryCode znak reprezentujący kod kraju,
@@ -76,7 +77,8 @@ public:
    
 /** @brief
      * Publiczna metoda sprawdzająca poprawność utworzonego kodu,
-     * zwracająca false, jeżeli podany warunek nie zostanie spełniony, true w przeciwnym wypadku.
+     * 
+     * @return zwracająca false, jeżeli podany warunek nie zostanie spełniony, true w przeciwnym wypadku.
      * 
      * Warunek składa się z:
      * @param barcode ciąg znaków tworzący kod towaru.
