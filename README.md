@@ -19,7 +19,6 @@ Aby zbudować i uruchomić ten projekt, będziesz potrzebować:
 - Git
 
 ### Kompilacja
-
 1. **Sklonuj repozytorium:**
 
    ```sh
