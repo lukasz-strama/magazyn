@@ -37,11 +37,10 @@
 class BarcodeReader
 {
 private:
+
     std::string barcode; /**< ciąg znaków kodu towaru */
 
-    int calculateChecksum(const std::string &barcode) const; /**<zliczanie sumy kontrolnej */
-
-    /**
+/**
      * @brief Metoda prywatna zliczająca sumę kontrolną,
      * W następujący sposób:
      * @param sumEven liczona jest suma cyfr na parzystych pozycjach,
@@ -50,10 +49,10 @@ private:
      * @param checkSum to (10- reszta z dzielenia total przez 10), a następnie brana jest reszta z dzielenia przez 10 podanej różnicy,
      * @return Suma kontrolna (zwrócona wartość jest cyfrą). 
      */
+    int calculateChecksum(const std::string &barcode) const; /**<zliczanie sumy kontrolnej */
 
 public:
 /** @brief Konstruktor ustawiający wartość początkową kodu towaru 
- * 
 */
     BarcodeReader(); 
 
