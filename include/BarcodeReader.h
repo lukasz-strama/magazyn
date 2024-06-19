@@ -6,7 +6,7 @@
 /** @file */
 
 /** @class BarcodeReader
- * @brief Służy do generowania kodu towaru, sprawdzania jego poprawności
+ * @brief Służy do generowania kodu towaru, sprawdzania jego poprawności.
  * 
  * Klasa BarcodeReader pozwala na utworzenie kodu towaru, w celu ułatwienia zarządzania towarami na magazynie. 
  * Kod towaru składa się z ciągu 12 znaków i jest tworzony na podstawie schematu, wykorzystującego m.in. sumę kontrolną.
@@ -52,11 +52,12 @@ private:
      */
 
 public:
-/** @brief Konstruktor ustawiający wartość początkową kodu towaru */
+/** @brief Konstruktor ustawiający wartość początkową kodu towaru 
+ * 
+*/
     BarcodeReader(); 
 
- /** @brief 
-     * Publiczna metoda pozwalająca na tworzenie kodu towaru, 
+ /** @brief Publiczna metoda pozwalająca na tworzenie kodu towaru, 
      * 
      * @return zwracająca false, jeżeli podany warunek nie zostanie spełniony, true w przeciwnym wypadku.
      * 
@@ -75,8 +76,7 @@ public:
      */
     bool generateBarcode(char countryCode, const std::string &manufacturerCode, const std::string &productCode);
    
-/** @brief
-     * Publiczna metoda sprawdzająca poprawność utworzonego kodu,
+/** @brief Publiczna metoda sprawdzająca poprawność utworzonego kodu,
      * 
      * @return zwracająca false, jeżeli podany warunek nie zostanie spełniony, true w przeciwnym wypadku.
      * 
@@ -94,8 +94,8 @@ public:
      */
     bool validateBarcode(const std::string &barcode) const;
     
-/** @brief 
-     * Metoda zwracająca aktualną wartość kodu towaru. 
+/** @brief Metoda zwracająca aktualną wartość kodu towaru.
+ *  
      * Jeśli wartość nie została ustawiona zostanie zwrócony pusty ciąg znaków.
      */
     std::string getBarcode() const;
