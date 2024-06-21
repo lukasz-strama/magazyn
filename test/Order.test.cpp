@@ -31,6 +31,18 @@ void runOrderTests()
             std::cout << "Details: " << order.getDetails() << std::endl;
             std::cout << std::endl;
         }
+
+        std::vector<Shipment> shipments = {shipment1, shipment2};
+        for (const Shipment &shipment : shipments)
+        {
+            std::cout << "Shipment Barcode: " << shipment.getBarcode() << std::endl;
+            Order order = shipment.getOrder();
+            std::cout << "Order ID: " << order.getId() << std::endl;
+            std::cout << "Customer: " << order.getCustomer() << std::endl;
+            std::cout << "Type: " << (order.getType() == Order::Type::Incoming ? "Incoming" : "Outgoing") << std::endl;
+            std::cout << "Details: " << order.getDetails() << std::endl;
+            std::cout << std::endl;
+        }
     }
     catch (const std::exception &e)
     {

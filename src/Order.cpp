@@ -3,25 +3,12 @@
 Order::Order(int id, const std::string &customer, Type type, const std::string &details)
     : id(id), customer(customer), type(type), details(details) {}
 
-int Order::getId() const
-{
-    return id;
-}
+int Order::getId() const { return id; }
+std::string Order::getCustomer() const { return customer; }
+Order::Type Order::getType() const { return type; }
+std::string Order::getDetails() const { return details; }
 
-std::string Order::getCustomer() const
-{
-    return customer;
-}
-
-Order::Type Order::getType() const
-{
-    return type;
-}
-
-std::string Order::getDetails() const
-{
-    return details;
-}
+void Order::setDetails(const std::string &details) { this->details = details; }
 
 nlohmann::json Order::toJson() const
 {

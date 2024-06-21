@@ -20,6 +20,8 @@ public:
     Type getType() const;
     std::string getDetails() const;
 
+    void setDetails(const std::string &details);
+
     // JSON serialization
     nlohmann::json toJson() const;
     static Order fromJson(const nlohmann::json &j);
