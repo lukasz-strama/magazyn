@@ -1,4 +1,3 @@
-// Shipment.cpp
 #include "Shipment.h"
 
 Shipment::Shipment(const std::string &barcode, const Order &order)
