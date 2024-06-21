@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['rozpoczęcie_0',['🚀 Rozpoczęcie',['../index.html#autotoc_md1',1,'']]]
+  ['palette_0',['Palette',['../de/dad/classPalette.html',1,'']]],
+  ['pbl_20magazyn_1',['📦 PBL MAGAZYN',['../index.html',1,'']]]
 ];
