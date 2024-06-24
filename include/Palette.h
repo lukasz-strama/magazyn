@@ -5,7 +5,31 @@
 #include "Slot.h"
 
 /**
- * @brief Zarzadzanie paletą.
+ * @class Palette 
+ * @brief Klasa dziedzicząca po klasie abstrakcyjnej Slot, 
+ * pozwalająca na zarzadzanie paletą.
+ * 
+ * Klasa obsługuje:
+ * - ustawienie na wybranej palecie,
+ * -ustawienie typu palety,
+ * - zwraca true jeśli towar może być dodany, false w przeciwnym wypadku.
+ * 
+ * Przykład użycia:
+ * 
+ * try{
+ * Palette palette;
+ * palette.setType(type);
+ * Item item1();
+        bool added1 = palette.addPackage(item1);
+       if (added1){
+       //dodano na paletę
+       }
+       else{
+       //nie dodano na paletę
+       }
+ * }catch (const std::exception &e) {
+        std::cerr << "An error occurred: " << e.what() << std::endl;
+ * }
  */
 class Palette : public Slot{
 private:

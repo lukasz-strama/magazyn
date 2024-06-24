@@ -6,8 +6,14 @@
 #include "Item.h"
 
 /**
- * @brief Abstrakcyjna klasa reprezentująca towar.
+ * @brief Klasa Slot jest klasą abstrakcyjną, która pozwala na przypisywanie lokalizacji towarom.
+ * Każdy slot posiada wektor przechowujący obiekty typu Item, 
+ * lokalizację określoną przez łańcuch znaków oraz stan informujący, czy slot jest pełny.
+ * Klasa ta zawiera metody do dodawania towarów, sprawdzania, czy slot jest pełny,
+ * oraz zarządzania lokalizacją slotu.
+ * 
  */
+
 class Slot {
 protected:
     std::vector<Item> items; ///< Wektor towarów w slocie
