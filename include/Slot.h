@@ -13,6 +13,7 @@ protected:
     std::vector<Item> items; ///< Wektor towarów w slocie
     std::string location;      ///< Lokalizacja slotu
     bool isFull;               ///< Czy slot jest pełny
+    size_t maxSize;          ///< Maksymalny rozmiar tablicy
 
 public:
     /**
@@ -21,6 +22,14 @@ public:
      * @return true jeśli towar został dodany, false w przeciwnym razie.
      */
     virtual bool addPackage(const Item& item) = 0;
+
+    /**
+     * @brief Usuwa dany towar ze slotu.
+     * @param barcode Item do usuniecia.
+     * @return true jeśli towar został usuniety, false w przeciwnym razie.
+     */
+    virtual bool removePackage(const int barcode) = 0;
+
 
     /**
      * @brief Sprawdza czy slot jest pełny.
@@ -39,6 +48,7 @@ public:
      */
     void setLocation(const std::string& _location);
 
+    const std::vector<Item>& getItems() const;
 
     virtual ~Slot() = default;
 };

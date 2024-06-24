@@ -1,6 +1,7 @@
 #include "../include/Shelf.h"
 #include "../include/Item.h"
 #include "../include/Palette.h"
+#include "../include/Warehouse.h"
 
 #include <iostream>
 
@@ -12,7 +13,6 @@ void shelfTest()
     
         Item item(1, 1, 1233232, "Daniel", "drewno");
         std::cout << item.getItemDetails() << std::endl;
-        item.updateQuantity(2);
 
         shelf.addPackage(item);
         shelf.setLocation("Magazyn 1");
@@ -24,5 +24,11 @@ void shelfTest()
         palette.addPackage(item);
         std::cout << "Czy paleta jest pełna: " << palette.isSlotFull() << std::endl;
         
-   
+        Warehouse warehouse;
+        warehouse.addSlotToStorageUnit(&shelf); 
+        warehouse.addSlotToStorageUnit(&palette);
+
+        std::cout<< warehouse.searchItem(item.getBarcode()).getItemDetails()<<std::endl;
+        
+        warehouse.removeSlotFromStorageUnit(&shelf);
 }

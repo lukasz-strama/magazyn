@@ -26,11 +26,23 @@ public:
      */
     std::tuple<int, int, int> getDimensions() const;
 
+      /**
+     * @brief Ustawia wymiary półki.
+     */
+    void setDimensions(std::tuple<int, int, int> __dimensions);
+
+
     /**
      * @brief Zwraca piętro, na którym znajduje się półka.
      * @return Piętro.
      */
     int getFloor() const;
+
+     /**
+     * @brief Ustawia piętro, na którym znajduje się półka.
+     */
+    void setFloor(int _floor) ;
+    
 
     /**
      * @brief Dodaje towar do półki.
@@ -38,6 +50,13 @@ public:
      * @return true jeśli towar został dodany, false w przeciwnym razie.
      */
     bool addPackage(const Item& towar) override;
+
+     /**
+     * @brief Usuwa towar z palety.
+     * @param barcode Kod towaru do usuniecia.
+     * @return true jeśli towar został usuniety, false w przeciwnym razie.
+     */
+    bool removePackage(const int barcode) override;
 };
 
 #endif // SHELF_H

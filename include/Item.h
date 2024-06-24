@@ -27,6 +27,11 @@ public:
      */
     Item(int id, int quantity, int barcode, const std::string& owner, const std::string& itemType) ;
 
+     /**
+     * @brief Bezparametrowy konstruktor klasy Item.
+     */
+    Item(); 
+
     /**
      * @brief Zwraca szczegóły towaru.
      * @return Szczegóły towaru w formacie string.
@@ -34,10 +39,22 @@ public:
     std::string getItemDetails() const ;
 
     /**
-     * @brief Aktualizuje ilość towaru.
-     * @param newQuantity Nowa ilość towaru.
+     * @brief Aktualizuje dane towaru.
+     * @param newId Nowy identyfikator towaru (opcjonalny).
+     * @param newQuantity Nowa ilość towaru (opcjonalna).
+     * @param newBarcode Nowy kod kreskowy towaru (opcjonalny).
+     * @param newOwner Nowy właściciel towaru (opcjonalny).
+     * @param newItemType Nowy typ towaru (opcjonalny).
      */
-    void updateQuantity(int newQuantity) ;
+    void updateItemData(std::optional<int> newId = std::nullopt, std::optional<int> newQuantity = std::nullopt, std::optional<int> newBarcode = std::nullopt, std::optional<std::string> newOwner = std::nullopt, std::optional<std::string> newItemType = std::nullopt);
+
+    /**
+     * @brief Zwraca barcode towaru.
+     * @return Barcode towaru w formacie string.
+     */
+    int getBarcode() const ;
+
+
 };
 
 #endif // ITEM_H

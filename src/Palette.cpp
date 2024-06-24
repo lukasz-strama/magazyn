@@ -13,6 +13,22 @@ bool Palette::addPackage(const Item& item) {
         items.push_back(item);
         isFull = true;
         return true;
+
+        if (items.size() >= maxSize) {
+            isFull = true;
+        }
+    }
+    return false;
+}
+
+
+bool Palette::removePackage(const int barcode) {
+    for (auto it = items.begin(); it != items.end(); ++it) {
+        if (it->getBarcode() == barcode) {
+            items.erase(it);
+            isFull = !items.empty(); // Update the isFull status
+            return true;
+        }
     }
     return false;
 }

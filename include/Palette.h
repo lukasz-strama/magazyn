@@ -30,6 +30,13 @@ public:
      * @return true jeśli towar został dodany, false w przeciwnym razie.
      */
     bool addPackage(const Item& item) override;
+
+     /**
+     * @brief Usuwa towar z palety.
+     * @param barcode Kod towaru do usuniecia.
+     * @return true jeśli towar został usuniety, false w przeciwnym razie.
+     */
+    bool removePackage(const int barcode) override;
 };
 
 #endif // Palette_H
