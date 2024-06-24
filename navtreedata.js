@@ -33,7 +33,8 @@ var NAVTREE =
       [ "Pola danych", "functions.html", [
         [ "Wszystko", "functions.html", null ],
         [ "Funkcje", "functions_func.html", null ],
-        [ "Zmienne", "functions_vars.html", null ]
+        [ "Zmienne", "functions_vars.html", null ],
+        [ "Wyliczenia", "functions_enum.html", null ]
       ] ]
     ] ],
     [ "Pliki", "files.html", [

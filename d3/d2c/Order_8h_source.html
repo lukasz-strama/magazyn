@@ -108,39 +108,52 @@ $(function(){initNavTree('d3/d2c/Order_8h_source.html','../../'); initResizable(
 <div class="line"><a id="l00004" name="l00004"></a><span class="lineno">    4</span><span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a id="l00005" name="l00005"></a><span class="lineno">    5</span><span class="preprocessor">#include &quot;../lib/json.hpp&quot;</span></div>
 <div class="line"><a id="l00006" name="l00006"></a><span class="lineno">    6</span> </div>
-<div class="foldopen" id="foldopen00007" data-start="{" data-end="};">
-<div class="line"><a id="l00007" name="l00007"></a><span class="lineno"><a class="line" href="../../d5/d6b/classOrder.html">    7</a></span><span class="keyword">class </span><a class="code hl_class" href="../../d5/d6b/classOrder.html">Order</a></div>
-<div class="line"><a id="l00008" name="l00008"></a><span class="lineno">    8</span>{</div>
-<div class="line"><a id="l00009" name="l00009"></a><span class="lineno">    9</span><span class="keyword">public</span>:</div>
-<div class="line"><a id="l00010" name="l00010"></a><span class="lineno">   10</span>    <span class="keyword">enum class</span> Type</div>
-<div class="line"><a id="l00011" name="l00011"></a><span class="lineno">   11</span>    {</div>
-<div class="line"><a id="l00012" name="l00012"></a><span class="lineno">   12</span>        Incoming,</div>
-<div class="line"><a id="l00013" name="l00013"></a><span class="lineno">   13</span>        Outgoing</div>
-<div class="line"><a id="l00014" name="l00014"></a><span class="lineno">   14</span>    };</div>
-<div class="line"><a id="l00015" name="l00015"></a><span class="lineno">   15</span> </div>
-<div class="line"><a id="l00016" name="l00016"></a><span class="lineno">   16</span>    <a class="code hl_class" href="../../d5/d6b/classOrder.html">Order</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keyword">const</span> std::string &amp;customer, Type type, <span class="keyword">const</span> std::string &amp;details);</div>
-<div class="line"><a id="l00017" name="l00017"></a><span class="lineno">   17</span> </div>
-<div class="line"><a id="l00018" name="l00018"></a><span class="lineno">   18</span>    <span class="keywordtype">int</span> getId() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00019" name="l00019"></a><span class="lineno">   19</span>    std::string getCustomer() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00020" name="l00020"></a><span class="lineno">   20</span>    Type getType() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00021" name="l00021"></a><span class="lineno">   21</span>    std::string getDetails() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00022" name="l00022"></a><span class="lineno">   22</span> </div>
-<div class="line"><a id="l00023" name="l00023"></a><span class="lineno">   23</span>    <span class="keywordtype">void</span> setDetails(<span class="keyword">const</span> std::string &amp;details);</div>
-<div class="line"><a id="l00024" name="l00024"></a><span class="lineno">   24</span> </div>
-<div class="line"><a id="l00025" name="l00025"></a><span class="lineno">   25</span>    <span class="comment">// JSON serialization</span></div>
-<div class="line"><a id="l00026" name="l00026"></a><span class="lineno">   26</span>    nlohmann::json toJson() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00027" name="l00027"></a><span class="lineno">   27</span>    <span class="keyword">static</span> <a class="code hl_class" href="../../d5/d6b/classOrder.html">Order</a> fromJson(<span class="keyword">const</span> nlohmann::json &amp;j);</div>
-<div class="line"><a id="l00028" name="l00028"></a><span class="lineno">   28</span> </div>
-<div class="line"><a id="l00029" name="l00029"></a><span class="lineno">   29</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00030" name="l00030"></a><span class="lineno">   30</span>    <span class="keywordtype">int</span> id;</div>
-<div class="line"><a id="l00031" name="l00031"></a><span class="lineno">   31</span>    std::string customer;</div>
-<div class="line"><a id="l00032" name="l00032"></a><span class="lineno">   32</span>    Type type;</div>
-<div class="line"><a id="l00033" name="l00033"></a><span class="lineno">   33</span>    std::string details;</div>
-<div class="line"><a id="l00034" name="l00034"></a><span class="lineno">   34</span>};</div>
+<div class="foldopen" id="foldopen00035" data-start="{" data-end="};">
+<div class="line"><a id="l00035" name="l00035"></a><span class="lineno"><a class="line" href="../../d5/d6b/classOrder.html">   35</a></span><span class="keyword">class </span><a class="code hl_class" href="../../d5/d6b/classOrder.html">Order</a></div>
+<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span>{</div>
+<div class="line"><a id="l00037" name="l00037"></a><span class="lineno">   37</span><span class="keyword">public</span>:</div>
+<div class="line"><a id="l00038" name="l00038"></a><span class="lineno">   38</span> </div>
+<div class="foldopen" id="foldopen00040" data-start="{" data-end="};">
+<div class="line"><a id="l00040" name="l00040"></a><span class="lineno"><a class="line" href="../../d5/d6b/classOrder.html#aaab71b1058cdd7537dd856782ab436f0">   40</a></span>    <span class="keyword">enum class</span> <a class="code hl_enumeration" href="../../d5/d6b/classOrder.html#aaab71b1058cdd7537dd856782ab436f0">Type</a></div>
+<div class="line"><a id="l00041" name="l00041"></a><span class="lineno">   41</span>    {</div>
+<div class="line"><a id="l00042" name="l00042"></a><span class="lineno">   42</span>        Incoming, <span class="comment">//zamówienie przychodzące</span></div>
+<div class="line"><a id="l00043" name="l00043"></a><span class="lineno">   43</span>        Outgoing <span class="comment">//zamówienie wychodzące</span></div>
+<div class="line"><a id="l00044" name="l00044"></a><span class="lineno">   44</span>    };</div>
 </div>
-<div class="line"><a id="l00035" name="l00035"></a><span class="lineno">   35</span> </div>
-<div class="line"><a id="l00036" name="l00036"></a><span class="lineno">   36</span><span class="preprocessor">#endif </span><span class="comment">// ORDER_H</span></div>
-<div class="ttc" id="aclassOrder_html"><div class="ttname"><a href="../../d5/d6b/classOrder.html">Order</a></div><div class="ttdef"><b>Definition</b> Order.h:8</div></div>
+<div class="line"><a id="l00045" name="l00045"></a><span class="lineno">   45</span> </div>
+<div class="line"><a id="l00049" name="l00049"></a><span class="lineno">   49</span>    <a class="code hl_function" href="../../d5/d6b/classOrder.html#aa5256eb4e8f0d82ce676f9343493aa27">Order</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>, <span class="keyword">const</span> std::string &amp;customer, <a class="code hl_enumeration" href="../../d5/d6b/classOrder.html#aaab71b1058cdd7537dd856782ab436f0">Type</a> type, <span class="keyword">const</span> std::string &amp;details);</div>
+<div class="line"><a id="l00050" name="l00050"></a><span class="lineno">   50</span> </div>
+<div class="line"><a id="l00055" name="l00055"></a><span class="lineno">   55</span>    <span class="keywordtype">int</span> <a class="code hl_function" href="../../d5/d6b/classOrder_a9506e43ee697e335b3e0e3ad04f4d8fa.html#a9506e43ee697e335b3e0e3ad04f4d8fa">getId</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00056" name="l00056"></a><span class="lineno">   56</span> </div>
+<div class="line"><a id="l00062" name="l00062"></a><span class="lineno">   62</span>    std::string <a class="code hl_function" href="../../d5/d6b/classOrder_aa93bb00f0e2b3018c596b92c182f6372.html#aa93bb00f0e2b3018c596b92c182f6372">getCustomer</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
+<div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <a class="code hl_enumeration" href="../../d5/d6b/classOrder.html#aaab71b1058cdd7537dd856782ab436f0">Type</a> <a class="code hl_function" href="../../d5/d6b/classOrder_af91a9ce815538dd575a1999bee09667f.html#af91a9ce815538dd575a1999bee09667f">getType</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    std::string <a class="code hl_function" href="../../d5/d6b/classOrder_a6a0687ca0b13f444e4b3b5ac092ae419.html#a6a0687ca0b13f444e4b3b5ac092ae419">getDetails</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../d5/d6b/classOrder_a9e0405599018aa05ce0ae8905fc7f958.html#a9e0405599018aa05ce0ae8905fc7f958">setDetails</a>(<span class="keyword">const</span> std::string &amp;details);</div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00090" name="l00090"></a><span class="lineno">   90</span>    nlohmann::json <a class="code hl_function" href="../../d5/d6b/classOrder_a5ea95303625f199610dfe6dac2654426.html#a5ea95303625f199610dfe6dac2654426">toJson</a>() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00091" name="l00091"></a><span class="lineno">   91</span>    <span class="keyword">static</span> <a class="code hl_class" href="../../d5/d6b/classOrder.html">Order</a> fromJson(<span class="keyword">const</span> nlohmann::json &amp;j);</div>
+<div class="line"><a id="l00092" name="l00092"></a><span class="lineno">   92</span> </div>
+<div class="line"><a id="l00093" name="l00093"></a><span class="lineno">   93</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00094" name="l00094"></a><span class="lineno">   94</span>    <span class="keywordtype">int</span> id; </div>
+<div class="line"><a id="l00095" name="l00095"></a><span class="lineno">   95</span>    std::string customer; </div>
+<div class="line"><a id="l00096" name="l00096"></a><span class="lineno">   96</span>    <a class="code hl_enumeration" href="../../d5/d6b/classOrder.html#aaab71b1058cdd7537dd856782ab436f0">Type</a> type; </div>
+<div class="line"><a id="l00097" name="l00097"></a><span class="lineno">   97</span>    std::string details; </div>
+<div class="line"><a id="l00098" name="l00098"></a><span class="lineno">   98</span>};</div>
+</div>
+<div class="line"><a id="l00099" name="l00099"></a><span class="lineno">   99</span> </div>
+<div class="line"><a id="l00100" name="l00100"></a><span class="lineno">  100</span><span class="preprocessor">#endif </span><span class="comment">// ORDER_H</span></div>
+<div class="ttc" id="aclassOrder_a5ea95303625f199610dfe6dac2654426_html_a5ea95303625f199610dfe6dac2654426"><div class="ttname"><a href="../../d5/d6b/classOrder_a5ea95303625f199610dfe6dac2654426.html#a5ea95303625f199610dfe6dac2654426">Order::toJson</a></div><div class="ttdeci">nlohmann::json toJson() const</div><div class="ttdoc">Deserializuje obiekt Order z formatu JSON.</div><div class="ttdef"><b>Definition</b> Order.cpp:13</div></div>
+<div class="ttc" id="aclassOrder_a6a0687ca0b13f444e4b3b5ac092ae419_html_a6a0687ca0b13f444e4b3b5ac092ae419"><div class="ttname"><a href="../../d5/d6b/classOrder_a6a0687ca0b13f444e4b3b5ac092ae419.html#a6a0687ca0b13f444e4b3b5ac092ae419">Order::getDetails</a></div><div class="ttdeci">std::string getDetails() const</div><div class="ttdoc">Metoda publiczna zwracająca szczegóły zamówienia.</div><div class="ttdef"><b>Definition</b> Order.cpp:9</div></div>
+<div class="ttc" id="aclassOrder_a9506e43ee697e335b3e0e3ad04f4d8fa_html_a9506e43ee697e335b3e0e3ad04f4d8fa"><div class="ttname"><a href="../../d5/d6b/classOrder_a9506e43ee697e335b3e0e3ad04f4d8fa.html#a9506e43ee697e335b3e0e3ad04f4d8fa">Order::getId</a></div><div class="ttdeci">int getId() const</div><div class="ttdoc">Metoda publiczna zwracająca ID zamówienia.</div><div class="ttdef"><b>Definition</b> Order.cpp:6</div></div>
+<div class="ttc" id="aclassOrder_a9e0405599018aa05ce0ae8905fc7f958_html_a9e0405599018aa05ce0ae8905fc7f958"><div class="ttname"><a href="../../d5/d6b/classOrder_a9e0405599018aa05ce0ae8905fc7f958.html#a9e0405599018aa05ce0ae8905fc7f958">Order::setDetails</a></div><div class="ttdeci">void setDetails(const std::string &amp;details)</div><div class="ttdoc">Metoda publiczna ustawiająca szczegóły zamówienia.</div><div class="ttdef"><b>Definition</b> Order.cpp:11</div></div>
+<div class="ttc" id="aclassOrder_aa93bb00f0e2b3018c596b92c182f6372_html_aa93bb00f0e2b3018c596b92c182f6372"><div class="ttname"><a href="../../d5/d6b/classOrder_aa93bb00f0e2b3018c596b92c182f6372.html#aa93bb00f0e2b3018c596b92c182f6372">Order::getCustomer</a></div><div class="ttdeci">std::string getCustomer() const</div><div class="ttdoc">Metoda publiczna zwracająca dane klienta.</div><div class="ttdef"><b>Definition</b> Order.cpp:7</div></div>
+<div class="ttc" id="aclassOrder_af91a9ce815538dd575a1999bee09667f_html_af91a9ce815538dd575a1999bee09667f"><div class="ttname"><a href="../../d5/d6b/classOrder_af91a9ce815538dd575a1999bee09667f.html#af91a9ce815538dd575a1999bee09667f">Order::getType</a></div><div class="ttdeci">Type getType() const</div><div class="ttdoc">Metoda publiczna zwracająca typ zamówienia.</div><div class="ttdef"><b>Definition</b> Order.cpp:8</div></div>
+<div class="ttc" id="aclassOrder_html"><div class="ttname"><a href="../../d5/d6b/classOrder.html">Order</a></div><div class="ttdoc">Reprezentująca zamówienia towarów.</div><div class="ttdef"><b>Definition</b> Order.h:36</div></div>
+<div class="ttc" id="aclassOrder_html_aa5256eb4e8f0d82ce676f9343493aa27"><div class="ttname"><a href="../../d5/d6b/classOrder.html#aa5256eb4e8f0d82ce676f9343493aa27">Order::Order</a></div><div class="ttdeci">Order(int id, const std::string &amp;customer, Type type, const std::string &amp;details)</div><div class="ttdoc">Konstruktor klasy Order.</div><div class="ttdef"><b>Definition</b> Order.cpp:3</div></div>
+<div class="ttc" id="aclassOrder_html_aaab71b1058cdd7537dd856782ab436f0"><div class="ttname"><a href="../../d5/d6b/classOrder.html#aaab71b1058cdd7537dd856782ab436f0">Order::Type</a></div><div class="ttdeci">Type</div><div class="ttdoc">Typ wyliczeniowy reprezentujący typ zamówienia.</div><div class="ttdef"><b>Definition</b> Order.h:41</div></div>
 </div><!-- fragment --></div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->

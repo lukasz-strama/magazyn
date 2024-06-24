@@ -99,20 +99,35 @@ $(function(){initNavTree('de/d69/classShipment.html','../../'); initResizable();
   <div class="headertitle"><div class="title">Dokumentacja klasy Shipment</div></div>
 </div><!--header-->
 <div class="contents">
+
+<p>Klasa zarządzająca wysyłką zamówień.  
+ <a href="#details">Więcej...</a></p>
+
+<p><code>#include &lt;<a class="el" href="../../d9/d0e/Shipment_8h_source.html">Shipment.h</a>&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
 Metody publiczne</h2></td></tr>
-<tr class="memitem:a1fc3992678708713fba8d620a0079e8c" id="r_a1fc3992678708713fba8d620a0079e8c"><td class="memItemLeft" align="right" valign="top"><a id="a1fc3992678708713fba8d620a0079e8c" name="a1fc3992678708713fba8d620a0079e8c"></a>
-&#160;</td><td class="memItemRight" valign="bottom"><b>Shipment</b> (const std::string &amp;barcode, const <a class="el" href="../../d5/d6b/classOrder.html">Order</a> &amp;order)</td></tr>
+<tr class="memitem:a1fc3992678708713fba8d620a0079e8c" id="r_a1fc3992678708713fba8d620a0079e8c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d69/classShipment_a1fc3992678708713fba8d620a0079e8c.html#a1fc3992678708713fba8d620a0079e8c">Shipment</a> (const std::string &amp;barcode, const <a class="el" href="../../d5/d6b/classOrder.html">Order</a> &amp;order)</td></tr>
+<tr class="memdesc:a1fc3992678708713fba8d620a0079e8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor klasy <a class="el" href="../../de/d69/classShipment.html" title="Klasa zarządzająca wysyłką zamówień.">Shipment</a> inicjujący przesyłkę.  <br /></td></tr>
 <tr class="separator:a1fc3992678708713fba8d620a0079e8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac0b4cb296d3c0a3e60f70004f2ccaf80" id="r_ac0b4cb296d3c0a3e60f70004f2ccaf80"><td class="memItemLeft" align="right" valign="top"><a id="ac0b4cb296d3c0a3e60f70004f2ccaf80" name="ac0b4cb296d3c0a3e60f70004f2ccaf80"></a>
-std::string&#160;</td><td class="memItemRight" valign="bottom"><b>getBarcode</b> () const</td></tr>
+<tr class="memitem:ac0b4cb296d3c0a3e60f70004f2ccaf80" id="r_ac0b4cb296d3c0a3e60f70004f2ccaf80"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d69/classShipment_ac0b4cb296d3c0a3e60f70004f2ccaf80.html#ac0b4cb296d3c0a3e60f70004f2ccaf80">getBarcode</a> () const</td></tr>
+<tr class="memdesc:ac0b4cb296d3c0a3e60f70004f2ccaf80"><td class="mdescLeft">&#160;</td><td class="mdescRight">Publiczna metoda pozwalająca na zebranie informacji o kodzie kreskowym.  <br /></td></tr>
 <tr class="separator:ac0b4cb296d3c0a3e60f70004f2ccaf80"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adc74aab8757ab53e446ec75efa170004" id="r_adc74aab8757ab53e446ec75efa170004"><td class="memItemLeft" align="right" valign="top"><a id="adc74aab8757ab53e446ec75efa170004" name="adc74aab8757ab53e446ec75efa170004"></a>
-<a class="el" href="../../d5/d6b/classOrder.html">Order</a>&#160;</td><td class="memItemRight" valign="bottom"><b>getOrder</b> () const</td></tr>
+<tr class="memitem:adc74aab8757ab53e446ec75efa170004" id="r_adc74aab8757ab53e446ec75efa170004"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d5/d6b/classOrder.html">Order</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../de/d69/classShipment_adc74aab8757ab53e446ec75efa170004.html#adc74aab8757ab53e446ec75efa170004">getOrder</a> () const</td></tr>
+<tr class="memdesc:adc74aab8757ab53e446ec75efa170004"><td class="mdescLeft">&#160;</td><td class="mdescRight">Publiczna metoda zwracająca zamówienie, obiekt klasy <a class="el" href="../../d5/d6b/classOrder.html" title="Reprezentująca zamówienia towarów.">Order</a>.  <br /></td></tr>
 <tr class="separator:adc74aab8757ab53e446ec75efa170004"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>Klasa zarządzająca wysyłką zamówień. </p>
+<p>Klasa <a class="el" href="../../de/d69/classShipment.html" title="Klasa zarządzająca wysyłką zamówień.">Shipment</a> przechowuje informacje o przesyłce(kod kreskowy, powiązane zamówienie).</p>
+<p>Klasa obsługuje:</p><ul>
+<li>przypisanie informacji o przesyłce,</li>
+<li>stworzenie zamówienia,</li>
+<li>stworzenie przesyłki.</li>
+</ul>
+<p>Przykład użycia:</p>
+<p>try{ <a class="el" href="../../d5/d6b/classOrder.html" title="Reprezentująca zamówienia towarów.">Order</a> order(id, customer, type, details); <a class="el" href="../../de/d69/classShipment.html" title="Klasa zarządzająca wysyłką zamówień.">Shipment</a> shipment(barcode, order); <a class="el" href="../../d5/d6b/classOrder.html" title="Reprezentująca zamówienia towarów.">Order</a> aorder = shipment.getOrder(); } catch (const std::exception &amp;e) { std::cerr &lt;&lt; "An error occurred: " &lt;&lt; e.what() &lt;&lt; std::endl; } </p>
+</div><hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
 <li>include/<a class="el" href="../../d9/d0e/Shipment_8h_source.html">Shipment.h</a></li>
 <li>src/<b>Shipment.cpp</b></li>
 </ul>

@@ -1,12 +1,13 @@
 var indexSectionsWithContent =
 {
-  0: "abcdghiklmoprsuvw✨📃📦🚀",
+  0: "abcdghiklmoprstuvw✨📃📦🚀",
   1: "biops",
   2: "bis",
-  3: "abcgilsuv",
+  3: "abcgilostuv",
   4: "il",
   5: "u",
-  6: "mp📦"
+  6: "t",
+  7: "mp📦"
 };
 
 var indexSectionNames =
@@ -17,7 +18,8 @@ var indexSectionNames =
   3: "functions",
   4: "variables",
   5: "typedefs",
-  6: "pages"
+  6: "enums",
+  7: "pages"
 };
 
 var indexSectionLabels =
@@ -28,6 +30,7 @@ var indexSectionLabels =
   3: "Funkcje",
   4: "Zmienne",
   5: "Definicje typów",
-  6: "Strony"
+  6: "Wyliczenia",
+  7: "Strony"
 };
 

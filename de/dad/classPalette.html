@@ -100,7 +100,7 @@ $(function(){initNavTree('de/dad/classPalette.html','../../'); initResizable(); 
 </div><!--header-->
 <div class="contents">
 
-<p>Zarzadzanie paletą.  
+<p>Klasa dziedzicząca po klasie abstrakcyjnej <a class="el" href="../../df/d6d/classSlot.html" title="Klasa Slot jest klasą abstrakcyjną, która pozwala na przypisywanie lokalizacji towarom.">Slot</a>, pozwalająca na zarzadzanie paletą.  
  <a href="#details">Więcej...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../dd/d1a/Palette_8h_source.html">Palette.h</a>&gt;</code></p>
@@ -112,7 +112,7 @@ $(function(){initNavTree('de/dad/classPalette.html','../../'); initResizable(); 
  <div class="center">
   <img src="../../de/dad/classPalette.png" usemap="#Palette_map" alt=""/>
   <map id="Palette_map" name="Palette_map">
-<area href="../../df/d6d/classSlot.html" title="Abstrakcyjna klasa reprezentująca towar." alt="Slot" shape="rect" coords="0,0,50,24"/>
+<area href="../../df/d6d/classSlot.html" title="Klasa Slot jest klasą abstrakcyjną, która pozwala na przypisywanie lokalizacji towarom." alt="Slot" shape="rect" coords="0,0,50,24"/>
   </map>
 </div></div>
 <table class="memberdecls">
@@ -156,7 +156,13 @@ bool&#160;</td><td class="memItemRight" valign="bottom"><b>isFull</b></td></tr>
 <tr class="separator:af3eac80ff2566b97503c9d342d1578ac inherit pro_attribs_classSlot"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
-<div class="textblock"><p>Zarzadzanie paletą. </p>
+<div class="textblock"><p>Klasa dziedzicząca po klasie abstrakcyjnej <a class="el" href="../../df/d6d/classSlot.html" title="Klasa Slot jest klasą abstrakcyjną, która pozwala na przypisywanie lokalizacji towarom.">Slot</a>, pozwalająca na zarzadzanie paletą. </p>
+<p>Klasa obsługuje:</p><ul>
+<li>ustawienie na wybranej palecie, -ustawienie typu palety,</li>
+<li>zwraca true jeśli towar może być dodany, false w przeciwnym wypadku.</li>
+</ul>
+<p>Przykład użycia:</p>
+<p>try{ <a class="el" href="../../de/dad/classPalette.html" title="Klasa dziedzicząca po klasie abstrakcyjnej Slot, pozwalająca na zarzadzanie paletą.">Palette</a> palette; palette.setType(type); <a class="el" href="../../d0/dae/classItem.html" title="Służy do przechowywania informacji o towarze.">Item</a> item1(); bool added1 = palette.addPackage(item1); if (added1){ dodano na paletę } else{ nie dodano na paletę } }catch (const std::exception &amp;e) { std::cerr &lt;&lt; "An error occurred: " &lt;&lt; e.what() &lt;&lt; std::endl; } </p>
 </div><hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
 <li>include/<a class="el" href="../../dd/d1a/Palette_8h_source.html">Palette.h</a></li>
 <li>src/<b>Palette.cpp</b></li>
