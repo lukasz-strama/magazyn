@@ -1,18 +1,16 @@
-#include "../test/SecurityTest.cpp"
-#include "../test/BarcodeReaderTest.cpp"
+#include "../test/Security.test.cpp"
+#include "../test/BarcodeReader.test.cpp"
 #include "../test/Shelft.test.cpp"
-
-#include "../include/Item.h"
-#include "../include/Slot.h"
-#include "../include/Palette.h"
-#include "../include/Shelf.h"
-
+#include "../test/Order.test.cpp"
+#include <iostream>
 
 int main()
 {
     runLoginTests();
     runBarcodeTests();
     shelfTest();
-    
+    std::cout << "--------------------------------" << std::endl;
+    runOrderTests();
+
     return 0;
 }

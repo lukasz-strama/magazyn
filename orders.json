@@ -1,0 +1,14 @@
+[
+    {
+        "customer": "John Doe",
+        "details": "Order details",
+        "id": 1,
+        "type": "Incoming"
+    },
+    {
+        "customer": "Jane Doe",
+        "details": "Order details",
+        "id": 2,
+        "type": "Outgoing"
+    }
+]
