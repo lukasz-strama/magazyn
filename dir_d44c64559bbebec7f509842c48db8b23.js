@@ -8,5 +8,6 @@ var dir_d44c64559bbebec7f509842c48db8b23 =
     [ "Security.h", "db/d68/Security_8h.html", "db/d68/Security_8h" ],
     [ "Shelf.h", "d3/d68/Shelf_8h.html", "d3/d68/Shelf_8h" ],
     [ "Shipment.h", "d9/d0e/Shipment_8h_source.html", null ],
-    [ "Slot.h", "d5/ddd/Slot_8h_source.html", null ]
+    [ "Slot.h", "d5/ddd/Slot_8h_source.html", null ],
+    [ "Warehouse.h", "dc/d76/Warehouse_8h_source.html", null ]
 ];

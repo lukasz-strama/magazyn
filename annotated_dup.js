@@ -8,5 +8,6 @@ var annotated_dup =
     [ "Security", "d1/d13/classSecurity.html", "d1/d13/classSecurity" ],
     [ "Shelf", "de/d6d/classShelf.html", "de/d6d/classShelf" ],
     [ "Shipment", "de/d69/classShipment.html", "de/d69/classShipment" ],
-    [ "Slot", "df/d6d/classSlot.html", "df/d6d/classSlot" ]
+    [ "Slot", "df/d6d/classSlot.html", "df/d6d/classSlot" ],
+    [ "Warehouse", "d5/d6b/classWarehouse.html", "d5/d6b/classWarehouse" ]
 ];

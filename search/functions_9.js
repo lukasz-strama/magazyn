@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['updatequantity_0',['updateQuantity',['../d0/dae/classItem_a240b897a641fd41d86cdeef6250a8c73.html#a240b897a641fd41d86cdeef6250a8c73',1,'Item']]]
+  ['tojson_0',['toJson',['../d5/d6b/classOrder_a5ea95303625f199610dfe6dac2654426.html#a5ea95303625f199610dfe6dac2654426',1,'Order']]]
 ];

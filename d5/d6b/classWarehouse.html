@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PBL Magazyn: Slot::isSlotFull</title>
+<title>PBL Magazyn: Dokumentacja klasy Warehouse</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -68,7 +68,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('df/d6d/classSlot_a1695b6f420ffa4eadfdfdae53fd2470c.html','../../'); initResizable(); });
+$(function(){initNavTree('d5/d6b/classWarehouse.html','../../'); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -93,39 +93,42 @@ $(function(){initNavTree('df/d6d/classSlot_a1695b6f420ffa4eadfdfdae53fd2470c.htm
 </div>
 </div>
 
+<div class="header">
+  <div class="summary">
+<a href="#pub-methods">Metody publiczne</a>  </div>
+  <div class="headertitle"><div class="title">Dokumentacja klasy Warehouse</div></div>
+</div><!--header-->
 <div class="contents">
-<a id="a1695b6f420ffa4eadfdfdae53fd2470c" name="a1695b6f420ffa4eadfdfdae53fd2470c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1695b6f420ffa4eadfdfdae53fd2470c">&#9670;&#160;</a></span>isSlotFull()</h2>
 
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool Slot::isSlotFull </td>
-          <td>(</td>
-          <td class="paramname"><span class="paramname"></span></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
+<p>Klasa reprezentująca magazyn.  
+ <a href="#details">Więcej...</a></p>
 
-<p>Sprawdza czy slot jest pełny. </p>
-<dl class="section return"><dt>Zwraca</dt><dd>true jeśli slot jest pełny, false w przeciwnym razie.</dd></dl>
-<p>Publiczna metoda, sprawdzająca, czy slot jest pełny.</p>
-<p>Warunek sprawdza, czy:</p><ul>
-<li>wybrany slot jest pełny.</li>
+<p><code>#include &lt;<a class="el" href="../../dc/d76/Warehouse_8h_source.html">Warehouse.h</a>&gt;</code></p>
+<table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-methods" name="pub-methods"></a>
+Metody publiczne</h2></td></tr>
+<tr class="memitem:adfc7c0b06eceda9ca92b9656709bf809" id="r_adfc7c0b06eceda9ca92b9656709bf809"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d6b/classWarehouse_adfc7c0b06eceda9ca92b9656709bf809.html#adfc7c0b06eceda9ca92b9656709bf809">addSlotToStorageUnit</a> (<a class="el" href="../../df/d6d/classSlot.html">Slot</a> *slot)</td></tr>
+<tr class="memdesc:adfc7c0b06eceda9ca92b9656709bf809"><td class="mdescLeft">&#160;</td><td class="mdescRight">Dodaje slot do jednostek magazynowych.  <br /></td></tr>
+<tr class="separator:adfc7c0b06eceda9ca92b9656709bf809"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae160a04a6ff3ad11a7058a6f4bded3b9" id="r_ae160a04a6ff3ad11a7058a6f4bded3b9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d6b/classWarehouse_ae160a04a6ff3ad11a7058a6f4bded3b9.html#ae160a04a6ff3ad11a7058a6f4bded3b9">removeSlotFromStorageUnit</a> (const <a class="el" href="../../df/d6d/classSlot.html">Slot</a> *slot)</td></tr>
+<tr class="memdesc:ae160a04a6ff3ad11a7058a6f4bded3b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Usuwa slot z jednostki magazynowej.  <br /></td></tr>
+<tr class="separator:ae160a04a6ff3ad11a7058a6f4bded3b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a35fb2c062463d75cc32a71b13e3335ea" id="r_a35fb2c062463d75cc32a71b13e3335ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="../../d0/dae/classItem.html">Item</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d6b/classWarehouse_a35fb2c062463d75cc32a71b13e3335ea.html#a35fb2c062463d75cc32a71b13e3335ea">searchItem</a> (int barcode) const</td></tr>
+<tr class="memdesc:a35fb2c062463d75cc32a71b13e3335ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">Wyszukuje przedmiot po kodzie kreskowym.  <br /></td></tr>
+<tr class="separator:a35fb2c062463d75cc32a71b13e3335ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table>
+<a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
+<div class="textblock"><p>Klasa reprezentująca magazyn. </p>
+</div><hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<li>include/<a class="el" href="../../dc/d76/Warehouse_8h_source.html">Warehouse.h</a></li>
+<li>src/<b>Warehouse.cpp</b></li>
 </ul>
-<p>W sytuacji zwrócenia true, slot jest pusty, możliwe jest dodanie towaru, W przeciwnej sytuacji (slot jest pełny), zwraca false.</p>
-<dl class="section return"><dt>Zwraca</dt><dd>zwraca true, jeśli slot jest pełny, false w przeciwnym wypadku. </dd></dl>
-
-</div>
-</div>
 </div><!-- contents -->
 </div><!-- doc-content -->
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../df/d6d/classSlot.html">Slot</a></li>
+    <li class="navelem"><a class="el" href="../../d5/d6b/classWarehouse.html">Warehouse</a></li>
     <li class="footer">Wygenerowano przez <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>

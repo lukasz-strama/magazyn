@@ -3,7 +3,7 @@ var searchData=
   ['generatebarcode_0',['generateBarcode',['../d0/d96/classBarcodeReader_a39e108582119800446bf97b3579fe3fe.html#a39e108582119800446bf97b3579fe3fe',1,'BarcodeReader']]],
   ['generowanie_20dokumentacji_20html_20w_20doxygen_3a_1',['Generowanie dokumentacji HTML w doxygen:',['../index.html#autotoc_md6',1,'']]],
   ['getallorders_2',['getAllOrders',['../db/d68/classOrderHistory_aa0eef439430cb7e805388c75194afc7f.html#aa0eef439430cb7e805388c75194afc7f',1,'OrderHistory']]],
-  ['getbarcode_3',['getBarcode',['../d0/d96/classBarcodeReader_adc836fd7c60564fc0406d13e3c553bf6.html#adc836fd7c60564fc0406d13e3c553bf6',1,'BarcodeReader::getBarcode()'],['../de/d69/classShipment_ac0b4cb296d3c0a3e60f70004f2ccaf80.html#ac0b4cb296d3c0a3e60f70004f2ccaf80',1,'Shipment::getBarcode()']]],
+  ['getbarcode_3',['getBarcode',['../d0/d96/classBarcodeReader_adc836fd7c60564fc0406d13e3c553bf6.html#adc836fd7c60564fc0406d13e3c553bf6',1,'BarcodeReader::getBarcode()'],['../d0/dae/classItem_a6807903d4fb5ac75aab10ce67cd173c2.html#a6807903d4fb5ac75aab10ce67cd173c2',1,'Item::getBarcode()'],['../de/d69/classShipment_ac0b4cb296d3c0a3e60f70004f2ccaf80.html#ac0b4cb296d3c0a3e60f70004f2ccaf80',1,'Shipment::getBarcode()']]],
   ['getcustomer_4',['getCustomer',['../d5/d6b/classOrder_aa93bb00f0e2b3018c596b92c182f6372.html#aa93bb00f0e2b3018c596b92c182f6372',1,'Order']]],
   ['getdetails_5',['getDetails',['../d5/d6b/classOrder_a6a0687ca0b13f444e4b3b5ac092ae419.html#a6a0687ca0b13f444e4b3b5ac092ae419',1,'Order']]],
   ['getdimensions_6',['getDimensions',['../de/d6d/classShelf_ab2fa350f3ca293e1e3d554aac02c7fe5.html#ab2fa350f3ca293e1e3d554aac02c7fe5',1,'Shelf']]],

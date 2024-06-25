@@ -9,5 +9,6 @@ var hierarchy =
     [ "Slot", "df/d6d/classSlot.html", [
       [ "Palette", "de/dad/classPalette.html", null ],
       [ "Shelf", "de/d6d/classShelf.html", null ]
-    ] ]
+    ] ],
+    [ "Warehouse", "d5/d6b/classWarehouse.html", null ]
 ];
