@@ -2,27 +2,28 @@
 #define ITEM_H
 
 #include <string>
+#include <optional>
 
 /** @file */
 
 /**
  * @class Item
  * @brief Służy do przechowywania informacji o towarze.
- * 
- * Klasa Item zawiera informacje takie jak: 
- * identyfikator towaru, ilość towaru, wygenerowany i przypisany kod towaru, kto jest właścicielem oraz jakiego typu jest towar. 
- * 
+ *
+ * Klasa Item zawiera informacje takie jak:
+ * identyfikator towaru, ilość towaru, wygenerowany i przypisany kod towaru, kto jest właścicielem oraz jakiego typu jest towar.
+ *
  * Klasa ta obsługuje:
  * - scharakteryzowanie towaru znajdującego się na magazynie,
  * - zaktualizowanie ilości towaru.
- * 
+ *
  * Przykład użycia:
  * @code
  * try{
  * Item newItem(id, quantity, barcode, owner, itemType); // zainicjalizowanie nowego obiektu klasy Item
  * std::cout << newItem.getItemDetails(); // wyświetlenie danych o towarze
  * newItem.updateQuantity(quantity) // zaktualizowanie danych o ilości towaru
- * 
+ *
  * } catch (const std::exception &e) {
  *      std::cerr << "Error: " << e.what() << std::endl;
  * }
@@ -40,9 +41,9 @@ private:
 public:
     /**
      * @brief Konstruktor klasy Item.
-     * 
+     *
      * Zadaniem konstruktora jest zainicjalizowanie objektu.
-     * 
+     *
      * @param id Identyfikator towaru.
      * @param quantity Ilość towaru.
      * @param barcode Kod kreskowy towaru.
@@ -51,15 +52,15 @@ public:
      */
     Item(int id, int quantity, int barcode, const std::string &owner, const std::string &itemType);
 
-     /**
+    /**
      * @brief Bezparametrowy konstruktor klasy Item.
      */
-    Item(); 
+    Item();
 
     /**
      * @brief Publiczna metoda, zwracająca dane towaru.
-     * Dane charakteryzujące towar to: identyfikator, ilość, kod, właściciel oraz typ. 
-     * 
+     * Dane charakteryzujące towar to: identyfikator, ilość, kod, właściciel oraz typ.
+     *
      * @return zwraca szczegóły towaru w formacie string.
      */
     std::string getItemDetails() const;
@@ -78,10 +79,7 @@ public:
      * @brief Zwraca barcode towaru.
      * @return Barcode towaru w formacie string.
      */
-    int getBarcode() const ;
-
-
-
+    int getBarcode() const;
 };
 
 #endif // ITEM_H
