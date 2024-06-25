@@ -17,3 +17,7 @@ void Slot::setLocation(const std::string &_location)
 {
     location = _location;
 }
+
+const std::vector<Item>& Slot::getItems() const {
+    return items;
+}
