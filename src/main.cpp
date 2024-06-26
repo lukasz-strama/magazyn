@@ -7,26 +7,45 @@
 #include "Palette.h"
 #include "Item.h"
 
-bool login(bool login_flag, int login_id, std::string password);
+void registerUser(int userID, std::string initialPassword);
+bool loginUser(int userID, std::string password);
+bool changePassword(int userID, std::string oldPassword, std::string newPassword);
 
 int main()
 {
-    bool login_flag;
-    int login_id;
+    int userID;
     std::string password;
 
-    do
+    std::cout << "Do you have an account? (1 - Yes, 0 - No): ";
+    bool hasAccount;
+    std::cin >> hasAccount;
+
+    std::cout << "Enter user ID: ";
+    std::cin >> userID;
+
+    bool loggedIn = false;
+
+    while (!loggedIn)
     {
-        std::cout << "czy posiadasz konto? (1/0)" << std::endl;
-        std::cin >> login_flag;
-
-        std::cout << "Podaj login: ";
-        std::cin >> login_id;
-
-        std::cout << "Podaj haslo: ";
+        std::cout << "Enter password: ";
         std::cin >> password;
 
-    } while (login(login_flag, login_id, password) == false);
+        if (hasAccount)
+        {
+            loggedIn = loginUser(userID, password);
+        }
+        else
+        {
+            registerUser(userID, password);
+            hasAccount = true;
+            loggedIn = true;
+        }
+
+        if (!loggedIn)
+        {
+            std::cout << "Please try again." << std::endl;
+        }
+    }
 
     password = "";
 
@@ -34,7 +53,7 @@ int main()
     warehouse.populateOrderHistory("orders.json");
     OrderHistory orderHistory = warehouse.getOrderHistory();
 
-    std::cout << "Historia zamowien: " << std::endl;
+    std::cout << "Order History: " << std::endl;
     orderHistory.showAllHistory();
 
     warehouse.addSlotToStorageUnit(new Shelf(std::make_tuple(2, 5, 10), 1));
@@ -46,44 +65,66 @@ int main()
     return 0;
 }
 
-bool login(bool login_flag, int login_id, std::string password)
+// Function definitions
+void registerUser(int userID, std::string initialPassword)
 {
-
-    if (login_flag == true)
+    try
     {
-        User user(login_id);
-        if (user.loginValidation(password))
+        User newUser(userID, initialPassword);
+        std::cout << "Registered new user successfully." << std::endl;
+    }
+    catch (const std::exception &e)
+    {
+        std::cerr << "Error: " << e.what() << std::endl;
+    }
+}
+
+bool loginUser(int userID, std::string password)
+{
+    try
+    {
+        User existingUser(userID);
+        bool isLoggedIn = existingUser.loginValidation(password);
+        if (isLoggedIn)
         {
-            std::cout << "Zalogowano" << std::endl;
+            std::cout << "Logged in as existing user." << std::endl;
+            existingUser.logout();
             return true;
         }
         else
         {
-            std::cout << "Bledne dane" << std::endl;
+            std::cout << "Invalid login credentials." << std::endl;
             return false;
         }
     }
-    else
+    catch (const std::exception &e)
     {
-        User existingUser(login_id);
-        if (existingUser.loginValidation(password))
+        std::cerr << "Error: " << e.what() << std::endl;
+        return false;
+    }
+}
+
+bool changePassword(int userID, std::string oldPassword, std::string newPassword)
+{
+    try
+    {
+        User existingUser(userID);
+        bool isLoggedIn = existingUser.loginValidation(oldPassword);
+        if (isLoggedIn)
         {
-            std::cout << "Taki uzytkownik juz istnieje" << std::endl;
-            return false;
+            existingUser.changePassword(newPassword);
+            existingUser.logout();
+            return true;
         }
         else
         {
-            User user(login_id, password);
-            if (user.loginValidation(password))
-            {
-                std::cout << "Zarejestrowano" << std::endl;
-                return true;
-            }
-            else
-            {
-                std::cout << "Cos poszlo nie tak" << std::endl;
-                return false;
-            }
+            std::cout << "Invalid login credentials." << std::endl;
+            return false;
         }
+    }
+    catch (const std::exception &e)
+    {
+        std::cerr << "Error: " << e.what() << std::endl;
+        return false;
     }
 }
