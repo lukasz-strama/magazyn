@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PBL Magazyn: Item::updateItemData</title>
+<title>PBL Magazyn: Item::getBarcode</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -68,7 +68,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('d0/dae/classItem_a26080fda2aa7ab6abad5e51b70ac3c44.html','../../'); initResizable(); });
+$(function(){initNavTree('d0/dae/classItem_a5e4049c4fa1c8cd8614d2df35a15c23e.html','../../'); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -94,51 +94,23 @@ $(function(){initNavTree('d0/dae/classItem_a26080fda2aa7ab6abad5e51b70ac3c44.htm
 </div>
 
 <div class="contents">
-<a id="a26080fda2aa7ab6abad5e51b70ac3c44" name="a26080fda2aa7ab6abad5e51b70ac3c44"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a26080fda2aa7ab6abad5e51b70ac3c44">&#9670;&#160;</a></span>updateItemData()</h2>
+<a id="a5e4049c4fa1c8cd8614d2df35a15c23e" name="a5e4049c4fa1c8cd8614d2df35a15c23e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e4049c4fa1c8cd8614d2df35a15c23e">&#9670;&#160;</a></span>getBarcode()</h2>
 
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">void Item::updateItemData </td>
+          <td class="memname">std::string Item::getBarcode </td>
           <td>(</td>
-          <td class="paramtype">std::optional&lt; int &gt;</td>          <td class="paramname"><span class="paramname"><em>newId</em><span class="paramdefsep"> = </span><span class="paramdefval">std::nullopt</span>, </span></td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::optional&lt; int &gt;</td>          <td class="paramname"><span class="paramname"><em>newQuantity</em><span class="paramdefsep"> = </span><span class="paramdefval">std::nullopt</span>, </span></td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::optional&lt; int &gt;</td>          <td class="paramname"><span class="paramname"><em>newBarcode</em><span class="paramdefsep"> = </span><span class="paramdefval">std::nullopt</span>, </span></td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::optional&lt; std::string &gt;</td>          <td class="paramname"><span class="paramname"><em>newOwner</em><span class="paramdefsep"> = </span><span class="paramdefval">std::nullopt</span>, </span></td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">std::optional&lt; std::string &gt;</td>          <td class="paramname"><span class="paramname"><em>newItemType</em><span class="paramdefsep"> = </span><span class="paramdefval">std::nullopt</span></span>&#160;)</td>
+          <td class="paramname"><span class="paramname"></span></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
 
-<p>Aktualizuje dane towaru. </p>
-<dl class="params"><dt>Parametry</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">newId</td><td>Nowy identyfikator towaru (opcjonalny). </td></tr>
-    <tr><td class="paramname">newQuantity</td><td>Nowa ilość towaru (opcjonalna). </td></tr>
-    <tr><td class="paramname">newBarcode</td><td>Nowy kod kreskowy towaru (opcjonalny). </td></tr>
-    <tr><td class="paramname">newOwner</td><td>Nowy właściciel towaru (opcjonalny). </td></tr>
-    <tr><td class="paramname">newItemType</td><td>Nowy typ towaru (opcjonalny). </td></tr>
-  </table>
-  </dd>
-</dl>
+<p>Zwraca barcode towaru. </p>
+<dl class="section return"><dt>Zwraca</dt><dd>Barcode towaru w formacie string. </dd></dl>
 
 </div>
 </div>

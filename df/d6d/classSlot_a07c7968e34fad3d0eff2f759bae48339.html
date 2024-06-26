@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.10.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>PBL Magazyn: Shelf::removePackage</title>
+<title>PBL Magazyn: Slot::removePackage</title>
 <link href="../../tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="../../jquery.js"></script>
 <script type="text/javascript" src="../../dynsections.js"></script>
@@ -68,7 +68,7 @@ $(function() {
 </div>
 <script type="text/javascript">
 /* @license magnet:?xt=urn:btih:d3d9a9a6595521f9666a5e94cc830dab83b65699&amp;dn=expat.txt MIT */
-$(function(){initNavTree('de/d6d/classShelf_a91b548ebcc343875a4fd583c6dd7f152.html','../../'); initResizable(); });
+$(function(){initNavTree('df/d6d/classSlot_a07c7968e34fad3d0eff2f759bae48339.html','../../'); initResizable(); });
 /* @license-end */
 </script>
 <div id="doc-content">
@@ -94,8 +94,8 @@ $(function(){initNavTree('de/d6d/classShelf_a91b548ebcc343875a4fd583c6dd7f152.ht
 </div>
 
 <div class="contents">
-<a id="a91b548ebcc343875a4fd583c6dd7f152" name="a91b548ebcc343875a4fd583c6dd7f152"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a91b548ebcc343875a4fd583c6dd7f152">&#9670;&#160;</a></span>removePackage()</h2>
+<a id="a07c7968e34fad3d0eff2f759bae48339" name="a07c7968e34fad3d0eff2f759bae48339"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a07c7968e34fad3d0eff2f759bae48339">&#9670;&#160;</a></span>removePackage()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -104,29 +104,29 @@ $(function(){initNavTree('de/d6d/classShelf_a91b548ebcc343875a4fd583c6dd7f152.ht
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool Shelf::removePackage </td>
+          <td class="memname">virtual bool Slot::removePackage </td>
           <td>(</td>
-          <td class="paramtype">const int</td>          <td class="paramname"><span class="paramname"><em>barcode</em></span></td><td>)</td>
+          <td class="paramtype">const std::string</td>          <td class="paramname"><span class="paramname"><em>barcode</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
 
-<p>Usuwa towar z palety. </p>
+<p>Usuwa dany towar ze slotu. </p>
 <dl class="params"><dt>Parametry</dt><dd>
   <table class="params">
-    <tr><td class="paramname">barcode</td><td>Kod towaru do usuniecia. </td></tr>
+    <tr><td class="paramname">barcode</td><td><a class="el" href="../../d0/dae/classItem.html" title="Klasa służąca do przechowywania informacji o towarze.">Item</a> do usuniecia. </td></tr>
   </table>
   </dd>
 </dl>
 <dl class="section return"><dt>Zwraca</dt><dd>true jeśli towar został usuniety, false w przeciwnym razie. </dd></dl>
 
-<p>Implementuje <a class="el" href="../../df/d6d/classSlot_a256bfcbe344bf5c9876ca0924b8a5d50.html#a256bfcbe344bf5c9876ca0924b8a5d50">Slot</a>.</p>
+<p>Implementowany w <a class="el" href="../../de/dad/classPalette_a62add5f2b3454a1d942061068446b332.html#a62add5f2b3454a1d942061068446b332">Palette</a> i <a class="el" href="../../de/d6d/classShelf_a301e8cbf42fdd5d617e3e04923b2d13b.html#a301e8cbf42fdd5d617e3e04923b2d13b">Shelf</a>.</p>
 
 </div>
 </div>
@@ -135,7 +135,7 @@ $(function(){initNavTree('de/d6d/classShelf_a91b548ebcc343875a4fd583c6dd7f152.ht
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a class="el" href="../../de/d6d/classShelf.html">Shelf</a></li>
+    <li class="navelem"><a class="el" href="../../df/d6d/classSlot.html">Slot</a></li>
     <li class="footer">Wygenerowano przez <a href="https://www.doxygen.org/index.html"><img class="footer" src="../../doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.10.0 </li>
   </ul>
 </div>
