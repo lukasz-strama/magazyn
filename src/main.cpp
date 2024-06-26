@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Security.h"
+#include "BarcodeReader.h"
 #include "OrderHistory.h"
 #include "Warehouse.h"
 #include "Slot.h"
@@ -50,22 +51,63 @@ int main()
     password = "";
 
     Warehouse warehouse;
+    BarcodeReader reader;
+
     warehouse.populateOrderHistory("orders.json");
     OrderHistory orderHistory = warehouse.getOrderHistory();
 
     std::cout << "Order History: " << std::endl;
     orderHistory.showAllHistory();
 
-    warehouse.addSlotToStorageUnit(new Shelf(std::make_tuple(2, 5, 10), 1));
-    warehouse.addSlotToStorageUnit(new Shelf(std::make_tuple(2, 5, 10), 2));
+    Shelf shelf1(std::make_tuple(2, 5, 10), 1);
+    Shelf shelf2(std::make_tuple(2, 5, 10), 2);
+    Palette palette1("euro");
+    Palette palette2("block");
 
-    warehouse.addSlotToStorageUnit(new Palette("euro"));
-    warehouse.addSlotToStorageUnit(new Palette("block"));
+    warehouse.addSlotToStorageUnit(&shelf1);
+    warehouse.addSlotToStorageUnit(&shelf2);
+
+    warehouse.addSlotToStorageUnit(&palette1);
+    warehouse.addSlotToStorageUnit(&palette2);
+
+    reader.generateBarcode(1, "11111", "55555");
+    std::string barcode = reader.getBarcode();
+
+    shelf1.addPackage(*(new Item(1, 5, "12345", "Alice", "Electronics")));
+    shelf1.addPackage(*(new Item(2, 10, "54321", "Bob", "Clothing")));
+
+    shelf2.addPackage(*(new Item(3, 15, "67890", "Charlie", "Food")));
+    shelf2.addPackage(*(new Item(4, 20, "98765", "David", "Electronics")));
+
+    palette1.addPackage(*(new Item(5, 25, "13579", "Eve", "Clothing")));
+    palette1.addPackage(*(new Item(6, 30, "24680", "Frank", "Food")));
+
+    palette2.addPackage(*(new Item(7, 35, "11223", "Grace", "Electronics")));
+    palette2.addPackage(*(new Item(8, 40, "33445", "Heidi", "Clothing")));
+
+    std::cout << "Shelf details: " << std::endl;
+    std::cout << shelf1.getItemDetails() << std::endl;
+    std::cout << shelf2.getItemDetails() << std::endl;
+
+    std::cout << "Palette details: " << std::endl;
+    std::cout << palette1.getItemDetails() << std::endl;
+    std::cout << palette2.getItemDetails() << std::endl;
+
+    if (shelf1.removePackage("54321"))
+    {
+        std::cout << "Item removed successfully." << std::endl;
+    }
+    else
+    {
+        std::cout << "Item not found." << std::endl;
+    }
+
+    std::cout << "Shelf details after removing item: " << std::endl;
+    std::cout << shelf1.getItemDetails() << std::endl;
 
     return 0;
 }
 
-// Function definitions
 void registerUser(int userID, std::string initialPassword)
 {
     try

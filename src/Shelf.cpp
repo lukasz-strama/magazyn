@@ -45,7 +45,7 @@ bool Shelf::addPackage(const Item &item)
     return false;
 }
 
-bool Shelf::removePackage(const int barcode)
+bool Shelf::removePackage(const std::string barcode)
 {
     for (auto it = items.begin(); it != items.end(); ++it)
     {

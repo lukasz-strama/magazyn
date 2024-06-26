@@ -36,7 +36,7 @@ public:
      * @param barcode Kod kreskowy przedmiotu do wyszukania.
      * @return Znaleziony przedmiot.
      */
-    Item searchItem(int barcode) const;
+    Item searchItem(std::string barcode) const;
 
     /**
      * @brief Wypełnia historię zamówień danymi z pliku JSON.

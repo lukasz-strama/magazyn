@@ -45,7 +45,7 @@ public:
      * @param barcode Item do usuniecia.
      * @return true jeśli towar został usuniety, false w przeciwnym razie.
      */
-    virtual bool removePackage(const int barcode) = 0;
+    virtual bool removePackage(const std::string barcode) = 0;
 
     /**
      * @brief Sprawdza czy slot jest pełny.
@@ -75,6 +75,8 @@ public:
     void setLocation(const std::string &_location);
 
     const std::vector<Item> &getItems() const;
+
+    std::string getItemDetails() const;
 
     virtual ~Slot() = default;
 };

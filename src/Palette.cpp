@@ -31,7 +31,7 @@ bool Palette::addPackage(const Item &item)
     return false;
 }
 
-bool Palette::removePackage(const int barcode)
+bool Palette::removePackage(const std::string barcode)
 {
     for (auto it = items.begin(); it != items.end(); ++it)
     {
