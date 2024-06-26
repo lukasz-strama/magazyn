@@ -124,14 +124,17 @@ $(function(){initNavTree('dd/d29/OrderHistory_8h_source.html','../../'); initRes
 <div class="line"><a id="l00063" name="l00063"></a><span class="lineno">   63</span> </div>
 <div class="line"><a id="l00069" name="l00069"></a><span class="lineno">   69</span>    <span class="keywordtype">void</span> <a class="code hl_function" href="../../db/d68/classOrderHistory_ab38394331d0916001ed3aa4f5ca59457.html#ab38394331d0916001ed3aa4f5ca59457">loadFromFile</a>(<span class="keyword">const</span> std::string &amp;filename);</div>
 <div class="line"><a id="l00070" name="l00070"></a><span class="lineno">   70</span> </div>
-<div class="line"><a id="l00071" name="l00071"></a><span class="lineno">   71</span>    <span class="keywordtype">void</span> showAllHistory() <span class="keyword">const</span>;</div>
-<div class="line"><a id="l00072" name="l00072"></a><span class="lineno">   72</span> </div>
-<div class="line"><a id="l00073" name="l00073"></a><span class="lineno">   73</span><span class="keyword">private</span>:</div>
-<div class="line"><a id="l00074" name="l00074"></a><span class="lineno">   74</span>    std::vector&lt;Order&gt; orders; </div>
-<div class="line"><a id="l00075" name="l00075"></a><span class="lineno">   75</span>};</div>
+<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span>    <span class="keywordtype">bool</span> <a class="code hl_function" href="../../db/d68/classOrderHistory_a0bda184fedcb74b6cc5ffda699b2670e.html#a0bda184fedcb74b6cc5ffda699b2670e">orderExists</a>(<span class="keywordtype">int</span> <span class="keywordtype">id</span>) <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span> </div>
+<div class="line"><a id="l00078" name="l00078"></a><span class="lineno">   78</span>    <span class="keywordtype">void</span> showAllHistory() <span class="keyword">const</span>;</div>
+<div class="line"><a id="l00079" name="l00079"></a><span class="lineno">   79</span> </div>
+<div class="line"><a id="l00080" name="l00080"></a><span class="lineno">   80</span><span class="keyword">private</span>:</div>
+<div class="line"><a id="l00081" name="l00081"></a><span class="lineno">   81</span>    std::vector&lt;Order&gt; orders; </div>
+<div class="line"><a id="l00082" name="l00082"></a><span class="lineno">   82</span>};</div>
 </div>
-<div class="line"><a id="l00076" name="l00076"></a><span class="lineno">   76</span> </div>
-<div class="line"><a id="l00077" name="l00077"></a><span class="lineno">   77</span><span class="preprocessor">#endif </span><span class="comment">// ORDERHISTORY_H</span></div>
+<div class="line"><a id="l00083" name="l00083"></a><span class="lineno">   83</span> </div>
+<div class="line"><a id="l00084" name="l00084"></a><span class="lineno">   84</span><span class="preprocessor">#endif </span><span class="comment">// ORDERHISTORY_H</span></div>
+<div class="ttc" id="aclassOrderHistory_a0bda184fedcb74b6cc5ffda699b2670e_html_a0bda184fedcb74b6cc5ffda699b2670e"><div class="ttname"><a href="../../db/d68/classOrderHistory_a0bda184fedcb74b6cc5ffda699b2670e.html#a0bda184fedcb74b6cc5ffda699b2670e">OrderHistory::orderExists</a></div><div class="ttdeci">bool orderExists(int id) const</div><div class="ttdoc">Metoda sprawdzająca czy zamówienie o podanym ID istnieje.</div><div class="ttdef"><b>Definition</b> OrderHistory.cpp:60</div></div>
 <div class="ttc" id="aclassOrderHistory_a44846860e790d00cc3acc597b938e269_html_a44846860e790d00cc3acc597b938e269"><div class="ttname"><a href="../../db/d68/classOrderHistory_a44846860e790d00cc3acc597b938e269.html#a44846860e790d00cc3acc597b938e269">OrderHistory::addOrder</a></div><div class="ttdeci">void addOrder(const Order &amp;order)</div><div class="ttdoc">Publiczna metoda pozwalająca na dodawanie zamówienia do historii.</div><div class="ttdef"><b>Definition</b> OrderHistory.cpp:5</div></div>
 <div class="ttc" id="aclassOrderHistory_a6eb1d1ff7a6dc6415c2f29f9cde9f1cf_html_a6eb1d1ff7a6dc6415c2f29f9cde9f1cf"><div class="ttname"><a href="../../db/d68/classOrderHistory_a6eb1d1ff7a6dc6415c2f29f9cde9f1cf.html#a6eb1d1ff7a6dc6415c2f29f9cde9f1cf">OrderHistory::saveToFile</a></div><div class="ttdeci">void saveToFile(const std::string &amp;filename) const</div><div class="ttdoc">Pozwala na zapis histori zamówień do pliku JSON.</div><div class="ttdef"><b>Definition</b> OrderHistory.cpp:27</div></div>
 <div class="ttc" id="aclassOrderHistory_aa0eef439430cb7e805388c75194afc7f_html_aa0eef439430cb7e805388c75194afc7f"><div class="ttname"><a href="../../db/d68/classOrderHistory_aa0eef439430cb7e805388c75194afc7f.html#aa0eef439430cb7e805388c75194afc7f">OrderHistory::getAllOrders</a></div><div class="ttdeci">std::vector&lt; Order &gt; getAllOrders() const</div><div class="ttdoc">Publiczna metoda zwracająca wszystkie zamówienia.</div><div class="ttdef"><b>Definition</b> OrderHistory.cpp:22</div></div>
