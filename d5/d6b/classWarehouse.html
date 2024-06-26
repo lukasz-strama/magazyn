@@ -131,7 +131,31 @@ Metody publiczne</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
 <div class="textblock"><p>Klasa reprezentująca magazyn. </p>
-</div><hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<p>Klasa <a class="el" href="../../d5/d6b/classWarehouse.html" title="Klasa reprezentująca magazyn.">Warehouse</a> pozwala na zarządzanie magazynem, w tym dodawanie i usuwanie slotów, wyszukiwanie przedmiotów, oraz zarządzanie historią zamówień.</p>
+<div class="fragment"><div class="line"><span class="keywordflow">try</span>{</div>
+<div class="line"> <a class="code hl_class" href="../../d5/d6b/classWarehouse.html">Warehouse</a> warehouse;</div>
+<div class="line"> <a class="code hl_class" href="../../df/d6d/classSlot.html">Slot</a> *slot1 = <span class="keyword">new</span> <a class="code hl_class" href="../../df/d6d/classSlot.html">Slot</a>();</div>
+<div class="line"> warehouse.<a class="code hl_function" href="../../d5/d6b/classWarehouse_adfc7c0b06eceda9ca92b9656709bf809.html#adfc7c0b06eceda9ca92b9656709bf809">addSlotToStorageUnit</a>(slot1);</div>
+<div class="line"> <a class="code hl_class" href="../../d0/dae/classItem.html">Item</a> item1();</div>
+<div class="line"> slot1-&gt;addItem(item1);</div>
+<div class="line"> warehouse.<a class="code hl_function" href="../../d5/d6b/classWarehouse_ac387c798f2e2c51948b0cdacbf1aeb69.html#ac387c798f2e2c51948b0cdacbf1aeb69">saveOrderHistory</a>(<span class="stringliteral">&quot;plik_typu_json.json&quot;</span>);</div>
+<div class="line"> warehouse.<a class="code hl_function" href="../../d5/d6b/classWarehouse_a87214bfa5700ea3e0738dd84351cd25f.html#a87214bfa5700ea3e0738dd84351cd25f">populateOrderHistory</a>(<span class="stringliteral">&quot;plik_typu_json.json&quot;</span>);</div>
+<div class="line"> <a class="code hl_class" href="../../db/d68/classOrderHistory.html">OrderHistory</a> history = warehouse.<a class="code hl_function" href="../../d5/d6b/classWarehouse_a970c48419f75cdd94e1ccf2903c3593a.html#a970c48419f75cdd94e1ccf2903c3593a">getOrderHistory</a>();</div>
+<div class="line"> warehouse.<a class="code hl_function" href="../../d5/d6b/classWarehouse_ae160a04a6ff3ad11a7058a6f4bded3b9.html#ae160a04a6ff3ad11a7058a6f4bded3b9">removeSlotFromStorageUnit</a>(slot1);</div>
+<div class="line"> <span class="keyword">delete</span> slot1;</div>
+<div class="line"> </div>
+<div class="line">}<span class="keywordflow">catch</span> (<span class="keyword">const</span> std::exception &amp;e) {</div>
+<div class="line">     std::cerr &lt;&lt; <span class="stringliteral">&quot;An error occurred: &quot;</span> &lt;&lt; e.what() &lt;&lt; std::endl;}</div>
+<div class="ttc" id="aclassItem_html"><div class="ttname"><a href="../../d0/dae/classItem.html">Item</a></div><div class="ttdoc">Klasa służąca do przechowywania informacji o towarze.</div><div class="ttdef"><b>Definition</b> Item.h:33</div></div>
+<div class="ttc" id="aclassOrderHistory_html"><div class="ttname"><a href="../../db/d68/classOrderHistory.html">OrderHistory</a></div><div class="ttdoc">Klasa służąca do przechowywania historii zamówienia.</div><div class="ttdef"><b>Definition</b> OrderHistory.h:38</div></div>
+<div class="ttc" id="aclassSlot_html"><div class="ttname"><a href="../../df/d6d/classSlot.html">Slot</a></div><div class="ttdoc">Klasa abstrakcyjna, która pozwala na przypisywanie lokalizacji towarom.</div><div class="ttdef"><b>Definition</b> Slot.h:19</div></div>
+<div class="ttc" id="aclassWarehouse_a87214bfa5700ea3e0738dd84351cd25f_html_a87214bfa5700ea3e0738dd84351cd25f"><div class="ttname"><a href="../../d5/d6b/classWarehouse_a87214bfa5700ea3e0738dd84351cd25f.html#a87214bfa5700ea3e0738dd84351cd25f">Warehouse::populateOrderHistory</a></div><div class="ttdeci">bool populateOrderHistory(const std::string &amp;filename)</div><div class="ttdoc">Wypełnia historię zamówień danymi z pliku JSON.</div><div class="ttdef"><b>Definition</b> Warehouse.cpp:75</div></div>
+<div class="ttc" id="aclassWarehouse_a970c48419f75cdd94e1ccf2903c3593a_html_a970c48419f75cdd94e1ccf2903c3593a"><div class="ttname"><a href="../../d5/d6b/classWarehouse_a970c48419f75cdd94e1ccf2903c3593a.html#a970c48419f75cdd94e1ccf2903c3593a">Warehouse::getOrderHistory</a></div><div class="ttdeci">OrderHistory getOrderHistory() const</div><div class="ttdoc">Zwraca historię zamówień.</div><div class="ttdef"><b>Definition</b> Warehouse.cpp:8</div></div>
+<div class="ttc" id="aclassWarehouse_ac387c798f2e2c51948b0cdacbf1aeb69_html_ac387c798f2e2c51948b0cdacbf1aeb69"><div class="ttname"><a href="../../d5/d6b/classWarehouse_ac387c798f2e2c51948b0cdacbf1aeb69.html#ac387c798f2e2c51948b0cdacbf1aeb69">Warehouse::saveOrderHistory</a></div><div class="ttdeci">bool saveOrderHistory(const std::string &amp;filename) const</div><div class="ttdoc">Zapisuje historię zamówień do pliku JSON.</div><div class="ttdef"><b>Definition</b> Warehouse.cpp:90</div></div>
+<div class="ttc" id="aclassWarehouse_adfc7c0b06eceda9ca92b9656709bf809_html_adfc7c0b06eceda9ca92b9656709bf809"><div class="ttname"><a href="../../d5/d6b/classWarehouse_adfc7c0b06eceda9ca92b9656709bf809.html#adfc7c0b06eceda9ca92b9656709bf809">Warehouse::addSlotToStorageUnit</a></div><div class="ttdeci">bool addSlotToStorageUnit(Slot *slot)</div><div class="ttdoc">Dodaje slot do jednostek magazynowych.</div><div class="ttdef"><b>Definition</b> Warehouse.cpp:11</div></div>
+<div class="ttc" id="aclassWarehouse_ae160a04a6ff3ad11a7058a6f4bded3b9_html_ae160a04a6ff3ad11a7058a6f4bded3b9"><div class="ttname"><a href="../../d5/d6b/classWarehouse_ae160a04a6ff3ad11a7058a6f4bded3b9.html#ae160a04a6ff3ad11a7058a6f4bded3b9">Warehouse::removeSlotFromStorageUnit</a></div><div class="ttdeci">bool removeSlotFromStorageUnit(const Slot *slot)</div><div class="ttdoc">Usuwa slot z jednostki magazynowej.</div><div class="ttdef"><b>Definition</b> Warehouse.cpp:30</div></div>
+<div class="ttc" id="aclassWarehouse_html"><div class="ttname"><a href="../../d5/d6b/classWarehouse.html">Warehouse</a></div><div class="ttdoc">Klasa reprezentująca magazyn.</div><div class="ttdef"><b>Definition</b> Warehouse.h:37</div></div>
+</div><!-- fragment --> </div><hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
 <li>include/<a class="el" href="../../dc/d76/Warehouse_8h_source.html">Warehouse.h</a></li>
 <li>src/<b>Warehouse.cpp</b></li>
 </ul>
