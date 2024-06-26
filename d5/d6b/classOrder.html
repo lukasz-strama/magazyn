@@ -153,11 +153,19 @@ static <a class="el" href="../../d5/d6b/classOrder.html">Order</a>&#160;</td><td
 <li>zbieranie informacji dotyczących paczki (ID, nazwa klienta, typ, szczegóły),</li>
 <li>pobieranie/ dodawanie informacji w formacie JSON.</li>
 </ul>
-<p>Przykład użycia:</p>
-<p>try{ <a class="el" href="../../d5/d6b/classOrder.html" title="Reprezentująca zamówienia towarów.">Order</a> order1(id, customer, type, details); order1.setDetails(details); nlohmann::json jsonOrder = order1.toJson();</p>
-<p><a class="el" href="../../d5/d6b/classOrder.html" title="Reprezentująca zamówienia towarów.">Order</a> order2 = Order::fromJson(jsonOrder);</p>
-<p>}catch{ catch (const std::exception &amp;e) { std::cerr &lt;&lt; "Error: " &lt;&lt; e.what() &lt;&lt; std::endl; } </p>
-</div><hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
+<p>Przykład użycia: </p><div class="fragment"><div class="line"><span class="keywordflow">try</span>{</div>
+<div class="line"><a class="code hl_class" href="../../d5/d6b/classOrder.html">Order</a> order1(<span class="keywordtype">id</span>, customer, type, details);</div>
+<div class="line">order1.setDetails(details);</div>
+<div class="line">nlohmann::json jsonOrder = order1.toJson();</div>
+<div class="line"> </div>
+<div class="line"><a class="code hl_class" href="../../d5/d6b/classOrder.html">Order</a> order2 = Order::fromJson(jsonOrder);</div>
+<div class="line"> </div>
+<div class="line">}<span class="keywordflow">catch</span>{</div>
+<div class="line"><span class="keywordflow">catch</span> (<span class="keyword">const</span> std::exception &amp;e) {</div>
+<div class="line">      std::cerr &lt;&lt; <span class="stringliteral">&quot;Error: &quot;</span> &lt;&lt; e.what() &lt;&lt; std::endl;</div>
+<div class="line">} </div>
+<div class="ttc" id="aclassOrder_html"><div class="ttname"><a href="../../d5/d6b/classOrder.html">Order</a></div><div class="ttdoc">Reprezentująca zamówienia towarów.</div><div class="ttdef"><b>Definition</b> Order.h:36</div></div>
+</div><!-- fragment --> </div><hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
 <li>include/<a class="el" href="../../d3/d2c/Order_8h_source.html">Order.h</a></li>
 <li>src/<b>Order.cpp</b></li>
 </ul>
