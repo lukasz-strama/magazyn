@@ -3,7 +3,7 @@
 // Metoda sprawdzająca czy slot jest pełny
 bool Slot::isSlotFull() const
 {
-    return isFull;
+    return items.size() == maxSize;
 }
 
 // Metoda zwracająca lokalizację slotu
