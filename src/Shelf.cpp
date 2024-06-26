@@ -2,10 +2,7 @@
 
 // Konstruktor z inicjalizacją wymiarów i piętra
 Shelf::Shelf(const std::tuple<int, int, int> &dimensions, int floor)
-    : dimensions(dimensions), floor(floor)
-{
-    isFull = false;
-}
+    : dimensions(dimensions), floor(floor) {}
 
 // Metoda zwracająca wymiary półki
 std::tuple<int, int, int> Shelf::getDimensions() const
@@ -34,13 +31,7 @@ bool Shelf::addPackage(const Item &item)
     if (!isSlotFull())
     {
         items.push_back(item);
-        isFull = true;
         return true;
-
-        if (items.size() >= maxSize)
-        {
-            isFull = true;
-        }
     }
     return false;
 }
@@ -52,7 +43,6 @@ bool Shelf::removePackage(const std::string barcode)
         if (it->getBarcode() == barcode)
         {
             items.erase(it);
-            isFull = !items.empty();
             return true;
         }
     }

@@ -20,7 +20,6 @@ class Slot
 protected:
     std::vector<Item> items; ///< Wektor towarów w slocie
     std::string location;    ///< Lokalizacja slotu
-    bool isFull;             ///< Czy slot jest pełny
     size_t maxSize;          ///< Maksymalny rozmiar tablicy
 
 public:
