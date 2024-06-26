@@ -8,8 +8,31 @@
 #include "OrderHistory.h"
 
 /**
+ * @class Warehouse
  * @brief Klasa reprezentująca magazyn.
+ * 
+ * Klasa Warehouse pozwala na zarządzanie magazynem, w tym dodawanie i usuwanie slotów, 
+ * wyszukiwanie przedmiotów, oraz zarządzanie historią zamówień.
+ * 
+ * 
+ * @code
+ * try{
+ *  Warehouse warehouse;
+ *  Slot *slot1 = new Slot();
+ *  warehouse.addSlotToStorageUnit(slot1);
+ *  Item item1();
+ *  slot1->addItem(item1);
+ *  warehouse.saveOrderHistory("plik_typu_json.json");
+ *  warehouse.populateOrderHistory("plik_typu_json.json");
+ *  OrderHistory history = warehouse.getOrderHistory();
+ *  warehouse.removeSlotFromStorageUnit(slot1);
+ *  delete slot1;
+ * 
+ * }catch (const std::exception &e) {
+        std::cerr << "An error occurred: " << e.what() << std::endl;}
+ * @endcode
  */
+
 class Warehouse
 {
 private:
