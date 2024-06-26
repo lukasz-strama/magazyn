@@ -26,8 +26,7 @@
  *
  * Order order2 = Order::fromJson(jsonOrder);
  *
- * }catch{
- * catch (const std::exception &e) {
+ * }catch (const std::exception &e) {
  *       std::cerr << "Error: " << e.what() << std::endl;
  * } @endcode
  */
