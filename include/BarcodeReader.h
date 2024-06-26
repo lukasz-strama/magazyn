@@ -6,7 +6,7 @@
 /** @file */
 
 /** @class BarcodeReader
- * @brief Służy do generowania kodu towaru, sprawdzania jego poprawności.
+ * @brief Klasa służąca do generowania kodu towaru, sprawdzania jego poprawności.
  *
  * Klasa BarcodeReader pozwala na utworzenie kodu towaru, w celu ułatwienia zarządzania towarami na magazynie.
  * Kod towaru składa się z ciągu 12 znaków i jest tworzony na podstawie schematu, wykorzystującego m.in. sumę kontrolną.

@@ -6,7 +6,8 @@
 #include "Item.h"
 
 /**
- * @brief Klasa Slot jest klasą abstrakcyjną, która pozwala na przypisywanie lokalizacji towarom.
+ * @class Slot
+ * @brief Klasa abstrakcyjna, która pozwala na przypisywanie lokalizacji towarom.
  * Każdy slot posiada wektor przechowujący obiekty typu Item,
  * lokalizację określoną przez łańcuch znaków oraz stan informujący, czy slot jest pełny.
  * Klasa ta zawiera metody do dodawania towarów, sprawdzania, czy slot jest pełny,

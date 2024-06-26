@@ -8,7 +8,7 @@
 
 /**
  * @class Shelf
- * @brief Zarządzanie półką, umożliwiając scharakteryzowanie półki oraz dodać towar na półkę.
+ * @brief Klasa zarządzająca półką, umożliwiając scharakteryzowanie półki oraz dodać towar na półkę.
  * 
  * Klasa Shelf pozwala dodać wymairy półki, określić piętro, na którym jest półka oraz dodać towar na wybraną półkę. 
  * 

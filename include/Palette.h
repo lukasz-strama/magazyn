@@ -6,8 +6,9 @@
 
 /**
  * @class Palette
- * @brief Klasa dziedzicząca po klasie abstrakcyjnej Slot,
- * pozwalająca na zarzadzanie paletą.
+ * @brief Klasa pozwalająca na zarzadzanie paletą,
+ * dziedzicząca po klasie abstrakcyjnej Slot.
+ * 
  *
  * Klasa obsługuje:
  * - ustawienie na wybranej palecie,

@@ -5,7 +5,7 @@
 #include "../lib/json.hpp"
 
 /** @class Order
- * @brief Reprezentująca zamówienia towarów.
+ * @brief Klasa zarządzająca zamówieniami towarów.
  *
  * Klasa Order pozwala na zarządzanie zamówieniami.
  * Każde zamówienie identyfikowane jest za pomocą:

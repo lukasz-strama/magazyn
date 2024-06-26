@@ -8,7 +8,7 @@
 
 /**
  * @class Item
- * @brief Służy do przechowywania informacji o towarze.
+ * @brief Klasa służąca do przechowywania informacji o towarze.
  *
  * Klasa Item zawiera informacje takie jak:
  * identyfikator towaru, ilość towaru, wygenerowany i przypisany kod towaru, kto jest właścicielem oraz jakiego typu jest towar.

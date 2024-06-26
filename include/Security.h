@@ -7,7 +7,7 @@
 
 /**
  * @class Security
- * @brief Zarządza systemem logowania, umożliwiając rejestrację, logowanie, zmianę hasła użytkownika oraz wylogowanie.
+ * @brief Klasa zarządzająca systemem logowania, umożliwiając rejestrację, logowanie, zmianę hasła użytkownika oraz wylogowanie.
  *
  * Klasa Security zapewnia mechanizmy uwierzytelniania użytkowników oraz zarządzania hasłami.
  * Hasła są szyfrowane za pomocą algorytmu jednokierunkowego i przechowywane w formacie JSON.
