@@ -9,6 +9,7 @@ var searchData=
   ['setfloor_6',['setFloor',['../de/d6d/classShelf.html#ab9d73eab9b93675d32d2bb26f7eef0ae',1,'Shelf']]],
   ['setlocation_7',['setLocation',['../df/d6d/classSlot.html#a1c8d563f03bb06abea8ef033cab79d4e',1,'Slot']]],
   ['settype_8',['setType',['../de/dad/classPalette_acac80bded7161269b0a1238149d9c780.html#acac80bded7161269b0a1238149d9c780',1,'Palette']]],
-  ['shelf_9',['Shelf',['../de/d6d/classShelf_a54bb6ba4b63f7473afbd1fb7d17f9c42.html#a54bb6ba4b63f7473afbd1fb7d17f9c42',1,'Shelf']]],
-  ['shipment_10',['Shipment',['../de/d69/classShipment_a1fc3992678708713fba8d620a0079e8c.html#a1fc3992678708713fba8d620a0079e8c',1,'Shipment']]]
+  ['shelf_9',['Shelf',['../de/d6d/classShelf_af7321d5764a1d6afae939a37e08161c9.html#af7321d5764a1d6afae939a37e08161c9',1,'Shelf']]],
+  ['shipment_10',['Shipment',['../de/d69/classShipment_a1fc3992678708713fba8d620a0079e8c.html#a1fc3992678708713fba8d620a0079e8c',1,'Shipment']]],
+  ['slot_11',['Slot',['../df/d6d/classSlot_a92a49d49328f84e7f8eb6c709d80b33c.html#a92a49d49328f84e7f8eb6c709d80b33c',1,'Slot::Slot()'],['../df/d6d/classSlot_addc86314490be4a8002d82d50d7d930e.html#addc86314490be4a8002d82d50d7d930e',1,'Slot::Slot(const int maxSize)']]]
 ];
