@@ -25,7 +25,7 @@ bool Warehouse::removeSlotFromStorageUnit(const Slot *slot)
 }
 
 // Metoda wyszukująca przedmiot po kodzie kreskowym
-Item Warehouse::searchItem(int barcode) const
+Item Warehouse::searchItem(std::string barcode) const
 {
     for (const auto &slot : storageUnits)
     {
@@ -64,6 +64,12 @@ bool Warehouse::saveOrderHistory(const std::string &filename) const
     {
         return false;
     }
+}
+
+bool Warehouse::addOrderToHistory(const Order &order)
+{
+    orderHistory.addOrder(order);
+    return true;
 }
 
 OrderHistory Warehouse::getOrderHistory() const

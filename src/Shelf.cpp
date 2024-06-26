@@ -30,25 +30,18 @@ bool Shelf::addPackage(const Item &item)
     if (!isSlotFull())
     {
         items.push_back(item);
-        isFull = true;
         return true;
-
-        if (items.size() >= maxSize)
-        {
-            isFull = true;
-        }
     }
     return false;
 }
 
-bool Shelf::removePackage(const int barcode)
+bool Shelf::removePackage(const std::string barcode)
 {
     for (auto it = items.begin(); it != items.end(); ++it)
     {
         if (it->getBarcode() == barcode)
         {
             items.erase(it);
-            isFull = !items.empty();
             return true;
         }
     }

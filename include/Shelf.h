@@ -9,14 +9,14 @@
 /**
  * @class Shelf
  * @brief Klasa zarządzająca półką, umożliwiając scharakteryzowanie półki oraz dodać towar na półkę.
- * 
- * Klasa Shelf pozwala dodać wymairy półki, określić piętro, na którym jest półka oraz dodać towar na wybraną półkę. 
- * 
+ *
+ * Klasa Shelf pozwala dodać wymairy półki, określić piętro, na którym jest półka oraz dodać towar na wybraną półkę.
+ *
  * Klasa ta obsługuje:
  * - dodawanie charakterystyki półki (wymiary, piętro),
  * - ułożenie towaru na półkę, jeśli jest pusta.
- * 
- * Przykład użycia: 
+ *
+ * Przykład użycia:
  * @code
  * try{
  * Shelf newShelf (dimensions); // zainicjalizowanie nowego obiektu klasy Shelf
@@ -25,7 +25,7 @@
  * items.push_back(item);
  * return true; // półka jest pusta, dodano towar
  * }
- * else 
+ * else
  * return false; // półka jest pełna, nie można dodać towaru
  * }
  * catch (const std::exception &e) {
@@ -43,8 +43,8 @@ public:
     /**
      * @brief Konstruktor klasy Półka.
      * Konstruktor pozwala zainicjalizować dane o półce,
-     * Umożliwiając określenie wymiarów oraz piętra. 
-     * 
+     * Umożliwiając określenie wymiarów oraz piętra.
+     *
      * @param dimensions Wymiary półki.
      * @param floor Piętro, na którym znajduje się półka.
      */
@@ -55,11 +55,10 @@ public:
      */
     std::tuple<int, int, int> getDimensions() const;
 
-      /**
+    /**
      * @brief Ustawia wymiary półki.
      */
     void setDimensions(std::tuple<int, int, int> __dimensions);
-
 
     /**
      * @brief Publiczna metoda, zwracajaca piętro, na którym znajduje się półka.
@@ -67,33 +66,31 @@ public:
      */
     int getFloor() const;
 
-     /**
+    /**
      * @brief Ustawia piętro, na którym znajduje się półka.
      */
-    void setFloor(int _floor) ;
-    
+    void setFloor(int _floor);
 
     /**
      * @brief Publiczna metoda, umożliwiająca dodanie towaru do półki.
      * @param towar Towar do dodania.
-     * 
+     *
      * Metoda sprawdza, czy:
      * - wybrana półka jest pełna.
-     * 
+     *
      * W sytuacji, w której półka jest pusta, zwraca true,
      * W przeciwnej sytuacji zwraca false (półka jest zajęta).
-     * 
+     *
      * @return true jeśli towar został dodany, false w przeciwnym razie.
      */
-    bool addPackage(const Item& towar) override;
+    bool addPackage(const Item &towar) override;
 
-     /**
+    /**
      * @brief Usuwa towar z palety.
      * @param barcode Kod towaru do usuniecia.
      * @return true jeśli towar został usuniety, false w przeciwnym razie.
      */
-    bool removePackage(const int barcode) override;
-
+    bool removePackage(const std::string barcode) override;
 };
 
 #endif // SHELF_H

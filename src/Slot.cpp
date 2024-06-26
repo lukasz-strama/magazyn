@@ -3,7 +3,7 @@
 // Metoda sprawdzająca czy slot jest pełny
 bool Slot::isSlotFull() const
 {
-    return isFull;
+    return items.size() == maxSize;
 }
 
 // Metoda zwracająca lokalizację slotu
@@ -18,6 +18,17 @@ void Slot::setLocation(const std::string &_location)
     location = _location;
 }
 
-const std::vector<Item>& Slot::getItems() const {
+const std::vector<Item> &Slot::getItems() const
+{
     return items;
+}
+
+std::string Slot::getItemDetails() const
+{
+    std::string details;
+    for (const auto &item : items)
+    {
+        details += item.getItemDetails();
+    }
+    return details;
 }

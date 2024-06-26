@@ -36,7 +36,7 @@ public:
      * @param barcode Kod kreskowy przedmiotu do wyszukania.
      * @return Znaleziony przedmiot.
      */
-    Item searchItem(int barcode) const;
+    Item searchItem(std::string barcode) const;
 
     /**
      * @brief Wypełnia historię zamówień danymi z pliku JSON.
@@ -51,6 +51,13 @@ public:
      * @return true jeśli operacja się powiodła, false w przeciwnym razie.
      */
     bool saveOrderHistory(const std::string &filename) const;
+
+    /**
+     * @brief Dodaje zamówienie do historii zamówień.
+     * @param order Zamówienie do dodania.
+     * @return true jeśli zamówienie zostało dodane, false w przeciwnym razie.
+     */
+    bool addOrderToHistory(const Order &order);
 
     /**
      * @brief Zwraca historię zamówień.

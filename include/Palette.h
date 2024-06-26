@@ -8,7 +8,7 @@
  * @class Palette
  * @brief Klasa pozwalająca na zarzadzanie paletą,
  * dziedzicząca po klasie abstrakcyjnej Slot.
- * 
+ *
  *
  * Klasa obsługuje:
  * - ustawienie na wybranej palecie,
@@ -97,7 +97,7 @@ public:
      * @param barcode Kod towaru do usuniecia.
      * @return true jeśli towar został usuniety, false w przeciwnym razie.
      */
-    bool removePackage(const int barcode) override;
+    bool removePackage(const std::string barcode) override;
 };
 
 #endif // Palette_H

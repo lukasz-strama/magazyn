@@ -34,7 +34,7 @@ class Item
 private:
     int id;               ///< Identyfikator towaru
     int quantity;         ///< Ilość towaru
-    int barcode;          ///< Kod kreskowy towaru
+    std::string barcode;  ///< Kod kreskowy towaru
     std::string owner;    ///< Właściciel towaru
     std::string itemType; ///< Typ towaru
 
@@ -50,7 +50,7 @@ public:
      * @param owner Właściciel towaru.
      * @param itemType Typ towaru.
      */
-    Item(int id, int quantity, int barcode, const std::string &owner, const std::string &itemType);
+    Item(int id, int quantity, std::string barcode, const std::string &owner, const std::string &itemType);
 
     /**
      * @brief Bezparametrowy konstruktor klasy Item.
@@ -73,13 +73,13 @@ public:
      * @param newOwner Nowy właściciel towaru (opcjonalny).
      * @param newItemType Nowy typ towaru (opcjonalny).
      */
-    void updateItemData(std::optional<int> newId = std::nullopt, std::optional<int> newQuantity = std::nullopt, std::optional<int> newBarcode = std::nullopt, std::optional<std::string> newOwner = std::nullopt, std::optional<std::string> newItemType = std::nullopt);
+    void updateItemData(std::optional<int> newId = std::nullopt, std::optional<int> newQuantity = std::nullopt, std::optional<std::string> newBarcode = std::nullopt, std::optional<std::string> newOwner = std::nullopt, std::optional<std::string> newItemType = std::nullopt);
 
     /**
      * @brief Zwraca barcode towaru.
      * @return Barcode towaru w formacie string.
      */
-    int getBarcode() const;
+    std::string getBarcode() const;
 };
 
 #endif // ITEM_H

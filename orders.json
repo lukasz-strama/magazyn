@@ -10,5 +10,17 @@
         "details": "Order details",
         "id": 2,
         "type": "Outgoing"
+    },
+    {
+        "customer": "Alice",
+        "details": "Order for electronics",
+        "id": 3,
+        "type": "Outgoing"
+    },
+    {
+        "customer": "Alice",
+        "details": "Order for electronics",
+        "id": 3,
+        "type": "Outgoing"
     }
 ]
