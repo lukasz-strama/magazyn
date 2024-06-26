@@ -24,6 +24,21 @@ protected:
 
 public:
     /**
+     * @brief Konstruktor domyślny klasy Slot.
+     * Konstruktor domyślny klasy Slot.
+     */
+    Slot();
+
+    /**
+     * @brief Konstruktor klasy Slot.
+     * Konstruktor pozwala zainicjalizować dane o slocie,
+     * Umożliwiając określenie maksymalnego rozmiaru tablicy.
+     *
+     * @param maxSize Maksymalny rozmiar tablicy.
+     */
+    Slot(const int maxSize);
+
+    /**
      * @brief Publiczna metoda, dodająca towar do slotu.
      * Zwrca true, jeśli dodanie towaru jest możliwe, false w przeciwnym wypadku.
      *

@@ -41,11 +41,27 @@ private:
 
 public:
     /**
+     * @brief Konstruktor domyślny klasy Palette.
+     * Konstruktor domyślny klasy Palette.
+     */
+    Palette();
+
+    /**
      * @brief Konstruktor klasy Palette.
      * Konstruktor pozwala zainicjalizować dane o palecie,
      * Umożliwiając określenie typu palety.
      */
     Palette(const std::string type);
+
+    /**
+     * @brief Konstruktor klasy Palette.
+     * Konstruktor pozwala zainicjalizować dane o palecie,
+     * Umożliwiając określenie typu palety oraz maksymalnego rozmiaru.
+     *
+     * @param type Typ palety.
+     * @param maxSize Maksymalny rozmiar palety.
+     */
+    Palette(const std::string type, const int maxSize);
 
     /**
      * @brief Metoda publiczna, zwracająca typ palety.
