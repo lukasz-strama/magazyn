@@ -7,6 +7,7 @@
 #include "Shelf.h"
 #include "Palette.h"
 #include "Item.h"
+#include "Order.h"
 
 void registerUser(int userID, std::string initialPassword);
 bool loginUser(int userID, std::string password);
@@ -70,11 +71,15 @@ int main()
     warehouse.addSlotToStorageUnit(&palette1);
     warehouse.addSlotToStorageUnit(&palette2);
 
-    reader.generateBarcode(1, "11111", "55555");
-    std::string barcode = reader.getBarcode();
+    std::string barcode = "";
 
-    shelf1.addPackage(*(new Item(1, 5, "12345", "Alice", "Electronics")));
-    shelf1.addPackage(*(new Item(2, 10, "54321", "Bob", "Clothing")));
+    reader.generateBarcode(1, "11111", "55555");
+    barcode = reader.getBarcode();
+    shelf1.addPackage(*(new Item(1, 5, barcode, "Alice", "Electronics")));
+
+    reader.generateBarcode(2, "54321", "11111");
+    barcode = reader.getBarcode();
+    shelf1.addPackage(*(new Item(2, 10, barcode, "Bob", "Clothing")));
 
     shelf2.addPackage(*(new Item(3, 15, "67890", "Charlie", "Food")));
     shelf2.addPackage(*(new Item(4, 20, "98765", "David", "Electronics")));
@@ -93,7 +98,7 @@ int main()
     std::cout << palette1.getItemDetails() << std::endl;
     std::cout << palette2.getItemDetails() << std::endl;
 
-    if (shelf1.removePackage("54321"))
+    if (shelf1.removePackage("12345"))
     {
         std::cout << "Item removed successfully." << std::endl;
     }
@@ -104,6 +109,16 @@ int main()
 
     std::cout << "Shelf details after removing item: " << std::endl;
     std::cout << shelf1.getItemDetails() << std::endl;
+
+    Order order1(3, "Alice", Order::Type::Outgoing, "Electronics");
+    order1.setDetails("Order for electronics");
+
+    warehouse.addOrderToHistory(order1);
+    orderHistory = warehouse.getOrderHistory();
+    warehouse.saveOrderHistory("orders.json");
+
+    std::cout << "Order History after adding order: " << std::endl;
+    orderHistory.showAllHistory();
 
     return 0;
 }

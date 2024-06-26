@@ -66,6 +66,12 @@ bool Warehouse::saveOrderHistory(const std::string &filename) const
     }
 }
 
+bool Warehouse::addOrderToHistory(const Order &order)
+{
+    orderHistory.addOrder(order);
+    return true;
+}
+
 OrderHistory Warehouse::getOrderHistory() const
 {
     return orderHistory;

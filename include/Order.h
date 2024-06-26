@@ -43,7 +43,6 @@ public:
 
     /** @brief Konstruktor klasy Order
      */
-
     Order(int id, const std::string &customer, Type type, const std::string &details);
 
     /** @brief Metoda publiczna zwracająca ID zamówienia.

@@ -53,6 +53,13 @@ public:
     bool saveOrderHistory(const std::string &filename) const;
 
     /**
+     * @brief Dodaje zamówienie do historii zamówień.
+     * @param order Zamówienie do dodania.
+     * @return true jeśli zamówienie zostało dodane, false w przeciwnym razie.
+     */
+    bool addOrderToHistory(const Order &order);
+
+    /**
      * @brief Zwraca historię zamówień.
      * @return Historia zamówień.
      */
