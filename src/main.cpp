@@ -81,14 +81,14 @@ int main()
     barcode = reader.getBarcode();
     shelf1.addPackage(*(new Item(2, 10, barcode, "Bob", "Clothing")));
 
-    shelf2.addPackage(*(new Item(3, 15, "67890", "Charlie", "Food")));
-    shelf2.addPackage(*(new Item(4, 20, "98765", "David", "Electronics")));
+    shelf2.addPackage(*(new Item(3, 15, "6789067890", "Charlie", "Food")));
+    shelf2.addPackage(*(new Item(4, 20, "9876598765", "David", "Electronics")));
 
-    palette1.addPackage(*(new Item(5, 25, "13579", "Eve", "Clothing")));
-    palette1.addPackage(*(new Item(6, 30, "24680", "Frank", "Food")));
+    palette1.addPackage(*(new Item(5, 25, "1357913579", "Eve", "Clothing")));
+    palette1.addPackage(*(new Item(6, 30, "2468024680", "Frank", "Food")));
 
-    palette2.addPackage(*(new Item(7, 35, "11223", "Grace", "Electronics")));
-    palette2.addPackage(*(new Item(8, 40, "33445", "Heidi", "Clothing")));
+    palette2.addPackage(*(new Item(7, 35, "1122311223", "Grace", "Electronics")));
+    palette2.addPackage(*(new Item(8, 40, "3344533445", "Heidi", "Clothing")));
 
     std::cout << "Shelf details: " << std::endl;
     std::cout << shelf1.getItemDetails() << std::endl;

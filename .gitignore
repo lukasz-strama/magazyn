@@ -57,3 +57,7 @@ CMakeLists.txt.user
 *.swo
 .DS_Store
 Thumbs.db
+
+# XD
+passwords.json
+orders.json
