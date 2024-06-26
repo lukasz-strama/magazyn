@@ -1,45 +1,77 @@
 #include "Warehouse.h"
 #include <algorithm>
+#include <iostream>
+#include <exception>
+
+
+// Metoda zwracajaca historie zamówień
+OrderHistory Warehouse::getOrderHistory() const  { return orderHistory; }
 
 // Metoda dodająca slot do jednostek magazynowych
 bool Warehouse::addSlotToStorageUnit(Slot *slot)
 {
-    if (slot)
+    try
     {
-        storageUnits.push_back(slot);
-        return true;
+        if (slot)
+        {
+            storageUnits.push_back(slot);
+            return true;
+        }
+        return false;
     }
-    return false;
+    catch (const std::exception &e)
+    {
+        std::cerr << "Error adding slot to storage unit: " << e.what() << std::endl;
+        return false;
+    }
 }
 
 // Metoda usuwająca slot z jednostki magazynowej
 bool Warehouse::removeSlotFromStorageUnit(const Slot *slot)
 {
-    auto it = std::find(storageUnits.begin(), storageUnits.end(), slot);
-    if (it != storageUnits.end())
+    try
     {
-        storageUnits.erase(it);
-        return true;
+        auto it = std::find(storageUnits.begin(), storageUnits.end(), slot);
+        if (it != storageUnits.end())
+        {
+            storageUnits.erase(it);
+            return true;
+        }
+        return false;
     }
-    return false;
+    catch (const std::exception &e)
+    {
+        std::cerr << "Error removing slot from storage unit: " << e.what() << std::endl;
+        return false;
+    }
 }
 
 // Metoda wyszukująca przedmiot po kodzie kreskowym
 Item Warehouse::searchItem(std::string barcode) const
 {
-    for (const auto &slot : storageUnits)
+    try
     {
-        for (const auto &item : slot->getItems())
+        for (const auto &slot : storageUnits)
         {
-            if (item.getBarcode() == barcode)
+            for (const auto &item : slot->getItems())
             {
-                return item;
+                if (item.getBarcode() == barcode)
+                {
+                    return item;
+                }
             }
         }
+        return Item(); // Pusty przedmiot jako domyślna wartość
     }
-    return Item(); // Pusty przedmiot jako domyślna wartość
+    catch (const std::exception &e)
+    {
+        std::cerr << "Error searching item: " << e.what() << std::endl;
+        return Item(); // Zwraca pusty przedmiot w przypadku błędu
+    }
 }
 
+
+// Metoda zczytująca zamoówienia z pliku
 bool Warehouse::populateOrderHistory(const std::string &filename)
 {
     try
@@ -49,10 +81,12 @@ bool Warehouse::populateOrderHistory(const std::string &filename)
     }
     catch (const std::exception &e)
     {
+        std::cerr << "Error populating order history: " << e.what() << std::endl;
         return false;
     }
 }
 
+// Metoda zapisująca historię zamówień do pliku
 bool Warehouse::saveOrderHistory(const std::string &filename) const
 {
     try
@@ -62,17 +96,24 @@ bool Warehouse::saveOrderHistory(const std::string &filename) const
     }
     catch (const std::exception &e)
     {
+        std::cerr << "Error saving order history: " << e.what() << std::endl;
         return false;
     }
 }
 
+// Metoda dodająca zamówienie do historii
 bool Warehouse::addOrderToHistory(const Order &order)
 {
-    orderHistory.addOrder(order);
-    return true;
+    try
+    {
+        orderHistory.addOrder(order);
+        return true;
+    }
+    catch (const std::exception &e)
+    {
+        std::cerr << "Error adding order to history: " << e.what() << std::endl;
+        return false;
+    }
 }
 
-OrderHistory Warehouse::getOrderHistory() const
-{
-    return orderHistory;
-}
+
