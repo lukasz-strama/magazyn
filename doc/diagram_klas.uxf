@@ -24,37 +24,38 @@
 
 
 // This text will be stored with each diagram;  use it for notes.</help_text>
-  <zoom_level>10</zoom_level>
+  <zoom_level>4</zoom_level>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>520</x>
-      <y>260</y>
-      <w>400</w>
-      <h>150</h>
+      <x>592</x>
+      <y>448</y>
+      <w>160</w>
+      <h>76</h>
     </coordinates>
     <panel_attributes>Warehouse
 --
-- storageUnits: vector&lt;Slot&gt; 
-- history : OrderHistory
+- storageUnits: vector&lt;Slot *&gt; 
+- OrderHistory : OrderHistory
 --
-+ addItemToStorageUnit(Item *item) : bool
-+ removeItemFromStorageUnit(const std::string &amp;itemId) : bool
-+ searchItem(int barcode) const : Item
-+ getInventory() const : vector&lt;Item&gt;
-+ getHistory() const : vector&lt;Order&gt;</panel_attributes>
++ addItemToStorageUnit(*slot : Slot) : bool
++ removeItemFromStorageUnit(const *slot : Slot) : bool
++ searchItem(barcode : string) const : Item
++ populateOrderHistory(const &amp;filename : string) : bool
++ saveOrderHistory(const &amp;filename : string) const : bool
++ addOrderToHistory(const &amp;order : Order) : bool
++ getOrderHistory() const : OrderHistory</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>600</x>
-      <y>0</y>
-      <w>340</w>
-      <h>120</h>
+      <x>624</x>
+      <y>352</y>
+      <w>136</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>Security
-bg=green
 --
 - userID : char
 - password : string
@@ -67,25 +68,24 @@ bg=green
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>760</x>
-      <y>150</y>
-      <w>40</w>
-      <h>110</h>
+      <x>688</x>
+      <y>400</y>
+      <w>16</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>m1=1
 m2=1</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;100.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>0</x>
-      <y>290</y>
-      <w>340</w>
-      <h>140</h>
+      <x>404</x>
+      <y>468</y>
+      <w>136</w>
+      <h>56</h>
     </coordinates>
     <panel_attributes>BarcodeReader
-bg=green
 --
 - barcode : string
 --
@@ -99,27 +99,26 @@ bg=green
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>330</x>
-      <y>310</y>
-      <w>190</w>
-      <h>50</h>
+      <x>536</x>
+      <y>476</y>
+      <w>56</w>
+      <h>20</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
 m2=1..n
 </panel_attributes>
-    <additional_attributes>170.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>120.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>520</x>
-      <y>750</y>
-      <w>250</w>
-      <h>180</h>
+      <x>592</x>
+      <y>652</y>
+      <w>100</w>
+      <h>68</h>
     </coordinates>
     <panel_attributes>Order
-bg=yellow
 --
 - id : int
 - customer : string
@@ -135,13 +134,12 @@ bg=yellow
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>920</x>
-      <y>750</y>
-      <w>210</w>
-      <h>120</h>
+      <x>752</x>
+      <y>652</y>
+      <w>84</w>
+      <h>48</h>
     </coordinates>
     <panel_attributes>Shipment
-bg=yellow
 --
 - barcode : string
 - order : Order
@@ -153,13 +151,12 @@ bg=yellow
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1540</x>
-      <y>300</y>
-      <w>270</w>
-      <h>160</h>
+      <x>972</x>
+      <y>472</y>
+      <w>108</w>
+      <h>64</h>
     </coordinates>
     <panel_attributes>Item
-bg=green
 --
 - id : int
 - quantity : int
@@ -174,13 +171,12 @@ updateQuantity(newQuantity : int) : void</panel_attributes>
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1020</x>
-      <y>300</y>
-      <w>300</w>
-      <h>170</h>
+      <x>792</x>
+      <y>472</y>
+      <w>120</w>
+      <h>68</h>
     </coordinates>
     <panel_attributes>&lt;&lt;abstract&gt;&gt;
-bg=green
 Slot
 --
 # items : vector&lt;Item&gt;
@@ -196,10 +192,10 @@ Slot
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>910</x>
-      <y>350</y>
-      <w>130</w>
-      <h>30</h>
+      <x>748</x>
+      <y>492</y>
+      <w>52</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;110.0;10.0</additional_attributes>
@@ -207,10 +203,10 @@ Slot
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>910</x>
-      <y>340</y>
-      <w>130</w>
-      <h>50</h>
+      <x>748</x>
+      <y>488</y>
+      <w>52</w>
+      <h>20</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1..n
@@ -222,45 +218,33 @@ m2=1
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>520</x>
-      <y>560</y>
-      <w>250</w>
-      <h>90</h>
+      <x>572</x>
+      <y>564</y>
+      <w>136</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>OrderHistory
-bg=yellow
 --
 - orders : vector&lt;Order&gt;
 --
 + addOrder(order : Order) : void
-+ getOrderHistory() : vector&lt;Order&gt;</panel_attributes>
++ getOrder(id : int) const : Order
++ getAllOrders() const : vector&lt;Order&gt;
++ saveToFile(const &amp;filename : string) const : void
++ loadFromFile(const &amp;filename : string) : void
++ orderExists(id : int) const : bool</panel_attributes>
     <additional_attributes/>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>640</x>
-      <y>420</y>
-      <w>50</w>
-      <h>160</h>
+      <y>520</y>
+      <w>20</w>
+      <h>52</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1 
-m2=1..n
-
-</panel_attributes>
-    <additional_attributes>10.0;140.0;10.0;10.0</additional_attributes>
-  </element>
-  <element>
-    <id>Relation</id>
-    <coordinates>
-      <x>640</x>
-      <y>640</y>
-      <w>50</w>
-      <h>130</h>
-    </coordinates>
-    <panel_attributes>lt=-
-m1=1
 m2=1..n
 
 </panel_attributes>
@@ -269,10 +253,25 @@ m2=1..n
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>760</x>
-      <y>800</y>
-      <w>160</w>
-      <h>50</h>
+      <x>640</x>
+      <y>620</y>
+      <w>20</w>
+      <h>40</h>
+    </coordinates>
+    <panel_attributes>lt=-
+m1=1
+m2=1..n
+
+</panel_attributes>
+    <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
+  </element>
+  <element>
+    <id>Relation</id>
+    <coordinates>
+      <x>688</x>
+      <y>672</y>
+      <w>64</w>
+      <h>20</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1
@@ -284,54 +283,54 @@ m2=1
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>760</x>
-      <y>110</y>
-      <w>30</w>
-      <h>170</h>
+      <x>688</x>
+      <y>396</y>
+      <w>12</w>
+      <h>60</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;150.0;10.0;10.0</additional_attributes>
+    <additional_attributes>10.0;130.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1310</x>
-      <y>360</y>
-      <w>250</w>
-      <h>30</h>
+      <x>908</x>
+      <y>496</y>
+      <w>72</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;230.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;160.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>330</x>
-      <y>320</y>
-      <w>210</w>
-      <h>30</h>
+      <x>536</x>
+      <y>480</y>
+      <w>64</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>190.0;10.0;10.0;10.0</additional_attributes>
+    <additional_attributes>140.0;10.0;10.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>640</x>
-      <y>400</y>
-      <w>30</w>
-      <h>180</h>
+      <y>520</y>
+      <w>12</w>
+      <h>52</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;160.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>760</x>
-      <y>810</y>
-      <w>180</w>
-      <h>30</h>
+      <x>688</x>
+      <y>676</y>
+      <w>72</w>
+      <h>12</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;-</panel_attributes>
     <additional_attributes>160.0;10.0;10.0;10.0</additional_attributes>
@@ -340,35 +339,35 @@ m2=1
     <id>Relation</id>
     <coordinates>
       <x>640</x>
-      <y>640</y>
-      <w>30</w>
-      <h>130</h>
+      <y>620</y>
+      <w>12</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;&lt;&lt;&lt;-</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;110.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1320</x>
-      <y>350</y>
-      <w>240</w>
-      <h>50</h>
+      <x>912</x>
+      <y>492</y>
+      <w>68</w>
+      <h>20</h>
     </coordinates>
     <panel_attributes>lt=-
 m1=1..n
 m2=1
 
 </panel_attributes>
-    <additional_attributes>220.0;20.0;10.0;20.0</additional_attributes>
+    <additional_attributes>150.0;20.0;10.0;20.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1160</x>
-      <y>460</y>
-      <w>30</w>
-      <h>110</h>
+      <x>848</x>
+      <y>536</y>
+      <w>12</w>
+      <h>44</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;10.0;10.0;90.0</additional_attributes>
@@ -376,13 +375,12 @@ m2=1
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1020</x>
-      <y>100</y>
-      <w>300</w>
-      <h>130</h>
+      <x>792</x>
+      <y>392</y>
+      <w>120</w>
+      <h>52</h>
     </coordinates>
     <panel_attributes>Shelf
-bg=green
 --
 - dimensions : tuple&lt;int, int, int&gt;
 - floor : int
@@ -395,10 +393,10 @@ bg=green
   <element>
     <id>Relation</id>
     <coordinates>
-      <x>1160</x>
-      <y>220</y>
-      <w>30</w>
-      <h>100</h>
+      <x>848</x>
+      <y>440</y>
+      <w>12</w>
+      <h>40</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-</panel_attributes>
     <additional_attributes>10.0;80.0;10.0;10.0</additional_attributes>
@@ -406,13 +404,12 @@ bg=green
   <element>
     <id>UMLClass</id>
     <coordinates>
-      <x>1020</x>
-      <y>550</y>
-      <w>300</w>
-      <h>110</h>
+      <x>792</x>
+      <y>572</y>
+      <w>120</w>
+      <h>44</h>
     </coordinates>
     <panel_attributes>Palette
-bg=green
 --
 - type: string
 --
