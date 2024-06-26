@@ -1,5 +1,6 @@
 var classWarehouse =
 [
+    [ "addOrderToHistory", "d5/d6b/classWarehouse_aa1875feb14b8e71db04419b3e0c7ee75.html#aa1875feb14b8e71db04419b3e0c7ee75", null ],
     [ "addSlotToStorageUnit", "d5/d6b/classWarehouse_adfc7c0b06eceda9ca92b9656709bf809.html#adfc7c0b06eceda9ca92b9656709bf809", null ],
     [ "getOrderHistory", "d5/d6b/classWarehouse_a970c48419f75cdd94e1ccf2903c3593a.html#a970c48419f75cdd94e1ccf2903c3593a", null ],
     [ "populateOrderHistory", "d5/d6b/classWarehouse_a87214bfa5700ea3e0738dd84351cd25f.html#a87214bfa5700ea3e0738dd84351cd25f", null ],
