@@ -61,7 +61,7 @@ public:
      * @param type Typ palety.
      * @param maxSize Maksymalny rozmiar palety.
      */
-    Palette(const std::string type, const int maxSize);
+    Palette(const std::string type, const size_t maxSize);
 
     /**
      * @brief Metoda publiczna, zwracająca typ palety.

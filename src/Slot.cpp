@@ -1,5 +1,8 @@
 #include "Slot.h"
 
+Slot::Slot() : maxSize(0) {}
+Slot::Slot(const size_t maxSize) : maxSize(maxSize) {}
+
 // Metoda sprawdzająca czy slot jest pełny
 bool Slot::isSlotFull() const
 {

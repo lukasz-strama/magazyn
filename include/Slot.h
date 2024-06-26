@@ -36,7 +36,7 @@ public:
      *
      * @param maxSize Maksymalny rozmiar tablicy.
      */
-    Slot(const int maxSize);
+    Slot(const size_t maxSize);
 
     /**
      * @brief Publiczna metoda, dodająca towar do slotu.

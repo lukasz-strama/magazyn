@@ -48,7 +48,7 @@ public:
      * @param dimensions Wymiary półki.
      * @param floor Piętro, na którym znajduje się półka.
      */
-    Shelf::Shelf(const std::tuple<int, int, int> &dimensions, int floor, const int maxSize);
+    Shelf(const std::tuple<int, int, int> &dimensions, int floor, const size_t maxSize);
     /**
      * @brief Publiczna metoda, zwracająca wymiary półki.
      * @return zwraca wymiary półki.

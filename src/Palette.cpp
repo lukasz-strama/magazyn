@@ -1,8 +1,7 @@
 #include "Palette.h"
 
-
 Palette::Palette() {}
-Palette::Palette(const std::string type, const int maxSize) : Slot(maxSize), type(type) {}
+Palette::Palette(const std::string type, const size_t maxSize) : Slot(maxSize), type(type) {}
 Palette::Palette(const std::string type) : type(type) {}
 
 std::string Palette::getType() const

@@ -1,7 +1,7 @@
 #include "Shelf.h"
 
 // Konstruktor z inicjalizacją wymiarów i piętra półki
-Shelf::Shelf(const std::tuple<int, int, int> &dimensions, int floor, const int maxSize) : Slot(maxSize), floor(floor), dimensions(dimensions) {}
+Shelf::Shelf(const std::tuple<int, int, int> &dimensions, int floor, const size_t maxSize) : Slot(maxSize), dimensions(dimensions), floor(floor) {}
 
 // Metoda zwracająca wymiary półki
 std::tuple<int, int, int> Shelf::getDimensions() const
