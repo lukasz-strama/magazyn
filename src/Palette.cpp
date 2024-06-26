@@ -1,9 +1,6 @@
 #include "Palette.h"
 
-Palette::Palette(const std::string type) : type(type)
-{
-    isFull = false;
-}
+Palette::Palette(const std::string type) : type(type) {}
 
 std::string Palette::getType() const
 {
@@ -20,13 +17,7 @@ bool Palette::addPackage(const Item &item)
     if (!isSlotFull())
     {
         items.push_back(item);
-        isFull = true;
         return true;
-
-        if (items.size() >= maxSize)
-        {
-            isFull = true;
-        }
     }
     return false;
 }
@@ -38,7 +29,6 @@ bool Palette::removePackage(const int barcode)
         if (it->getBarcode() == barcode)
         {
             items.erase(it);
-            isFull = !items.empty(); // Update the isFull status
             return true;
         }
     }
