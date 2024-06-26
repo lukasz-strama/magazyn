@@ -1,5 +1,6 @@
 #include "OrderHistory.h"
 #include <fstream>
+#include <iostream>
 
 void OrderHistory::addOrder(const Order &order)
 {
@@ -53,5 +54,13 @@ void OrderHistory::loadFromFile(const std::string &filename)
         {
             orders.push_back(Order::fromJson(item));
         }
+    }
+}
+
+void OrderHistory::showAllHistory() const
+{
+    for (const auto &order : orders)
+    {
+        std::cout << order.getId() << " " << order.getCustomer() << " " << order.getDetails() << std::endl;
     }
 }

@@ -44,6 +44,19 @@ public:
      * @return true jeśli operacja się powiodła, false w przeciwnym razie.
      */
     bool populateOrderHistory(const std::string &filename);
+
+    /**
+     * @brief Zapisuje historię zamówień do pliku JSON.
+     * @param filename Nazwa pliku do zapisu.
+     * @return true jeśli operacja się powiodła, false w przeciwnym razie.
+     */
+    bool saveOrderHistory(const std::string &filename) const;
+
+    /**
+     * @brief Zwraca historię zamówień.
+     * @return Historia zamówień.
+     */
+    OrderHistory getOrderHistory() const;
 };
 
 #endif // WAREHOUSE_H

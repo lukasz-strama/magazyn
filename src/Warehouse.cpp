@@ -52,3 +52,21 @@ bool Warehouse::populateOrderHistory(const std::string &filename)
         return false;
     }
 }
+
+bool Warehouse::saveOrderHistory(const std::string &filename) const
+{
+    try
+    {
+        orderHistory.saveToFile(filename);
+        return true;
+    }
+    catch (const std::exception &e)
+    {
+        return false;
+    }
+}
+
+OrderHistory Warehouse::getOrderHistory() const
+{
+    return orderHistory;
+}

@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Security.h"
+#include "OrderHistory.h"
 #include "Warehouse.h"
 #include "Slot.h"
 #include "Shelf.h"
@@ -27,8 +28,15 @@ int main()
 
     } while (login(login_flag, login_id, password) == false);
 
+    password = "";
+
     Warehouse warehouse;
     warehouse.populateOrderHistory("orders.json");
+    OrderHistory orderHistory = warehouse.getOrderHistory();
+
+    std::cout << "Historia zamowien: " << std::endl;
+    orderHistory.showAllHistory();
+
     warehouse.addSlotToStorageUnit(new Shelf(std::make_tuple(2, 5, 10), 1));
     warehouse.addSlotToStorageUnit(new Shelf(std::make_tuple(2, 5, 10), 2));
 
