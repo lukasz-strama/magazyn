@@ -27,7 +27,7 @@ int main()
 
     bool loggedIn = false;
 
-    while (!loggedIn)
+    while (false)
     {
         std::cout << "Enter password: ";
         std::cin >> password;
@@ -60,10 +60,10 @@ int main()
     std::cout << "Order History: " << std::endl;
     orderHistory.showAllHistory();
 
-    Shelf shelf1(std::make_tuple(2, 5, 10), 1);
-    Shelf shelf2(std::make_tuple(2, 5, 10), 2);
-    Palette palette1("euro");
-    Palette palette2("block");
+    Shelf shelf1(std::make_tuple(2, 5, 10), 1, 10);
+    Shelf shelf2(std::make_tuple(2, 5, 10), 2, 10);
+    Palette palette1("euro", 10);
+    Palette palette2("block", 5);
 
     warehouse.addSlotToStorageUnit(&shelf1);
     warehouse.addSlotToStorageUnit(&shelf2);
@@ -110,12 +110,19 @@ int main()
     std::cout << "Shelf details after removing item: " << std::endl;
     std::cout << shelf1.getItemDetails() << std::endl;
 
-    Order order1(3, "Alice", Order::Type::Outgoing, "Electronics");
-    order1.setDetails("Order for electronics");
+    if (!orderHistory.orderExists(3))
+    {
+        Order order1(3, "Alice", Order::Type::Outgoing, "Electronics");
+        order1.setDetails("Order for electronics");
 
-    warehouse.addOrderToHistory(order1);
-    orderHistory = warehouse.getOrderHistory();
-    warehouse.saveOrderHistory("orders.json");
+        warehouse.addOrderToHistory(order1);
+        orderHistory = warehouse.getOrderHistory();
+        warehouse.saveOrderHistory("orders.json");
+    }
+    else
+    {
+        std::cout << "Order with ID 3 already exists." << std::endl;
+    }
 
     std::cout << "Order History after adding order: " << std::endl;
     orderHistory.showAllHistory();

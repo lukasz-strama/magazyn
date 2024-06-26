@@ -31,7 +31,7 @@
  * history.loadFromFile(filename);
  * }catch (const std::exception &e) {
         std::cerr << "An error occurred: " << e.what() << std::endl;}
- * @endcode       
+ * @endcode
  */
 
 class OrderHistory
@@ -67,6 +67,13 @@ public:
      * @param filename Nazwa pliku do odczytu.
      */
     void loadFromFile(const std::string &filename);
+
+    /**
+     * @brief Metoda sprawdzająca czy zamówienie o podanym ID istnieje.
+     * @param id Identyfikator zamówienia.
+     * @return Zwraca true jeśli zamówienie istnieje, false w przeciwnym razie.
+     */
+    bool orderExists(int id) const;
 
     void showAllHistory() const;
 

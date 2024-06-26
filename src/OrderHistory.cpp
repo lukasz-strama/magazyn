@@ -57,6 +57,18 @@ void OrderHistory::loadFromFile(const std::string &filename)
     }
 }
 
+bool OrderHistory::orderExists(int id) const
+{
+    for (const auto &order : orders)
+    {
+        if (order.getId() == id)
+        {
+            return true;
+        }
+    }
+    return false;
+}
+
 void OrderHistory::showAllHistory() const
 {
     for (const auto &order : orders)
