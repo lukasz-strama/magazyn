@@ -22,6 +22,7 @@
  *
  * Przykład użycia:
  *
+ * @code
  * try{
  *  OrderHistory history;
  *  history.addOrder(Order(id, customer, type, details));
@@ -30,6 +31,7 @@
  * history.loadFromFile(filename);
  * }catch (const std::exception &e) {
         std::cerr << "An error occurred: " << e.what() << std::endl;}
+ * @endcode       
  */
 
 class OrderHistory

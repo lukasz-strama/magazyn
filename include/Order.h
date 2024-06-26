@@ -18,7 +18,7 @@
  *
  *
  * Przykład użycia:
- *
+ * @code
  * try{
  * Order order1(id, customer, type, details);
  * order1.setDetails(details);
@@ -29,7 +29,7 @@
  * }catch{
  * catch (const std::exception &e) {
  *       std::cerr << "Error: " << e.what() << std::endl;
- * }
+ * } @endcode
  */
 
 class Order

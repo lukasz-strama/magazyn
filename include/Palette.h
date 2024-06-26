@@ -16,6 +16,7 @@
  *
  * Przykład użycia:
  *
+ * @code
  * try{
  * Palette palette;
  * palette.setType(type);
@@ -30,6 +31,7 @@
  * }catch (const std::exception &e) {
         std::cerr << "An error occurred: " << e.what() << std::endl;
  * }
+ * @endcode
  */
 class Palette : public Slot
 {

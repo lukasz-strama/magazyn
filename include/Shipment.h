@@ -18,7 +18,7 @@
  * 
  * Przykład użycia:
  * 
- * 
+ * @code
  * try{
  * Order order(id, customer, type, details);
  * Shipment shipment(barcode, order);
@@ -27,6 +27,7 @@
  * catch (const std::exception &e) {
         std::cerr << "An error occurred: " << e.what() << std::endl;
  * }
+ * @endcode
  */
 
 class Shipment
