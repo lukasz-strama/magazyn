@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['validatebarcode_0',['validateBarcode',['../d0/d96/classBarcodeReader_a64c9bb4778bc4a692e68afa10421d5eb.html#a64c9bb4778bc4a692e68afa10421d5eb',1,'BarcodeReader']]]
+  ['updateitemdata_0',['updateItemData',['../d0/dae/classItem_a26080fda2aa7ab6abad5e51b70ac3c44.html#a26080fda2aa7ab6abad5e51b70ac3c44',1,'Item']]]
 ];
