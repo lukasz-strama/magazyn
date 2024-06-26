@@ -12,5 +12,6 @@ var searchData=
   ['getitemdetails_9',['getItemDetails',['../d0/dae/classItem_ac5921376ed6f3be4b17f754830fd392f.html#ac5921376ed6f3be4b17f754830fd392f',1,'Item']]],
   ['getlocation_10',['getLocation',['../df/d6d/classSlot_ad1ba951df5eb21c8463dbeeb579a4fa3.html#ad1ba951df5eb21c8463dbeeb579a4fa3',1,'Slot']]],
   ['getorder_11',['getOrder',['../db/d68/classOrderHistory_ac61340978154cdaa244dffeae8bb548d.html#ac61340978154cdaa244dffeae8bb548d',1,'OrderHistory::getOrder()'],['../de/d69/classShipment_adc74aab8757ab53e446ec75efa170004.html#adc74aab8757ab53e446ec75efa170004',1,'Shipment::getOrder()']]],
-  ['gettype_12',['getType',['../d5/d6b/classOrder_af91a9ce815538dd575a1999bee09667f.html#af91a9ce815538dd575a1999bee09667f',1,'Order::getType()'],['../de/dad/classPalette_a253a8523bf1cfa825f4d95c63aa26ec6.html#a253a8523bf1cfa825f4d95c63aa26ec6',1,'Palette::getType()']]]
+  ['getorderhistory_12',['getOrderHistory',['../d5/d6b/classWarehouse_a970c48419f75cdd94e1ccf2903c3593a.html#a970c48419f75cdd94e1ccf2903c3593a',1,'Warehouse']]],
+  ['gettype_13',['getType',['../d5/d6b/classOrder_af91a9ce815538dd575a1999bee09667f.html#af91a9ce815538dd575a1999bee09667f',1,'Order::getType()'],['../de/dad/classPalette_a253a8523bf1cfa825f4d95c63aa26ec6.html#a253a8523bf1cfa825f4d95c63aa26ec6',1,'Palette::getType()']]]
 ];
