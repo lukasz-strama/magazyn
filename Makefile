@@ -24,7 +24,7 @@ else
 	RMDIR := rm -rf
 endif
 
-CFLAGS = -g -Wall -I$(INCLUDE_DIR)
+CFLAGS = -g -Wall -I$(INCLUDE_DIR) -std=c++17
 
 all: $(BUILD_DIR) $(TARGET)
 	@$(info Compilation successful)
