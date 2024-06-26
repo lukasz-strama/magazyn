@@ -31,7 +31,7 @@ std::string Slot::getItemDetails() const
     std::string details;
     for (const auto &item : items)
     {
-        details += item.getItemDetails();
+        details += item.getItemDetails() + "\n";
     }
     return details;
 }

@@ -60,7 +60,7 @@ int main()
     std::cout << "Order History: " << std::endl;
     orderHistory.showAllHistory();
 
-    Shelf shelf1(std::make_tuple(2, 5, 10), 1, 10);
+    Shelf shelf1(std::make_tuple(2, 5, 10), 1, 1);
     Shelf shelf2(std::make_tuple(2, 5, 10), 2, 10);
     Palette palette1("euro", 10);
     Palette palette2("block", 5);
