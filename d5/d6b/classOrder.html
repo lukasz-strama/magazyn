@@ -102,7 +102,7 @@ $(function(){initNavTree('d5/d6b/classOrder.html','../../'); initResizable(); })
 </div><!--header-->
 <div class="contents">
 
-<p>Reprezentująca zamówienia towarów.  
+<p>Klasa zarządzająca zamówieniami towarów.  
  <a href="#details">Więcej...</a></p>
 
 <p><code>#include &lt;<a class="el" href="../../d3/d2c/Order_8h_source.html">Order.h</a>&gt;</code></p>
@@ -119,7 +119,7 @@ Typy publiczne</h2></td></tr>
 Metody publiczne</h2></td></tr>
 <tr class="memitem:aa5256eb4e8f0d82ce676f9343493aa27" id="r_aa5256eb4e8f0d82ce676f9343493aa27"><td class="memItemLeft" align="right" valign="top"><a id="aa5256eb4e8f0d82ce676f9343493aa27" name="aa5256eb4e8f0d82ce676f9343493aa27"></a>
 &#160;</td><td class="memItemRight" valign="bottom"><b>Order</b> (int id, const std::string &amp;customer, <a class="el" href="#aaab71b1058cdd7537dd856782ab436f0">Type</a> type, const std::string &amp;details)</td></tr>
-<tr class="memdesc:aa5256eb4e8f0d82ce676f9343493aa27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor klasy <a class="el" href="../../d5/d6b/classOrder.html" title="Reprezentująca zamówienia towarów.">Order</a>. <br /></td></tr>
+<tr class="memdesc:aa5256eb4e8f0d82ce676f9343493aa27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Konstruktor klasy <a class="el" href="../../d5/d6b/classOrder.html" title="Klasa zarządzająca zamówieniami towarów.">Order</a>. <br /></td></tr>
 <tr class="separator:aa5256eb4e8f0d82ce676f9343493aa27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9506e43ee697e335b3e0e3ad04f4d8fa" id="r_a9506e43ee697e335b3e0e3ad04f4d8fa"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d6b/classOrder_a9506e43ee697e335b3e0e3ad04f4d8fa.html#a9506e43ee697e335b3e0e3ad04f4d8fa">getId</a> () const</td></tr>
 <tr class="memdesc:a9506e43ee697e335b3e0e3ad04f4d8fa"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda publiczna zwracająca ID zamówienia.  <br /></td></tr>
@@ -137,7 +137,7 @@ Metody publiczne</h2></td></tr>
 <tr class="memdesc:a9e0405599018aa05ce0ae8905fc7f958"><td class="mdescLeft">&#160;</td><td class="mdescRight">Metoda publiczna ustawiająca szczegóły zamówienia.  <br /></td></tr>
 <tr class="separator:a9e0405599018aa05ce0ae8905fc7f958"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5ea95303625f199610dfe6dac2654426" id="r_a5ea95303625f199610dfe6dac2654426"><td class="memItemLeft" align="right" valign="top">nlohmann::json&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="../../d5/d6b/classOrder_a5ea95303625f199610dfe6dac2654426.html#a5ea95303625f199610dfe6dac2654426">toJson</a> () const</td></tr>
-<tr class="memdesc:a5ea95303625f199610dfe6dac2654426"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deserializuje obiekt <a class="el" href="../../d5/d6b/classOrder.html" title="Reprezentująca zamówienia towarów.">Order</a> z formatu JSON.  <br /></td></tr>
+<tr class="memdesc:a5ea95303625f199610dfe6dac2654426"><td class="mdescLeft">&#160;</td><td class="mdescRight">Deserializuje obiekt <a class="el" href="../../d5/d6b/classOrder.html" title="Klasa zarządzająca zamówieniami towarów.">Order</a> z formatu JSON.  <br /></td></tr>
 <tr class="separator:a5ea95303625f199610dfe6dac2654426"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a id="pub-static-methods" name="pub-static-methods"></a>
@@ -147,8 +147,8 @@ static <a class="el" href="../../d5/d6b/classOrder.html">Order</a>&#160;</td><td
 <tr class="separator:a8e8d3cb4040500c16ed29773f7809265"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Opis szczegółowy</h2>
-<div class="textblock"><p>Reprezentująca zamówienia towarów. </p>
-<p>Klasa <a class="el" href="../../d5/d6b/classOrder.html" title="Reprezentująca zamówienia towarów.">Order</a> pozwala na zarządzanie zamówieniami. Każde zamówienie identyfikowane jest za pomocą: ID, nazwy klienta, typu zamówienia (czy jest ono przychodzące czy wychodzące), szczegółów.</p>
+<div class="textblock"><p>Klasa zarządzająca zamówieniami towarów. </p>
+<p>Klasa <a class="el" href="../../d5/d6b/classOrder.html" title="Klasa zarządzająca zamówieniami towarów.">Order</a> pozwala na zarządzanie zamówieniami. Każde zamówienie identyfikowane jest za pomocą: ID, nazwy klienta, typu zamówienia (czy jest ono przychodzące czy wychodzące), szczegółów.</p>
 <p>Klasa obsługuje: -tworzenie zamówienia,</p><ul>
 <li>zbieranie informacji dotyczących paczki (ID, nazwa klienta, typ, szczegóły),</li>
 <li>pobieranie/ dodawanie informacji w formacie JSON.</li>
@@ -164,7 +164,7 @@ static <a class="el" href="../../d5/d6b/classOrder.html">Order</a>&#160;</td><td
 <div class="line"><span class="keywordflow">catch</span> (<span class="keyword">const</span> std::exception &amp;e) {</div>
 <div class="line">      std::cerr &lt;&lt; <span class="stringliteral">&quot;Error: &quot;</span> &lt;&lt; e.what() &lt;&lt; std::endl;</div>
 <div class="line">} </div>
-<div class="ttc" id="aclassOrder_html"><div class="ttname"><a href="../../d5/d6b/classOrder.html">Order</a></div><div class="ttdoc">Reprezentująca zamówienia towarów.</div><div class="ttdef"><b>Definition</b> Order.h:36</div></div>
+<div class="ttc" id="aclassOrder_html"><div class="ttname"><a href="../../d5/d6b/classOrder.html">Order</a></div><div class="ttdoc">Klasa zarządzająca zamówieniami towarów.</div><div class="ttdef"><b>Definition</b> Order.h:36</div></div>
 </div><!-- fragment --> </div><hr/>Dokumentacja dla tej klasy została wygenerowana z plików:<ul>
 <li>include/<a class="el" href="../../d3/d2c/Order_8h_source.html">Order.h</a></li>
 <li>src/<b>Order.cpp</b></li>
